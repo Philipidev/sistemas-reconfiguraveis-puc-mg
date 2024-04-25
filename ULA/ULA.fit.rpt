@@ -1,5 +1,5 @@
 Fitter report for ULA
-Wed Apr 24 22:27:33 2024
+Thu Apr 25 18:05:40 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 24 22:27:33 2024        ;
+; Fitter Status                      ; Successful - Thu Apr 25 18:05:40 2024        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; ULA                                          ;
 ; Top-level Entity Name              ; ULA                                          ;
@@ -1435,7 +1435,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Apr 24 22:27:29 2024
+    Info: Processing started: Thu Apr 25 18:05:38 2024
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off ULA -c ULA
 Info: Selected device EP2C35F672C6 for design "ULA"
 Info: Low junction temperature is 0 degrees C
@@ -1506,7 +1506,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1536,8 +1536,8 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 286 megabytes
-    Info: Processing ended: Wed Apr 24 22:27:33 2024
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Thu Apr 25 18:05:40 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

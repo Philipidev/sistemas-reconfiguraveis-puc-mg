@@ -9,7 +9,7 @@ ENTITY ULA IS
      c_in : IN STD_LOGIC;
      op_sel : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
      r_out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-     c_out, z_out, v_out : OUT STD_LOGIC -- Inclusão da saída v_out
+     c_out, z_out, v_out : OUT STD_LOGIC
  );
 END ENTITY;
 
@@ -36,7 +36,8 @@ BEGIN
              (a_in(7 downto 0) & '0') WHEN "1100", -- SLL
              ('0' & '0' & a_in(7 downto 1)) WHEN "1101",  -- SRL
              (a_in(7) & a_in(7) & a_in(7 downto 1)) WHEN "1110",  -- SRA
-        ('0' & b_in) WHEN OTHERS;
+             ('0' & b_in) WHEN "1111", -- By-pass B conforme especificado
+        (others => '0') WHEN OTHERS; -- Caso padrão segurança
 
         r_out <= aux(7 DOWNTO 0); -- Resultado encontrado após as operações
         c_out <= aux(8); -- Carry out que foi inserido durante os cálculos
