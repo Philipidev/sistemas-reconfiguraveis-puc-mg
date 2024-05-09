@@ -24,9 +24,9 @@ VECTOR("D:/Puc/sistemas reconf/Trab2/Stack/Stack.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 223200;
-		NUMERATOR = 1116;
-		DENOMINATOR = 223200;
+		ZEND = 500000;
+		NUMERATOR = 1718;
+		DENOMINATOR = 500000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
