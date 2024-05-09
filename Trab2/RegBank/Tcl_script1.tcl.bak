@@ -1,0 +1,26 @@
+# Carrega o design e o testbench
+vlog /RegBank.vhd
+vlog /RegBank_tb.vhd
+
+# Compila o design
+vsim work.RegBank_tb
+
+# Adiciona sinais ao Waveform Viewer
+add wave -position end sim:/RegBank_tb/clk_in
+add wave -position end sim:/RegBank_tb/nrst
+add wave -position end sim:/RegBank_tb/regn_di
+add wave -position end sim:/RegBank_tb/regn_wr_sel
+add wave -position end sim:/RegBank_tb/regn_wr_ena
+add wave -position end sim:/RegBank_tb/regn_rd_sel_a
+add wave -position end sim:/RegBank_tb/regn_rd_sel_b
+add wave -position end sim:/RegBank_tb/regn_do_a
+add wave -position end sim:/RegBank_tb/regn_do_b
+add wave -position end sim:/RegBank_tb/c_flag_out
+add wave -position end sim:/RegBank_tb/z_flag_out
+add wave -position end sim:/RegBank_tb/v_flag_out
+
+# Roda a simulação por um determinado período
+run 200 ns
+
+# Salva o waveform
+write format wave -window .main_wave -file /waveFormTeste1.wlf

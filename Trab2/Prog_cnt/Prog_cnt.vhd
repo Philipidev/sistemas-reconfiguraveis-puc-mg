@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Prog_cnt is
+    port (
+        clk_in     : in  std_logic;                        -- Entrada de clock
+        nrst       : in  std_logic;                        -- Entrada de reset assíncrono
+        pc_ctrl    : in  std_logic_vector(1 downto 0);     -- Controle do contador
+        new_pc_in  : in  std_logic_vector(10 downto 0);    -- Novo valor para carregar no contador
+        from_stack : in  std_logic_vector(10 downto 0);    -- Valor do topo da pilha para carregar no contador
+        next_pc_out: buffer std_logic_vector(10 downto 0); -- Próximo valor do contador (pode ser lido e escrito)
+        pc_out     : out std_logic_vector(10 downto 0)     -- Saída atual do valor do contador
+    );
+end Prog_cnt;
+
+architecture Behavioral of Prog_cnt is
+    signal pc      : std_logic_vector(10 downto 0) := (others => '0'); -- Contador interno
+begin
+    -- Processo combinacional para determinar o próximo valor do contador baseado no controle
+    with pc_ctrl select
+        next_pc_out <= pc when "00", -- Mantém o valor atual se nenhuma ação for especificada
+                       new_pc_in when "01", -- Carrega um novo valor especificado na entrada new_pc_in
+                       from_stack when "10", -- Carrega o valor do topo da pilha na entrada from_stack
+                       std_logic_vector(unsigned(pc) + 1) when "11", -- Incrementa o contador
+                       pc when others; -- Default case: mantém o valor atual
+
+    -- Processo sequencial para atualizar o contador com base no clock e no reset
+    process(clk_in, nrst)
+    begin
+        if nrst = '0' then
+            pc <= (others => '0'); -- Reseta o contador para zero quando o sinal de reset está ativo
+        elsif rising_edge(clk_in) then
+            pc <= next_pc_out; -- Atualiza o contador na borda de subida do clock com o valor de next_pc_out
+        end if;
+    end process;
+
+    -- Saída do valor atual do contador
+    pc_out <= pc; -- Atribui o valor atual do contador à saída pc_out
+end Behavioral;

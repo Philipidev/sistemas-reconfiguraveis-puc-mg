@@ -1,0 +1,705 @@
+Simulator report for Stack
+Wed May 08 22:09:51 2024
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 292 nodes    ;
+; Simulation Coverage         ;      14.04 % ;
+; Total Number of Transitions ; 456          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      14.04 % ;
+; Total nodes checked                                 ; 292          ;
+; Total output ports checked                          ; 292          ;
+; Total output ports with complete 1/0-value coverage ; 41           ;
+; Total output ports with no 1/0-value coverage       ; 250          ;
+; Total output ports with no 1-value coverage         ; 250          ;
+; Total output ports with no 0-value coverage         ; 251          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |Stack|process_0~0   ; |Stack|process_0~0   ; out0             ;
+; |Stack|process_0~1   ; |Stack|process_0~1   ; out0             ;
+; |Stack|stack~0       ; |Stack|stack~0       ; out              ;
+; |Stack|stack~2       ; |Stack|stack~2       ; out              ;
+; |Stack|stack~4       ; |Stack|stack~4       ; out              ;
+; |Stack|stack~6       ; |Stack|stack~6       ; out              ;
+; |Stack|stack~8       ; |Stack|stack~8       ; out              ;
+; |Stack|stack~10      ; |Stack|stack~10      ; out              ;
+; |Stack|stack~88      ; |Stack|stack~88      ; out              ;
+; |Stack|stack~90      ; |Stack|stack~90      ; out              ;
+; |Stack|stack~92      ; |Stack|stack~92      ; out              ;
+; |Stack|stack~94      ; |Stack|stack~94      ; out              ;
+; |Stack|stack~96      ; |Stack|stack~96      ; out              ;
+; |Stack|stack~98      ; |Stack|stack~98      ; out              ;
+; |Stack|stack~99      ; |Stack|stack~99      ; out              ;
+; |Stack|stack~101     ; |Stack|stack~101     ; out              ;
+; |Stack|stack~103     ; |Stack|stack~103     ; out              ;
+; |Stack|stack~105     ; |Stack|stack~105     ; out              ;
+; |Stack|stack~107     ; |Stack|stack~107     ; out              ;
+; |Stack|stack~109     ; |Stack|stack~109     ; out              ;
+; |Stack|stack[0][10]  ; |Stack|stack[0][10]  ; regout           ;
+; |Stack|stack[0][8]   ; |Stack|stack[0][8]   ; regout           ;
+; |Stack|stack[0][6]   ; |Stack|stack[0][6]   ; regout           ;
+; |Stack|stack[0][4]   ; |Stack|stack[0][4]   ; regout           ;
+; |Stack|stack[0][2]   ; |Stack|stack[0][2]   ; regout           ;
+; |Stack|stack[0][0]   ; |Stack|stack[0][0]   ; regout           ;
+; |Stack|clk_in        ; |Stack|clk_in        ; out              ;
+; |Stack|stack_in[0]   ; |Stack|stack_in[0]   ; out              ;
+; |Stack|stack_in[2]   ; |Stack|stack_in[2]   ; out              ;
+; |Stack|stack_in[4]   ; |Stack|stack_in[4]   ; out              ;
+; |Stack|stack_in[6]   ; |Stack|stack_in[6]   ; out              ;
+; |Stack|stack_in[8]   ; |Stack|stack_in[8]   ; out              ;
+; |Stack|stack_in[10]  ; |Stack|stack_in[10]  ; out              ;
+; |Stack|stack_push    ; |Stack|stack_push    ; out              ;
+; |Stack|stack_pop     ; |Stack|stack_pop     ; out              ;
+; |Stack|stack_out[0]  ; |Stack|stack_out[0]  ; pin_out          ;
+; |Stack|stack_out[2]  ; |Stack|stack_out[2]  ; pin_out          ;
+; |Stack|stack_out[4]  ; |Stack|stack_out[4]  ; pin_out          ;
+; |Stack|stack_out[6]  ; |Stack|stack_out[6]  ; pin_out          ;
+; |Stack|stack_out[8]  ; |Stack|stack_out[8]  ; pin_out          ;
+; |Stack|stack_out[10] ; |Stack|stack_out[10] ; pin_out          ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------+
+; Missing 1-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |Stack|stack~1      ; |Stack|stack~1      ; out              ;
+; |Stack|stack~3      ; |Stack|stack~3      ; out              ;
+; |Stack|stack~5      ; |Stack|stack~5      ; out              ;
+; |Stack|stack~7      ; |Stack|stack~7      ; out              ;
+; |Stack|stack~9      ; |Stack|stack~9      ; out              ;
+; |Stack|stack~11     ; |Stack|stack~11     ; out              ;
+; |Stack|stack~12     ; |Stack|stack~12     ; out              ;
+; |Stack|stack~13     ; |Stack|stack~13     ; out              ;
+; |Stack|stack~14     ; |Stack|stack~14     ; out              ;
+; |Stack|stack~15     ; |Stack|stack~15     ; out              ;
+; |Stack|stack~16     ; |Stack|stack~16     ; out              ;
+; |Stack|stack~17     ; |Stack|stack~17     ; out              ;
+; |Stack|stack~18     ; |Stack|stack~18     ; out              ;
+; |Stack|stack~19     ; |Stack|stack~19     ; out              ;
+; |Stack|stack~20     ; |Stack|stack~20     ; out              ;
+; |Stack|stack~21     ; |Stack|stack~21     ; out              ;
+; |Stack|stack~22     ; |Stack|stack~22     ; out              ;
+; |Stack|stack~23     ; |Stack|stack~23     ; out              ;
+; |Stack|stack~24     ; |Stack|stack~24     ; out              ;
+; |Stack|stack~25     ; |Stack|stack~25     ; out              ;
+; |Stack|stack~26     ; |Stack|stack~26     ; out              ;
+; |Stack|stack~27     ; |Stack|stack~27     ; out              ;
+; |Stack|stack~28     ; |Stack|stack~28     ; out              ;
+; |Stack|stack~29     ; |Stack|stack~29     ; out              ;
+; |Stack|stack~30     ; |Stack|stack~30     ; out              ;
+; |Stack|stack~31     ; |Stack|stack~31     ; out              ;
+; |Stack|stack~32     ; |Stack|stack~32     ; out              ;
+; |Stack|stack~33     ; |Stack|stack~33     ; out              ;
+; |Stack|stack~34     ; |Stack|stack~34     ; out              ;
+; |Stack|stack~35     ; |Stack|stack~35     ; out              ;
+; |Stack|stack~36     ; |Stack|stack~36     ; out              ;
+; |Stack|stack~37     ; |Stack|stack~37     ; out              ;
+; |Stack|stack~38     ; |Stack|stack~38     ; out              ;
+; |Stack|stack~39     ; |Stack|stack~39     ; out              ;
+; |Stack|stack~40     ; |Stack|stack~40     ; out              ;
+; |Stack|stack~41     ; |Stack|stack~41     ; out              ;
+; |Stack|stack~42     ; |Stack|stack~42     ; out              ;
+; |Stack|stack~43     ; |Stack|stack~43     ; out              ;
+; |Stack|stack~44     ; |Stack|stack~44     ; out              ;
+; |Stack|stack~45     ; |Stack|stack~45     ; out              ;
+; |Stack|stack~46     ; |Stack|stack~46     ; out              ;
+; |Stack|stack~47     ; |Stack|stack~47     ; out              ;
+; |Stack|stack~48     ; |Stack|stack~48     ; out              ;
+; |Stack|stack~49     ; |Stack|stack~49     ; out              ;
+; |Stack|stack~50     ; |Stack|stack~50     ; out              ;
+; |Stack|stack~51     ; |Stack|stack~51     ; out              ;
+; |Stack|stack~52     ; |Stack|stack~52     ; out              ;
+; |Stack|stack~53     ; |Stack|stack~53     ; out              ;
+; |Stack|stack~54     ; |Stack|stack~54     ; out              ;
+; |Stack|stack~55     ; |Stack|stack~55     ; out              ;
+; |Stack|stack~56     ; |Stack|stack~56     ; out              ;
+; |Stack|stack~57     ; |Stack|stack~57     ; out              ;
+; |Stack|stack~58     ; |Stack|stack~58     ; out              ;
+; |Stack|stack~59     ; |Stack|stack~59     ; out              ;
+; |Stack|stack~60     ; |Stack|stack~60     ; out              ;
+; |Stack|stack~61     ; |Stack|stack~61     ; out              ;
+; |Stack|stack~62     ; |Stack|stack~62     ; out              ;
+; |Stack|stack~63     ; |Stack|stack~63     ; out              ;
+; |Stack|stack~64     ; |Stack|stack~64     ; out              ;
+; |Stack|stack~65     ; |Stack|stack~65     ; out              ;
+; |Stack|stack~66     ; |Stack|stack~66     ; out              ;
+; |Stack|stack~67     ; |Stack|stack~67     ; out              ;
+; |Stack|stack~68     ; |Stack|stack~68     ; out              ;
+; |Stack|stack~69     ; |Stack|stack~69     ; out              ;
+; |Stack|stack~70     ; |Stack|stack~70     ; out              ;
+; |Stack|stack~71     ; |Stack|stack~71     ; out              ;
+; |Stack|stack~72     ; |Stack|stack~72     ; out              ;
+; |Stack|stack~73     ; |Stack|stack~73     ; out              ;
+; |Stack|stack~74     ; |Stack|stack~74     ; out              ;
+; |Stack|stack~75     ; |Stack|stack~75     ; out              ;
+; |Stack|stack~76     ; |Stack|stack~76     ; out              ;
+; |Stack|stack~77     ; |Stack|stack~77     ; out              ;
+; |Stack|stack~78     ; |Stack|stack~78     ; out              ;
+; |Stack|stack~79     ; |Stack|stack~79     ; out              ;
+; |Stack|stack~80     ; |Stack|stack~80     ; out              ;
+; |Stack|stack~81     ; |Stack|stack~81     ; out              ;
+; |Stack|stack~82     ; |Stack|stack~82     ; out              ;
+; |Stack|stack~83     ; |Stack|stack~83     ; out              ;
+; |Stack|stack~84     ; |Stack|stack~84     ; out              ;
+; |Stack|stack~85     ; |Stack|stack~85     ; out              ;
+; |Stack|stack~86     ; |Stack|stack~86     ; out              ;
+; |Stack|stack~87     ; |Stack|stack~87     ; out              ;
+; |Stack|stack~89     ; |Stack|stack~89     ; out              ;
+; |Stack|stack~91     ; |Stack|stack~91     ; out              ;
+; |Stack|stack~93     ; |Stack|stack~93     ; out              ;
+; |Stack|stack~95     ; |Stack|stack~95     ; out              ;
+; |Stack|stack~97     ; |Stack|stack~97     ; out              ;
+; |Stack|stack~100    ; |Stack|stack~100    ; out              ;
+; |Stack|stack~102    ; |Stack|stack~102    ; out              ;
+; |Stack|stack~104    ; |Stack|stack~104    ; out              ;
+; |Stack|stack~106    ; |Stack|stack~106    ; out              ;
+; |Stack|stack~108    ; |Stack|stack~108    ; out              ;
+; |Stack|stack~110    ; |Stack|stack~110    ; out              ;
+; |Stack|stack~111    ; |Stack|stack~111    ; out              ;
+; |Stack|stack~112    ; |Stack|stack~112    ; out              ;
+; |Stack|stack~113    ; |Stack|stack~113    ; out              ;
+; |Stack|stack~114    ; |Stack|stack~114    ; out              ;
+; |Stack|stack~115    ; |Stack|stack~115    ; out              ;
+; |Stack|stack~116    ; |Stack|stack~116    ; out              ;
+; |Stack|stack~117    ; |Stack|stack~117    ; out              ;
+; |Stack|stack~118    ; |Stack|stack~118    ; out              ;
+; |Stack|stack~119    ; |Stack|stack~119    ; out              ;
+; |Stack|stack~120    ; |Stack|stack~120    ; out              ;
+; |Stack|stack~121    ; |Stack|stack~121    ; out              ;
+; |Stack|stack~122    ; |Stack|stack~122    ; out              ;
+; |Stack|stack~123    ; |Stack|stack~123    ; out              ;
+; |Stack|stack~124    ; |Stack|stack~124    ; out              ;
+; |Stack|stack~125    ; |Stack|stack~125    ; out              ;
+; |Stack|stack~126    ; |Stack|stack~126    ; out              ;
+; |Stack|stack~127    ; |Stack|stack~127    ; out              ;
+; |Stack|stack~128    ; |Stack|stack~128    ; out              ;
+; |Stack|stack~129    ; |Stack|stack~129    ; out              ;
+; |Stack|stack~130    ; |Stack|stack~130    ; out              ;
+; |Stack|stack~131    ; |Stack|stack~131    ; out              ;
+; |Stack|stack~132    ; |Stack|stack~132    ; out              ;
+; |Stack|stack~133    ; |Stack|stack~133    ; out              ;
+; |Stack|stack~134    ; |Stack|stack~134    ; out              ;
+; |Stack|stack~135    ; |Stack|stack~135    ; out              ;
+; |Stack|stack~136    ; |Stack|stack~136    ; out              ;
+; |Stack|stack~137    ; |Stack|stack~137    ; out              ;
+; |Stack|stack~138    ; |Stack|stack~138    ; out              ;
+; |Stack|stack~139    ; |Stack|stack~139    ; out              ;
+; |Stack|stack~140    ; |Stack|stack~140    ; out              ;
+; |Stack|stack~141    ; |Stack|stack~141    ; out              ;
+; |Stack|stack~142    ; |Stack|stack~142    ; out              ;
+; |Stack|stack~143    ; |Stack|stack~143    ; out              ;
+; |Stack|stack~144    ; |Stack|stack~144    ; out              ;
+; |Stack|stack~145    ; |Stack|stack~145    ; out              ;
+; |Stack|stack~146    ; |Stack|stack~146    ; out              ;
+; |Stack|stack~147    ; |Stack|stack~147    ; out              ;
+; |Stack|stack~148    ; |Stack|stack~148    ; out              ;
+; |Stack|stack~149    ; |Stack|stack~149    ; out              ;
+; |Stack|stack~150    ; |Stack|stack~150    ; out              ;
+; |Stack|stack~151    ; |Stack|stack~151    ; out              ;
+; |Stack|stack~152    ; |Stack|stack~152    ; out              ;
+; |Stack|stack~153    ; |Stack|stack~153    ; out              ;
+; |Stack|stack~154    ; |Stack|stack~154    ; out              ;
+; |Stack|stack~155    ; |Stack|stack~155    ; out              ;
+; |Stack|stack~156    ; |Stack|stack~156    ; out              ;
+; |Stack|stack~157    ; |Stack|stack~157    ; out              ;
+; |Stack|stack~158    ; |Stack|stack~158    ; out              ;
+; |Stack|stack~159    ; |Stack|stack~159    ; out              ;
+; |Stack|stack~160    ; |Stack|stack~160    ; out              ;
+; |Stack|stack~161    ; |Stack|stack~161    ; out              ;
+; |Stack|stack~162    ; |Stack|stack~162    ; out              ;
+; |Stack|stack~163    ; |Stack|stack~163    ; out              ;
+; |Stack|stack~164    ; |Stack|stack~164    ; out              ;
+; |Stack|stack~165    ; |Stack|stack~165    ; out              ;
+; |Stack|stack~166    ; |Stack|stack~166    ; out              ;
+; |Stack|stack~167    ; |Stack|stack~167    ; out              ;
+; |Stack|stack~168    ; |Stack|stack~168    ; out              ;
+; |Stack|stack~169    ; |Stack|stack~169    ; out              ;
+; |Stack|stack~170    ; |Stack|stack~170    ; out              ;
+; |Stack|stack~171    ; |Stack|stack~171    ; out              ;
+; |Stack|stack~172    ; |Stack|stack~172    ; out              ;
+; |Stack|stack~173    ; |Stack|stack~173    ; out              ;
+; |Stack|stack~174    ; |Stack|stack~174    ; out              ;
+; |Stack|stack~175    ; |Stack|stack~175    ; out              ;
+; |Stack|stack[0][9]  ; |Stack|stack[0][9]  ; regout           ;
+; |Stack|stack[0][7]  ; |Stack|stack[0][7]  ; regout           ;
+; |Stack|stack[0][5]  ; |Stack|stack[0][5]  ; regout           ;
+; |Stack|stack[0][3]  ; |Stack|stack[0][3]  ; regout           ;
+; |Stack|stack[0][1]  ; |Stack|stack[0][1]  ; regout           ;
+; |Stack|stack[1][10] ; |Stack|stack[1][10] ; regout           ;
+; |Stack|stack[1][9]  ; |Stack|stack[1][9]  ; regout           ;
+; |Stack|stack[1][8]  ; |Stack|stack[1][8]  ; regout           ;
+; |Stack|stack[1][7]  ; |Stack|stack[1][7]  ; regout           ;
+; |Stack|stack[1][6]  ; |Stack|stack[1][6]  ; regout           ;
+; |Stack|stack[1][5]  ; |Stack|stack[1][5]  ; regout           ;
+; |Stack|stack[1][4]  ; |Stack|stack[1][4]  ; regout           ;
+; |Stack|stack[1][3]  ; |Stack|stack[1][3]  ; regout           ;
+; |Stack|stack[1][2]  ; |Stack|stack[1][2]  ; regout           ;
+; |Stack|stack[1][1]  ; |Stack|stack[1][1]  ; regout           ;
+; |Stack|stack[1][0]  ; |Stack|stack[1][0]  ; regout           ;
+; |Stack|stack[2][10] ; |Stack|stack[2][10] ; regout           ;
+; |Stack|stack[2][9]  ; |Stack|stack[2][9]  ; regout           ;
+; |Stack|stack[2][8]  ; |Stack|stack[2][8]  ; regout           ;
+; |Stack|stack[2][7]  ; |Stack|stack[2][7]  ; regout           ;
+; |Stack|stack[2][6]  ; |Stack|stack[2][6]  ; regout           ;
+; |Stack|stack[2][5]  ; |Stack|stack[2][5]  ; regout           ;
+; |Stack|stack[2][4]  ; |Stack|stack[2][4]  ; regout           ;
+; |Stack|stack[2][3]  ; |Stack|stack[2][3]  ; regout           ;
+; |Stack|stack[2][2]  ; |Stack|stack[2][2]  ; regout           ;
+; |Stack|stack[2][1]  ; |Stack|stack[2][1]  ; regout           ;
+; |Stack|stack[2][0]  ; |Stack|stack[2][0]  ; regout           ;
+; |Stack|stack[3][10] ; |Stack|stack[3][10] ; regout           ;
+; |Stack|stack[3][9]  ; |Stack|stack[3][9]  ; regout           ;
+; |Stack|stack[3][8]  ; |Stack|stack[3][8]  ; regout           ;
+; |Stack|stack[3][7]  ; |Stack|stack[3][7]  ; regout           ;
+; |Stack|stack[3][6]  ; |Stack|stack[3][6]  ; regout           ;
+; |Stack|stack[3][5]  ; |Stack|stack[3][5]  ; regout           ;
+; |Stack|stack[3][4]  ; |Stack|stack[3][4]  ; regout           ;
+; |Stack|stack[3][3]  ; |Stack|stack[3][3]  ; regout           ;
+; |Stack|stack[3][2]  ; |Stack|stack[3][2]  ; regout           ;
+; |Stack|stack[3][1]  ; |Stack|stack[3][1]  ; regout           ;
+; |Stack|stack[3][0]  ; |Stack|stack[3][0]  ; regout           ;
+; |Stack|stack[4][10] ; |Stack|stack[4][10] ; regout           ;
+; |Stack|stack[4][9]  ; |Stack|stack[4][9]  ; regout           ;
+; |Stack|stack[4][8]  ; |Stack|stack[4][8]  ; regout           ;
+; |Stack|stack[4][7]  ; |Stack|stack[4][7]  ; regout           ;
+; |Stack|stack[4][6]  ; |Stack|stack[4][6]  ; regout           ;
+; |Stack|stack[4][5]  ; |Stack|stack[4][5]  ; regout           ;
+; |Stack|stack[4][4]  ; |Stack|stack[4][4]  ; regout           ;
+; |Stack|stack[4][3]  ; |Stack|stack[4][3]  ; regout           ;
+; |Stack|stack[4][2]  ; |Stack|stack[4][2]  ; regout           ;
+; |Stack|stack[4][1]  ; |Stack|stack[4][1]  ; regout           ;
+; |Stack|stack[4][0]  ; |Stack|stack[4][0]  ; regout           ;
+; |Stack|stack[5][10] ; |Stack|stack[5][10] ; regout           ;
+; |Stack|stack[5][9]  ; |Stack|stack[5][9]  ; regout           ;
+; |Stack|stack[5][8]  ; |Stack|stack[5][8]  ; regout           ;
+; |Stack|stack[5][7]  ; |Stack|stack[5][7]  ; regout           ;
+; |Stack|stack[5][6]  ; |Stack|stack[5][6]  ; regout           ;
+; |Stack|stack[5][5]  ; |Stack|stack[5][5]  ; regout           ;
+; |Stack|stack[5][4]  ; |Stack|stack[5][4]  ; regout           ;
+; |Stack|stack[5][3]  ; |Stack|stack[5][3]  ; regout           ;
+; |Stack|stack[5][2]  ; |Stack|stack[5][2]  ; regout           ;
+; |Stack|stack[5][1]  ; |Stack|stack[5][1]  ; regout           ;
+; |Stack|stack[5][0]  ; |Stack|stack[5][0]  ; regout           ;
+; |Stack|stack[6][10] ; |Stack|stack[6][10] ; regout           ;
+; |Stack|stack[6][9]  ; |Stack|stack[6][9]  ; regout           ;
+; |Stack|stack[6][8]  ; |Stack|stack[6][8]  ; regout           ;
+; |Stack|stack[6][7]  ; |Stack|stack[6][7]  ; regout           ;
+; |Stack|stack[6][6]  ; |Stack|stack[6][6]  ; regout           ;
+; |Stack|stack[6][5]  ; |Stack|stack[6][5]  ; regout           ;
+; |Stack|stack[6][4]  ; |Stack|stack[6][4]  ; regout           ;
+; |Stack|stack[6][3]  ; |Stack|stack[6][3]  ; regout           ;
+; |Stack|stack[6][2]  ; |Stack|stack[6][2]  ; regout           ;
+; |Stack|stack[6][1]  ; |Stack|stack[6][1]  ; regout           ;
+; |Stack|stack[6][0]  ; |Stack|stack[6][0]  ; regout           ;
+; |Stack|stack[7][10] ; |Stack|stack[7][10] ; regout           ;
+; |Stack|stack[7][9]  ; |Stack|stack[7][9]  ; regout           ;
+; |Stack|stack[7][8]  ; |Stack|stack[7][8]  ; regout           ;
+; |Stack|stack[7][7]  ; |Stack|stack[7][7]  ; regout           ;
+; |Stack|stack[7][6]  ; |Stack|stack[7][6]  ; regout           ;
+; |Stack|stack[7][5]  ; |Stack|stack[7][5]  ; regout           ;
+; |Stack|stack[7][4]  ; |Stack|stack[7][4]  ; regout           ;
+; |Stack|stack[7][3]  ; |Stack|stack[7][3]  ; regout           ;
+; |Stack|stack[7][2]  ; |Stack|stack[7][2]  ; regout           ;
+; |Stack|stack[7][1]  ; |Stack|stack[7][1]  ; regout           ;
+; |Stack|stack[7][0]  ; |Stack|stack[7][0]  ; regout           ;
+; |Stack|stack_in[1]  ; |Stack|stack_in[1]  ; out              ;
+; |Stack|stack_in[3]  ; |Stack|stack_in[3]  ; out              ;
+; |Stack|stack_in[5]  ; |Stack|stack_in[5]  ; out              ;
+; |Stack|stack_in[7]  ; |Stack|stack_in[7]  ; out              ;
+; |Stack|stack_in[9]  ; |Stack|stack_in[9]  ; out              ;
+; |Stack|stack_out[1] ; |Stack|stack_out[1] ; pin_out          ;
+; |Stack|stack_out[3] ; |Stack|stack_out[3] ; pin_out          ;
+; |Stack|stack_out[5] ; |Stack|stack_out[5] ; pin_out          ;
+; |Stack|stack_out[7] ; |Stack|stack_out[7] ; pin_out          ;
+; |Stack|stack_out[9] ; |Stack|stack_out[9] ; pin_out          ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |Stack|stack~1      ; |Stack|stack~1      ; out              ;
+; |Stack|stack~3      ; |Stack|stack~3      ; out              ;
+; |Stack|stack~5      ; |Stack|stack~5      ; out              ;
+; |Stack|stack~7      ; |Stack|stack~7      ; out              ;
+; |Stack|stack~9      ; |Stack|stack~9      ; out              ;
+; |Stack|stack~11     ; |Stack|stack~11     ; out              ;
+; |Stack|stack~12     ; |Stack|stack~12     ; out              ;
+; |Stack|stack~13     ; |Stack|stack~13     ; out              ;
+; |Stack|stack~14     ; |Stack|stack~14     ; out              ;
+; |Stack|stack~15     ; |Stack|stack~15     ; out              ;
+; |Stack|stack~16     ; |Stack|stack~16     ; out              ;
+; |Stack|stack~17     ; |Stack|stack~17     ; out              ;
+; |Stack|stack~18     ; |Stack|stack~18     ; out              ;
+; |Stack|stack~19     ; |Stack|stack~19     ; out              ;
+; |Stack|stack~20     ; |Stack|stack~20     ; out              ;
+; |Stack|stack~21     ; |Stack|stack~21     ; out              ;
+; |Stack|stack~22     ; |Stack|stack~22     ; out              ;
+; |Stack|stack~23     ; |Stack|stack~23     ; out              ;
+; |Stack|stack~24     ; |Stack|stack~24     ; out              ;
+; |Stack|stack~25     ; |Stack|stack~25     ; out              ;
+; |Stack|stack~26     ; |Stack|stack~26     ; out              ;
+; |Stack|stack~27     ; |Stack|stack~27     ; out              ;
+; |Stack|stack~28     ; |Stack|stack~28     ; out              ;
+; |Stack|stack~29     ; |Stack|stack~29     ; out              ;
+; |Stack|stack~30     ; |Stack|stack~30     ; out              ;
+; |Stack|stack~31     ; |Stack|stack~31     ; out              ;
+; |Stack|stack~32     ; |Stack|stack~32     ; out              ;
+; |Stack|stack~33     ; |Stack|stack~33     ; out              ;
+; |Stack|stack~34     ; |Stack|stack~34     ; out              ;
+; |Stack|stack~35     ; |Stack|stack~35     ; out              ;
+; |Stack|stack~36     ; |Stack|stack~36     ; out              ;
+; |Stack|stack~37     ; |Stack|stack~37     ; out              ;
+; |Stack|stack~38     ; |Stack|stack~38     ; out              ;
+; |Stack|stack~39     ; |Stack|stack~39     ; out              ;
+; |Stack|stack~40     ; |Stack|stack~40     ; out              ;
+; |Stack|stack~41     ; |Stack|stack~41     ; out              ;
+; |Stack|stack~42     ; |Stack|stack~42     ; out              ;
+; |Stack|stack~43     ; |Stack|stack~43     ; out              ;
+; |Stack|stack~44     ; |Stack|stack~44     ; out              ;
+; |Stack|stack~45     ; |Stack|stack~45     ; out              ;
+; |Stack|stack~46     ; |Stack|stack~46     ; out              ;
+; |Stack|stack~47     ; |Stack|stack~47     ; out              ;
+; |Stack|stack~48     ; |Stack|stack~48     ; out              ;
+; |Stack|stack~49     ; |Stack|stack~49     ; out              ;
+; |Stack|stack~50     ; |Stack|stack~50     ; out              ;
+; |Stack|stack~51     ; |Stack|stack~51     ; out              ;
+; |Stack|stack~52     ; |Stack|stack~52     ; out              ;
+; |Stack|stack~53     ; |Stack|stack~53     ; out              ;
+; |Stack|stack~54     ; |Stack|stack~54     ; out              ;
+; |Stack|stack~55     ; |Stack|stack~55     ; out              ;
+; |Stack|stack~56     ; |Stack|stack~56     ; out              ;
+; |Stack|stack~57     ; |Stack|stack~57     ; out              ;
+; |Stack|stack~58     ; |Stack|stack~58     ; out              ;
+; |Stack|stack~59     ; |Stack|stack~59     ; out              ;
+; |Stack|stack~60     ; |Stack|stack~60     ; out              ;
+; |Stack|stack~61     ; |Stack|stack~61     ; out              ;
+; |Stack|stack~62     ; |Stack|stack~62     ; out              ;
+; |Stack|stack~63     ; |Stack|stack~63     ; out              ;
+; |Stack|stack~64     ; |Stack|stack~64     ; out              ;
+; |Stack|stack~65     ; |Stack|stack~65     ; out              ;
+; |Stack|stack~66     ; |Stack|stack~66     ; out              ;
+; |Stack|stack~67     ; |Stack|stack~67     ; out              ;
+; |Stack|stack~68     ; |Stack|stack~68     ; out              ;
+; |Stack|stack~69     ; |Stack|stack~69     ; out              ;
+; |Stack|stack~70     ; |Stack|stack~70     ; out              ;
+; |Stack|stack~71     ; |Stack|stack~71     ; out              ;
+; |Stack|stack~72     ; |Stack|stack~72     ; out              ;
+; |Stack|stack~73     ; |Stack|stack~73     ; out              ;
+; |Stack|stack~74     ; |Stack|stack~74     ; out              ;
+; |Stack|stack~75     ; |Stack|stack~75     ; out              ;
+; |Stack|stack~76     ; |Stack|stack~76     ; out              ;
+; |Stack|stack~77     ; |Stack|stack~77     ; out              ;
+; |Stack|stack~78     ; |Stack|stack~78     ; out              ;
+; |Stack|stack~79     ; |Stack|stack~79     ; out              ;
+; |Stack|stack~80     ; |Stack|stack~80     ; out              ;
+; |Stack|stack~81     ; |Stack|stack~81     ; out              ;
+; |Stack|stack~82     ; |Stack|stack~82     ; out              ;
+; |Stack|stack~83     ; |Stack|stack~83     ; out              ;
+; |Stack|stack~84     ; |Stack|stack~84     ; out              ;
+; |Stack|stack~85     ; |Stack|stack~85     ; out              ;
+; |Stack|stack~86     ; |Stack|stack~86     ; out              ;
+; |Stack|stack~87     ; |Stack|stack~87     ; out              ;
+; |Stack|stack~89     ; |Stack|stack~89     ; out              ;
+; |Stack|stack~91     ; |Stack|stack~91     ; out              ;
+; |Stack|stack~93     ; |Stack|stack~93     ; out              ;
+; |Stack|stack~95     ; |Stack|stack~95     ; out              ;
+; |Stack|stack~97     ; |Stack|stack~97     ; out              ;
+; |Stack|stack~100    ; |Stack|stack~100    ; out              ;
+; |Stack|stack~102    ; |Stack|stack~102    ; out              ;
+; |Stack|stack~104    ; |Stack|stack~104    ; out              ;
+; |Stack|stack~106    ; |Stack|stack~106    ; out              ;
+; |Stack|stack~108    ; |Stack|stack~108    ; out              ;
+; |Stack|stack~110    ; |Stack|stack~110    ; out              ;
+; |Stack|stack~111    ; |Stack|stack~111    ; out              ;
+; |Stack|stack~112    ; |Stack|stack~112    ; out              ;
+; |Stack|stack~113    ; |Stack|stack~113    ; out              ;
+; |Stack|stack~114    ; |Stack|stack~114    ; out              ;
+; |Stack|stack~115    ; |Stack|stack~115    ; out              ;
+; |Stack|stack~116    ; |Stack|stack~116    ; out              ;
+; |Stack|stack~117    ; |Stack|stack~117    ; out              ;
+; |Stack|stack~118    ; |Stack|stack~118    ; out              ;
+; |Stack|stack~119    ; |Stack|stack~119    ; out              ;
+; |Stack|stack~120    ; |Stack|stack~120    ; out              ;
+; |Stack|stack~121    ; |Stack|stack~121    ; out              ;
+; |Stack|stack~122    ; |Stack|stack~122    ; out              ;
+; |Stack|stack~123    ; |Stack|stack~123    ; out              ;
+; |Stack|stack~124    ; |Stack|stack~124    ; out              ;
+; |Stack|stack~125    ; |Stack|stack~125    ; out              ;
+; |Stack|stack~126    ; |Stack|stack~126    ; out              ;
+; |Stack|stack~127    ; |Stack|stack~127    ; out              ;
+; |Stack|stack~128    ; |Stack|stack~128    ; out              ;
+; |Stack|stack~129    ; |Stack|stack~129    ; out              ;
+; |Stack|stack~130    ; |Stack|stack~130    ; out              ;
+; |Stack|stack~131    ; |Stack|stack~131    ; out              ;
+; |Stack|stack~132    ; |Stack|stack~132    ; out              ;
+; |Stack|stack~133    ; |Stack|stack~133    ; out              ;
+; |Stack|stack~134    ; |Stack|stack~134    ; out              ;
+; |Stack|stack~135    ; |Stack|stack~135    ; out              ;
+; |Stack|stack~136    ; |Stack|stack~136    ; out              ;
+; |Stack|stack~137    ; |Stack|stack~137    ; out              ;
+; |Stack|stack~138    ; |Stack|stack~138    ; out              ;
+; |Stack|stack~139    ; |Stack|stack~139    ; out              ;
+; |Stack|stack~140    ; |Stack|stack~140    ; out              ;
+; |Stack|stack~141    ; |Stack|stack~141    ; out              ;
+; |Stack|stack~142    ; |Stack|stack~142    ; out              ;
+; |Stack|stack~143    ; |Stack|stack~143    ; out              ;
+; |Stack|stack~144    ; |Stack|stack~144    ; out              ;
+; |Stack|stack~145    ; |Stack|stack~145    ; out              ;
+; |Stack|stack~146    ; |Stack|stack~146    ; out              ;
+; |Stack|stack~147    ; |Stack|stack~147    ; out              ;
+; |Stack|stack~148    ; |Stack|stack~148    ; out              ;
+; |Stack|stack~149    ; |Stack|stack~149    ; out              ;
+; |Stack|stack~150    ; |Stack|stack~150    ; out              ;
+; |Stack|stack~151    ; |Stack|stack~151    ; out              ;
+; |Stack|stack~152    ; |Stack|stack~152    ; out              ;
+; |Stack|stack~153    ; |Stack|stack~153    ; out              ;
+; |Stack|stack~154    ; |Stack|stack~154    ; out              ;
+; |Stack|stack~155    ; |Stack|stack~155    ; out              ;
+; |Stack|stack~156    ; |Stack|stack~156    ; out              ;
+; |Stack|stack~157    ; |Stack|stack~157    ; out              ;
+; |Stack|stack~158    ; |Stack|stack~158    ; out              ;
+; |Stack|stack~159    ; |Stack|stack~159    ; out              ;
+; |Stack|stack~160    ; |Stack|stack~160    ; out              ;
+; |Stack|stack~161    ; |Stack|stack~161    ; out              ;
+; |Stack|stack~162    ; |Stack|stack~162    ; out              ;
+; |Stack|stack~163    ; |Stack|stack~163    ; out              ;
+; |Stack|stack~164    ; |Stack|stack~164    ; out              ;
+; |Stack|stack~165    ; |Stack|stack~165    ; out              ;
+; |Stack|stack~166    ; |Stack|stack~166    ; out              ;
+; |Stack|stack~167    ; |Stack|stack~167    ; out              ;
+; |Stack|stack~168    ; |Stack|stack~168    ; out              ;
+; |Stack|stack~169    ; |Stack|stack~169    ; out              ;
+; |Stack|stack~170    ; |Stack|stack~170    ; out              ;
+; |Stack|stack~171    ; |Stack|stack~171    ; out              ;
+; |Stack|stack~172    ; |Stack|stack~172    ; out              ;
+; |Stack|stack~173    ; |Stack|stack~173    ; out              ;
+; |Stack|stack~174    ; |Stack|stack~174    ; out              ;
+; |Stack|stack~175    ; |Stack|stack~175    ; out              ;
+; |Stack|stack[0][9]  ; |Stack|stack[0][9]  ; regout           ;
+; |Stack|stack[0][7]  ; |Stack|stack[0][7]  ; regout           ;
+; |Stack|stack[0][5]  ; |Stack|stack[0][5]  ; regout           ;
+; |Stack|stack[0][3]  ; |Stack|stack[0][3]  ; regout           ;
+; |Stack|stack[0][1]  ; |Stack|stack[0][1]  ; regout           ;
+; |Stack|stack[1][10] ; |Stack|stack[1][10] ; regout           ;
+; |Stack|stack[1][9]  ; |Stack|stack[1][9]  ; regout           ;
+; |Stack|stack[1][8]  ; |Stack|stack[1][8]  ; regout           ;
+; |Stack|stack[1][7]  ; |Stack|stack[1][7]  ; regout           ;
+; |Stack|stack[1][6]  ; |Stack|stack[1][6]  ; regout           ;
+; |Stack|stack[1][5]  ; |Stack|stack[1][5]  ; regout           ;
+; |Stack|stack[1][4]  ; |Stack|stack[1][4]  ; regout           ;
+; |Stack|stack[1][3]  ; |Stack|stack[1][3]  ; regout           ;
+; |Stack|stack[1][2]  ; |Stack|stack[1][2]  ; regout           ;
+; |Stack|stack[1][1]  ; |Stack|stack[1][1]  ; regout           ;
+; |Stack|stack[1][0]  ; |Stack|stack[1][0]  ; regout           ;
+; |Stack|stack[2][10] ; |Stack|stack[2][10] ; regout           ;
+; |Stack|stack[2][9]  ; |Stack|stack[2][9]  ; regout           ;
+; |Stack|stack[2][8]  ; |Stack|stack[2][8]  ; regout           ;
+; |Stack|stack[2][7]  ; |Stack|stack[2][7]  ; regout           ;
+; |Stack|stack[2][6]  ; |Stack|stack[2][6]  ; regout           ;
+; |Stack|stack[2][5]  ; |Stack|stack[2][5]  ; regout           ;
+; |Stack|stack[2][4]  ; |Stack|stack[2][4]  ; regout           ;
+; |Stack|stack[2][3]  ; |Stack|stack[2][3]  ; regout           ;
+; |Stack|stack[2][2]  ; |Stack|stack[2][2]  ; regout           ;
+; |Stack|stack[2][1]  ; |Stack|stack[2][1]  ; regout           ;
+; |Stack|stack[2][0]  ; |Stack|stack[2][0]  ; regout           ;
+; |Stack|stack[3][10] ; |Stack|stack[3][10] ; regout           ;
+; |Stack|stack[3][9]  ; |Stack|stack[3][9]  ; regout           ;
+; |Stack|stack[3][8]  ; |Stack|stack[3][8]  ; regout           ;
+; |Stack|stack[3][7]  ; |Stack|stack[3][7]  ; regout           ;
+; |Stack|stack[3][6]  ; |Stack|stack[3][6]  ; regout           ;
+; |Stack|stack[3][5]  ; |Stack|stack[3][5]  ; regout           ;
+; |Stack|stack[3][4]  ; |Stack|stack[3][4]  ; regout           ;
+; |Stack|stack[3][3]  ; |Stack|stack[3][3]  ; regout           ;
+; |Stack|stack[3][2]  ; |Stack|stack[3][2]  ; regout           ;
+; |Stack|stack[3][1]  ; |Stack|stack[3][1]  ; regout           ;
+; |Stack|stack[3][0]  ; |Stack|stack[3][0]  ; regout           ;
+; |Stack|stack[4][10] ; |Stack|stack[4][10] ; regout           ;
+; |Stack|stack[4][9]  ; |Stack|stack[4][9]  ; regout           ;
+; |Stack|stack[4][8]  ; |Stack|stack[4][8]  ; regout           ;
+; |Stack|stack[4][7]  ; |Stack|stack[4][7]  ; regout           ;
+; |Stack|stack[4][6]  ; |Stack|stack[4][6]  ; regout           ;
+; |Stack|stack[4][5]  ; |Stack|stack[4][5]  ; regout           ;
+; |Stack|stack[4][4]  ; |Stack|stack[4][4]  ; regout           ;
+; |Stack|stack[4][3]  ; |Stack|stack[4][3]  ; regout           ;
+; |Stack|stack[4][2]  ; |Stack|stack[4][2]  ; regout           ;
+; |Stack|stack[4][1]  ; |Stack|stack[4][1]  ; regout           ;
+; |Stack|stack[4][0]  ; |Stack|stack[4][0]  ; regout           ;
+; |Stack|stack[5][10] ; |Stack|stack[5][10] ; regout           ;
+; |Stack|stack[5][9]  ; |Stack|stack[5][9]  ; regout           ;
+; |Stack|stack[5][8]  ; |Stack|stack[5][8]  ; regout           ;
+; |Stack|stack[5][7]  ; |Stack|stack[5][7]  ; regout           ;
+; |Stack|stack[5][6]  ; |Stack|stack[5][6]  ; regout           ;
+; |Stack|stack[5][5]  ; |Stack|stack[5][5]  ; regout           ;
+; |Stack|stack[5][4]  ; |Stack|stack[5][4]  ; regout           ;
+; |Stack|stack[5][3]  ; |Stack|stack[5][3]  ; regout           ;
+; |Stack|stack[5][2]  ; |Stack|stack[5][2]  ; regout           ;
+; |Stack|stack[5][1]  ; |Stack|stack[5][1]  ; regout           ;
+; |Stack|stack[5][0]  ; |Stack|stack[5][0]  ; regout           ;
+; |Stack|stack[6][10] ; |Stack|stack[6][10] ; regout           ;
+; |Stack|stack[6][9]  ; |Stack|stack[6][9]  ; regout           ;
+; |Stack|stack[6][8]  ; |Stack|stack[6][8]  ; regout           ;
+; |Stack|stack[6][7]  ; |Stack|stack[6][7]  ; regout           ;
+; |Stack|stack[6][6]  ; |Stack|stack[6][6]  ; regout           ;
+; |Stack|stack[6][5]  ; |Stack|stack[6][5]  ; regout           ;
+; |Stack|stack[6][4]  ; |Stack|stack[6][4]  ; regout           ;
+; |Stack|stack[6][3]  ; |Stack|stack[6][3]  ; regout           ;
+; |Stack|stack[6][2]  ; |Stack|stack[6][2]  ; regout           ;
+; |Stack|stack[6][1]  ; |Stack|stack[6][1]  ; regout           ;
+; |Stack|stack[6][0]  ; |Stack|stack[6][0]  ; regout           ;
+; |Stack|stack[7][10] ; |Stack|stack[7][10] ; regout           ;
+; |Stack|stack[7][9]  ; |Stack|stack[7][9]  ; regout           ;
+; |Stack|stack[7][8]  ; |Stack|stack[7][8]  ; regout           ;
+; |Stack|stack[7][7]  ; |Stack|stack[7][7]  ; regout           ;
+; |Stack|stack[7][6]  ; |Stack|stack[7][6]  ; regout           ;
+; |Stack|stack[7][5]  ; |Stack|stack[7][5]  ; regout           ;
+; |Stack|stack[7][4]  ; |Stack|stack[7][4]  ; regout           ;
+; |Stack|stack[7][3]  ; |Stack|stack[7][3]  ; regout           ;
+; |Stack|stack[7][2]  ; |Stack|stack[7][2]  ; regout           ;
+; |Stack|stack[7][1]  ; |Stack|stack[7][1]  ; regout           ;
+; |Stack|stack[7][0]  ; |Stack|stack[7][0]  ; regout           ;
+; |Stack|nrst         ; |Stack|nrst         ; out              ;
+; |Stack|stack_in[1]  ; |Stack|stack_in[1]  ; out              ;
+; |Stack|stack_in[3]  ; |Stack|stack_in[3]  ; out              ;
+; |Stack|stack_in[5]  ; |Stack|stack_in[5]  ; out              ;
+; |Stack|stack_in[7]  ; |Stack|stack_in[7]  ; out              ;
+; |Stack|stack_in[9]  ; |Stack|stack_in[9]  ; out              ;
+; |Stack|stack_out[1] ; |Stack|stack_out[1] ; pin_out          ;
+; |Stack|stack_out[3] ; |Stack|stack_out[3] ; pin_out          ;
+; |Stack|stack_out[5] ; |Stack|stack_out[5] ; pin_out          ;
+; |Stack|stack_out[7] ; |Stack|stack_out[7] ; pin_out          ;
+; |Stack|stack_out[9] ; |Stack|stack_out[9] ; pin_out          ;
++---------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 08 22:09:51 2024
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Stack -c Stack
+Info: Using vector source file "D:/Puc/sistemas reconf/Trab2/Stack/Stack.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Stack.vwf called Stack.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      14.04 %
+Info: Number of transitions in simulation is 456
+Info: Vector file Stack.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 147 megabytes
+    Info: Processing ended: Wed May 08 22:09:51 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

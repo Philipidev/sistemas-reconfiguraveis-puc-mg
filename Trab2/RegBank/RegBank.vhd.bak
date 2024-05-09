@@ -1,0 +1,67 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;  -- Correct library for unsigned and to_integer conversions
+
+-- Declaração da entidade RegBank
+entity RegBank is
+    port (
+        clk_in       : in  std_logic;  -- Clock input
+        nrst         : in  std_logic;  -- Asynchronous reset input
+        regn_di      : in  std_logic_vector(7 downto 0);  -- Data input for registers
+        regn_wr_sel  : in  std_logic_vector(2 downto 0);  -- Register write select
+        regn_wr_ena  : in  std_logic;  -- Register write enable
+        regn_rd_sel_a: in  std_logic_vector(2 downto 0);  -- Register read select for output A
+        regn_rd_sel_b: in  std_logic_vector(2 downto 0);  -- Register read select for output B
+        c_flag_in    : in  std_logic;  -- Input for status flag C
+        z_flag_in    : in  std_logic;  -- Input for status flag Z
+        v_flag_in    : in  std_logic;  -- Input for status flag V
+        c_flag_wr_ena: in  std_logic;  -- Write enable for status flag C
+        z_flag_wr_ena: in  std_logic;  -- Write enable for status flag Z
+        v_flag_wr_ena: in  std_logic;  -- Write enable for status flag V
+        regn_do_a    : out std_logic_vector(7 downto 0);  -- Output A
+        regn_do_b    : out std_logic_vector(7 downto 0);  -- Output B
+        c_flag_out   : out std_logic;  -- Output for status flag C
+        z_flag_out   : out std_logic;  -- Output for status flag Z
+        v_flag_out   : out std_logic   -- Output for status flag V
+    );
+end RegBank;
+
+-- Arquitetura comportamental
+architecture Behavioral of RegBank is
+    type reg_array is array (0 to 7) of std_logic_vector(7 downto 0);
+    signal registers : reg_array;  -- Signal to store the registers
+    signal c_flag, z_flag, v_flag : std_logic;  -- Status flags
+begin
+    -- Processo de escrita controlado pelo clock e reset
+    process (clk_in, nrst)
+    begin
+        if nrst = '0' then
+            registers <= (others => (others => '0'));
+            c_flag <= '0';
+            z_flag <= '0';
+            v_flag <= '0';
+        elsif rising_edge(clk_in) then
+            if regn_wr_ena = '1' then
+                registers(to_integer(unsigned(regn_wr_sel))) <= regn_di;
+            end if;
+            if c_flag_wr_ena = '1' then
+                c_flag <= c_flag_in;
+            end if;
+            if z_flag_wr_ena = '1' then
+                z_flag <= z_flag_in;
+            end if;
+            if v_flag_wr_ena = '1' then
+                v_flag <= v_flag_in;
+            end if;
+        end if;
+    end process;
+
+    -- Processo de leitura assíncrona
+    regn_do_a <= registers(to_integer(unsigned(regn_rd_sel_a)));
+    regn_do_b <= registers(to_integer(unsigned(regn_rd_sel_b)));
+
+    -- Saídas dos flags
+    c_flag_out <= c_flag;
+    z_flag_out <= z_flag;
+    v_flag_out <= v_flag;
+end Behavioral;
