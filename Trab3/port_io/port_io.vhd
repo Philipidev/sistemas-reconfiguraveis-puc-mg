@@ -1,0 +1,83 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL; -- Biblioteca para operações aritméticas e tipos unsigned
+
+entity port_io is
+    generic (
+        base_addr : std_logic_vector(7 downto 0) := x"00" -- Endereço base para os registradores com valor padrão
+    );
+    port (
+        nrst     : in  std_logic; -- Entrada de reset assíncrono
+        clk_in   : in  std_logic; -- Entrada de clock do sistema
+        abus     : in  std_logic_vector(7 downto 0); -- Barramento de endereços
+        dbus     : inout std_logic_vector(7 downto 0); -- Barramento de dados bidirecional
+        wr_en    : in  std_logic; -- Habilitação para escrita
+        rd_en    : in  std_logic; -- Habilitação para leitura
+        port_io  : inout std_logic_vector(7 downto 0) -- Porta de E/S bidirecional
+    );
+end port_io;
+
+architecture Behavioral of port_io is
+    -- Registradores internos
+    signal dir_reg  : std_logic_vector(7 downto 0) := (others => '0'); -- Configuração da direção dos pinos
+    signal port_reg : std_logic_vector(7 downto 0) := (others => '0'); -- Armazena os dados de saída
+    signal latch    : std_logic_vector(7 downto 0); -- Armazena os dados de entrada temporariamente
+
+begin
+    -- Processo de reset e escrita nos registradores
+    process(nrst, clk_in)
+    begin
+        if nrst = '0' then
+            -- Reset assíncrono: zera todos os registradores
+            dir_reg  <= (others => '0');
+            port_reg <= (others => '0');
+        elsif rising_edge(clk_in) then
+            if wr_en = '1' then
+                if abus = base_addr then
+                    -- Escreve no registrador port_reg
+                    port_reg <= dbus;
+                elsif abus = std_logic_vector(to_unsigned(to_integer(unsigned(base_addr)) + 1, 8)) then
+                    -- Escreve no registrador dir_reg
+                    dir_reg <= dbus;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- Processo de leitura dos registradores
+    process(rd_en, abus, latch, dir_reg)
+    begin
+        if rd_en = '1' then
+            if abus = base_addr then
+                -- Leitura do latch (estado dos pinos de entrada)
+                dbus <= latch;
+            elsif abus = std_logic_vector(to_unsigned(to_integer(unsigned(base_addr)) + 1, 8)) then
+                -- Leitura do registrador dir_reg (configuração das direções)
+                dbus <= dir_reg;
+            else
+                -- Alta impedância se o endereço não corresponder
+                dbus <= (others => 'Z');
+            end if;
+        else
+            -- Alta impedância quando rd_en não está ativo
+            dbus <= (others => 'Z');
+        end if;
+    end process;
+
+    -- Lógica de interfaceamento com a porta de E/S
+    gen_io: for i in 0 to 7 generate
+    begin
+        process(dir_reg, port_reg, port_io)
+        begin
+            if dir_reg(i) = '1' then
+                -- Configura o pino como saída
+                port_io(i) <= port_reg(i);
+            else
+                -- Configura o pino como entrada e armazena o valor no latch
+                latch(i) <= port_io(i);
+                port_io(i) <= 'Z'; -- Alta impedância quando é entrada
+            end if;
+        end process;
+    end generate;
+
+end Behavioral;
