@@ -173,5 +173,3 @@ O código VHDL implementa o processador PUC-241, que é capaz de executar uma va
 Para mais detalhes, consulte o código completo no arquivo [puc241.vhd](./puc241.vhd).
 
 ---
-
-Certifique-se de que a imagem `schema.png` e o arquivo `puc241.vhd` estejam presentes na pasta correta no repositório GitHub.
