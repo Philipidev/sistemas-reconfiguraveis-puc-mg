@@ -156,7 +156,7 @@ Essa instrução não tem efeito algum. O programa continua normalmente com a in
 
 ## Código VHDL
 
-O código VHDL do processador pode ser encontrado no arquivo [puc241.vhd](./puc241.vhd).
+O código VHDL do processador pode ser encontrado no arquivo [puc241.vhd](./puc_241.vhd).
 
 ## Explicação do Código VHDL
 
@@ -170,6 +170,6 @@ O código VHDL implementa o processador PUC-241, que é capaz de executar uma va
 
 - **Execução da Instrução**: Dependendo do tipo de instrução, os sinais de controle apropriados são ativados para realizar a operação desejada, como leitura/escrita de memória, operações aritméticas/lógicas, saltos condicionais, entre outros.
 
-Para mais detalhes, consulte o código completo no arquivo [puc241.vhd](./puc241.vhd).
+Para mais detalhes, consulte o código completo no arquivo [puc241.vhd](./puc_241.vhd).
 
 ---
