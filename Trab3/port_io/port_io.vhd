@@ -1,83 +1,93 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL; -- Biblioteca para operações aritméticas e tipos unsigned
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
+-- Definição da entidade port_io
 entity port_io is
     generic (
-        base_addr : std_logic_vector(7 downto 0) := x"00" -- Endereço base para os registradores com valor padrão
+        base_addr : std_logic_vector(7 downto 0) := "00000000"  -- Endereço base configurável
     );
     port (
-        nrst     : in  std_logic; -- Entrada de reset assíncrono
-        clk_in   : in  std_logic; -- Entrada de clock do sistema
-        abus     : in  std_logic_vector(7 downto 0); -- Barramento de endereços
-        dbus     : inout std_logic_vector(7 downto 0); -- Barramento de dados bidirecional
-        wr_en    : in  std_logic; -- Habilitação para escrita
-        rd_en    : in  std_logic; -- Habilitação para leitura
-        port_io  : inout std_logic_vector(7 downto 0) -- Porta de E/S bidirecional
+        nrst   : in  std_logic;  -- Entrada de reset assíncrono
+        clk_in : in  std_logic;  -- Entrada de clock do sistema
+        abus   : in  std_logic_vector(7 downto 0);  -- Barramento de endereços
+        dbus   : inout std_logic_vector(7 downto 0);  -- Barramento bidirecional de dados
+        wr_en  : in  std_logic;  -- Habilitação de escrita
+        rd_en  : in  std_logic;  -- Habilitação de leitura
+        port_io: inout std_logic_vector(7 downto 0)  -- Porta bidirecional
     );
 end port_io;
 
+-- Arquitetura comportamental da entidade port_io
 architecture Behavioral of port_io is
-    -- Registradores internos
-    signal dir_reg  : std_logic_vector(7 downto 0) := (others => '0'); -- Configuração da direção dos pinos
-    signal port_reg : std_logic_vector(7 downto 0) := (others => '0'); -- Armazena os dados de saída
-    signal latch    : std_logic_vector(7 downto 0); -- Armazena os dados de entrada temporariamente
-
+    -- Sinais internos para os registradores
+    signal dir_reg : std_logic_vector(7 downto 0) := (others => '0');  -- Registrador de direção
+    signal port_reg: std_logic_vector(7 downto 0) := (others => '0');  -- Registrador de porta
+    signal latch   : std_logic_vector(7 downto 0);  -- Latch para leitura dos pinos
+    signal dbus_internal: std_logic_vector(7 downto 0);  -- Sinal interno para o barramento de dados
 begin
-    -- Processo de reset e escrita nos registradores
+    -- Processo para tratar o reset assíncrono e as escritas síncronas
     process(nrst, clk_in)
     begin
         if nrst = '0' then
-            -- Reset assíncrono: zera todos os registradores
-            dir_reg  <= (others => '0');
+            -- Reset assíncrono: zera os registradores
+            dir_reg <= (others => '0');
             port_reg <= (others => '0');
         elsif rising_edge(clk_in) then
             if wr_en = '1' then
+                -- Escreve no registrador de porta ou de direção dependendo do endereço
                 if abus = base_addr then
-                    -- Escreve no registrador port_reg
                     port_reg <= dbus;
-                elsif abus = std_logic_vector(to_unsigned(to_integer(unsigned(base_addr)) + 1, 8)) then
-                    -- Escreve no registrador dir_reg
+                elsif abus = base_addr + 1 then
                     dir_reg <= dbus;
                 end if;
             end if;
         end if;
     end process;
 
-    -- Processo de leitura dos registradores
-    process(rd_en, abus, latch, dir_reg)
+    -- Processo para tratar a direção e os dados da porta
+    process(dir_reg, port_reg)
+    begin
+        for i in 0 to 7 loop
+            if dir_reg(i) = '0' then
+                port_io(i) <= 'Z';  -- Alta impedância quando configurado como entrada
+            else
+                port_io(i) <= port_reg(i);  -- Valor de saída quando configurado como saída
+            end if;
+        end loop;
+    end process;
+
+    -- Processo para travar as entradas de port_io quando configuradas como entradas
+    process(port_io, dir_reg)
+    begin
+        for i in 0 to 7 loop
+            if dir_reg(i) = '0' then
+                latch(i) <= port_io(i);  -- Lê o valor dos pinos de entrada
+            else
+                latch(i) <= '0';
+            end if;
+        end loop;
+    end process;
+
+    -- Processo para tratar as operações de leitura
+    process(rd_en, abus)
     begin
         if rd_en = '1' then
+            -- Leitura dos registradores ou latch dependendo do endereço
             if abus = base_addr then
-                -- Leitura do latch (estado dos pinos de entrada)
-                dbus <= latch;
-            elsif abus = std_logic_vector(to_unsigned(to_integer(unsigned(base_addr)) + 1, 8)) then
-                -- Leitura do registrador dir_reg (configuração das direções)
-                dbus <= dir_reg;
+                dbus_internal <= latch;
+            elsif abus = base_addr + 1 then
+                dbus_internal <= dir_reg;
             else
-                -- Alta impedância se o endereço não corresponder
-                dbus <= (others => 'Z');
+                dbus_internal <= (others => 'Z');
             end if;
         else
-            -- Alta impedância quando rd_en não está ativo
-            dbus <= (others => 'Z');
+            dbus_internal <= (others => 'Z');
         end if;
     end process;
 
-    -- Lógica de interfaceamento com a porta de E/S
-    gen_io: for i in 0 to 7 generate
-    begin
-        process(dir_reg, port_reg, port_io)
-        begin
-            if dir_reg(i) = '1' then
-                -- Configura o pino como saída
-                port_io(i) <= port_reg(i);
-            else
-                -- Configura o pino como entrada e armazena o valor no latch
-                latch(i) <= port_io(i);
-                port_io(i) <= 'Z'; -- Alta impedância quando é entrada
-            end if;
-        end process;
-    end generate;
-
+    -- Buffer tri-state para o barramento de dados
+    dbus <= dbus_internal when rd_en = '1' else (others => 'Z');
+    
 end Behavioral;

@@ -1,5 +1,5 @@
 Assembler report for ram_256x8
-Sat May 18 17:24:07 2024
+Thu May 30 17:35:50 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat May 18 17:24:07 2024 ;
+; Assembler Status      ; Successful - Thu May 30 17:35:50 2024 ;
 ; Revision Name         ; ram_256x8                             ;
 ; Top-level Entity Name ; ram_256x8                             ;
 ; Family                ; Cyclone II                            ;
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat May 18 17:24:06 2024
+    Info: Processing started: Thu May 30 17:35:49 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ram_256x8 -c ram_256x8
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 265 megabytes
-    Info: Processing ended: Sat May 18 17:24:07 2024
+    Info: Processing ended: Thu May 30 17:35:50 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -7,7 +7,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 11.027 ns
 From           : addr[5]
-To             : ram[102][7]
+To             : memory[102][7]
 From Clock     : --
 To Clock       : clk_in
 Failed Paths   : 0
@@ -16,7 +16,7 @@ Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
 Actual Time    : 19.818 ns
-From           : ram[8][1]
+From           : memory[8][1]
 To             : dio[1]
 From Clock     : clk_in
 To Clock       : --
@@ -37,7 +37,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : -1.508 ns
 From           : addr[2]
-To             : ram[153][1]
+To             : memory[153][1]
 From Clock     : --
 To Clock       : clk_in
 Failed Paths   : 0

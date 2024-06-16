@@ -72,6 +72,13 @@ applicable agreement for further details.
 		(text "z_out" (rect 114 59 139 71)(font "Arial" ))
 		(line (pt 160 64)(pt 144 64)(line_width 1))
 	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "v_out" (rect 0 0 28 12)(font "Arial" ))
+		(text "v_out" (rect 111 75 139 87)(font "Arial" ))
+		(line (pt 160 80)(pt 144 80)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 144 112)(line_width 1))
 	)
