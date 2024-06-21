@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="puc_241">
+		<CBX_INST_ENTRY INSTANCE_NAME="|puc_241_esquema|BUSMUX:inst7|lpm_mux:$00000" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|puc_241_esquema|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|puc_241_esquema|rom_2k_16:inst11|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_me71.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

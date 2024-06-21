@@ -294,9 +294,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1808 720 1984 736)
+	(rect 1800 656 1976 672)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "dext[7..0]" (rect 90 0 137 12)(font "Arial" ))
+	(text "rom_q[15..0]" (rect 90 0 152 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -310,9 +310,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1800 656 1976 672)
+	(rect 1808 720 1984 736)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "rom_q[15..0]" (rect 90 0 152 12)(font "Arial" ))
+	(text "dext[7..0]" (rect 90 0 137 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -1315,15 +1315,6 @@ applicable agreement for further details.
 	(pt 1080 184)
 )
 (connector
-	(text "dext[7..0]" (rect 842 216 889 228)(font "Arial" ))
-	(pt 808 232)
-	(pt 1000 232)
-)
-(connector
-	(pt 1048 232)
-	(pt 1568 232)
-)
-(connector
 	(pt 1032 424)
 	(pt 1032 448)
 )
@@ -1333,27 +1324,8 @@ applicable agreement for further details.
 	(pt 960 448)
 )
 (connector
-	(pt 1568 320)
-	(pt 1568 232)
-)
-(connector
-	(pt 808 328)
-	(pt 808 368)
-	(bus)
-)
-(connector
 	(pt 808 368)
 	(pt 808 496)
-	(bus)
-)
-(connector
-	(pt 808 208)
-	(pt 808 232)
-	(bus)
-)
-(connector
-	(pt 808 232)
-	(pt 808 328)
 	(bus)
 )
 (connector
@@ -1602,11 +1574,6 @@ applicable agreement for further details.
 	(pt 1784 1072)
 )
 (connector
-	(text "dext[7..0]" (rect 1717 712 1764 724)(font "Arial" ))
-	(pt 1808 728)
-	(pt 1712 728)
-)
-(connector
 	(text "rom_q[15..0]" (rect 1668 648 1730 660)(font "Arial" ))
 	(pt 1648 664)
 	(pt 1800 664)
@@ -1704,21 +1671,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1568 352)
-	(pt 1568 320)
-	(bus)
-)
-(connector
-	(pt 1512 352)
-	(pt 1568 352)
-	(bus)
-)
-(connector
-	(pt 1568 352)
-	(pt 1976 352)
-	(bus)
-)
-(connector
 	(text "rom_q[10..8]" (rect 1224 384 1286 396)(font "Arial" ))
 	(pt 1216 400)
 	(pt 1288 400)
@@ -1786,9 +1738,50 @@ applicable agreement for further details.
 	(pt 1288 544)
 	(pt 1216 544)
 )
+(connector
+	(pt 1568 232)
+	(pt 1568 352)
+	(bus)
+)
+(connector
+	(pt 1512 352)
+	(pt 1568 352)
+	(bus)
+)
+(connector
+	(pt 1568 352)
+	(pt 1976 352)
+	(bus)
+)
+(connector
+	(pt 1568 232)
+	(pt 1048 232)
+	(bus)
+)
+(connector
+	(pt 808 232)
+	(pt 808 328)
+	(bus)
+)
+(connector
+	(pt 808 328)
+	(pt 808 368)
+	(bus)
+)
+(connector
+	(text "dext[7..0]" (rect 838 216 885 228)(font "Arial" ))
+	(pt 808 232)
+	(pt 1000 232)
+	(bus)
+)
+(connector
+	(text "dext[7..0]" (rect 1752 712 1799 724)(font "Arial" ))
+	(pt 1808 728)
+	(pt 1744 728)
+	(bus)
+)
 (junction (pt 808 672))
 (junction (pt 808 496))
 (junction (pt 808 328))
 (junction (pt 808 368))
-(junction (pt 808 232))
 (junction (pt 1568 352))
