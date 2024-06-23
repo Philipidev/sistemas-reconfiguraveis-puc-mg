@@ -1,5 +1,5 @@
 Fitter report for Prog_cnt
-Wed May 08 22:28:48 2024
+Sun Jun 23 13:58:42 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -61,7 +61,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 08 22:28:48 2024        ;
+; Fitter Status                      ; Successful - Sun Jun 23 13:58:42 2024        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Prog_cnt                                     ;
 ; Top-level Entity Name              ; Prog_cnt                                     ;
@@ -223,7 +223,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out node                        ; pc_ctrl[0]            ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out signal           ; pc_ctrl[0]            ;
@@ -241,31 +241,31 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clk_in         ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[0]  ; K6    ; 2        ; 0            ; 30           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[10] ; B8    ; 3        ; 16           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[1]  ; H8    ; 3        ; 7            ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[2]  ; F10   ; 3        ; 14           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[3]  ; J5    ; 2        ; 0            ; 31           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[4]  ; E10   ; 3        ; 18           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[5]  ; C9    ; 3        ; 16           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[6]  ; F11   ; 3        ; 18           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[7]  ; D9    ; 3        ; 16           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[8]  ; B7    ; 3        ; 11           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; from_stack[9]  ; G4    ; 2        ; 0            ; 30           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[0]  ; H8    ; 3        ; 7            ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[10] ; J11   ; 3        ; 27           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[1]  ; J13   ; 3        ; 24           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[2]  ; F9    ; 3        ; 9            ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[3]  ; A8    ; 3        ; 16           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[4]  ; J10   ; 3        ; 27           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[5]  ; F12   ; 3        ; 27           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[6]  ; D11   ; 3        ; 22           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[7]  ; C12   ; 3        ; 29           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[8]  ; D9    ; 3        ; 16           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; from_stack[9]  ; E12   ; 3        ; 24           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; new_pc_in[0]   ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[10]  ; Y10   ; 8        ; 7            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[1]   ; D7    ; 3        ; 9            ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[2]   ; H6    ; 2        ; 0            ; 31           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[3]   ; D6    ; 3        ; 11           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[4]   ; C3    ; 2        ; 0            ; 33           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[5]   ; A8    ; 3        ; 16           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[6]   ; D5    ; 3        ; 5            ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[7]   ; C7    ; 3        ; 9            ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[8]   ; G10   ; 3        ; 14           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; new_pc_in[9]   ; F6    ; 2        ; 0            ; 33           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[10]  ; J14   ; 3        ; 24           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[1]   ; B10   ; 3        ; 22           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[2]   ; C9    ; 3        ; 16           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[3]   ; H12   ; 3        ; 18           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[4]   ; H11   ; 3        ; 18           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[5]   ; D6    ; 3        ; 11           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[6]   ; B12   ; 3        ; 29           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[7]   ; C8    ; 3        ; 14           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[8]   ; AC9   ; 8        ; 20           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; new_pc_in[9]   ; C10   ; 3        ; 20           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; nrst           ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; pc_ctrl[0]     ; D13   ; 3        ; 31           ; 36           ; 3           ; 17                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; pc_ctrl[1]     ; H12   ; 3        ; 18           ; 36           ; 2           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; pc_ctrl[1]     ; D10   ; 3        ; 20           ; 36           ; 0           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -274,28 +274,28 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; next_pc_out[0]  ; J7    ; 2        ; 0            ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[10] ; K9    ; 3        ; 5            ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[1]  ; A5    ; 3        ; 3            ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[0]  ; B7    ; 3        ; 11           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[10] ; F21   ; 5        ; 65           ; 34           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[1]  ; D12   ; 3        ; 24           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; next_pc_out[2]  ; H10   ; 3        ; 7            ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[3]  ; D8    ; 3        ; 14           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[4]  ; F9    ; 3        ; 9            ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[5]  ; H11   ; 3        ; 18           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[6]  ; J9    ; 3        ; 5            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[7]  ; A7    ; 3        ; 11           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[8]  ; J8    ; 2        ; 0            ; 31           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; next_pc_out[9]  ; B5    ; 3        ; 3            ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[0]       ; C8    ; 3        ; 14           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[10]      ; B6    ; 3        ; 3            ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[1]       ; F4    ; 2        ; 0            ; 32           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[2]       ; F3    ; 2        ; 0            ; 32           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[3]       ; C4    ; 3        ; 5            ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[4]       ; G9    ; 3        ; 7            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[5]       ; E8    ; 3        ; 7            ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[6]       ; D1    ; 2        ; 0            ; 32           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[7]       ; A6    ; 3        ; 3            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[8]       ; D2    ; 2        ; 0            ; 32           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; pc_out[9]       ; F7    ; 2        ; 0            ; 32           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[3]  ; G10   ; 3        ; 14           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[4]  ; D8    ; 3        ; 14           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[5]  ; F10   ; 3        ; 14           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[6]  ; B2    ; 2        ; 0            ; 34           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[7]  ; C7    ; 3        ; 9            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[8]  ; A9    ; 3        ; 20           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; next_pc_out[9]  ; C11   ; 3        ; 29           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[0]       ; B11   ; 3        ; 29           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[10]      ; A7    ; 3        ; 11           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[1]       ; D14   ; 4        ; 33           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[2]       ; G12   ; 3        ; 27           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[3]       ; E10   ; 3        ; 18           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[4]       ; B8    ; 3        ; 16           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[5]       ; F11   ; 3        ; 18           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[6]       ; A10   ; 3        ; 22           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[7]       ; D7    ; 3        ; 9            ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[8]       ; B9    ; 3        ; 20           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; pc_out[9]       ; G11   ; 3        ; 22           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -305,10 +305,10 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 2 / 64 ( 3 % )   ; 3.3V          ; --           ;
-; 2        ; 15 / 59 ( 25 % ) ; 3.3V          ; --           ;
-; 3        ; 32 / 56 ( 57 % ) ; 3.3V          ; --           ;
-; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
+; 3        ; 42 / 56 ( 75 % ) ; 3.3V          ; --           ;
+; 4        ; 1 / 58 ( 2 % )   ; 3.3V          ; --           ;
+; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
 ; 8        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
@@ -323,12 +323,12 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; A2       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A3       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A4       ; 484        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A5       ; 482        ; 3        ; next_pc_out[1]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A6       ; 479        ; 3        ; pc_out[7]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A7       ; 465        ; 3        ; next_pc_out[7]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A8       ; 457        ; 3        ; new_pc_in[5]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A9       ; 451        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A10      ; 447        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A5       ; 482        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A6       ; 479        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A7       ; 465        ; 3        ; pc_out[10]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A8       ; 457        ; 3        ; from_stack[3]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A9       ; 451        ; 3        ; next_pc_out[8]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 447        ; 3        ; pc_out[6]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A13      ; 430        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -404,7 +404,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; AC6      ; 134        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC7      ; 143        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC8      ; 148        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC9      ; 163        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC9      ; 163        ; 8        ; new_pc_in[8]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC10     ; 164        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC11     ; 168        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 172        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -499,17 +499,17 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B2       ; 2          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B2       ; 2          ; 2        ; next_pc_out[6]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B3       ; 3          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; B4       ; 483        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B5       ; 481        ; 3        ; next_pc_out[9]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B6       ; 480        ; 3        ; pc_out[10]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B7       ; 466        ; 3        ; from_stack[8]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B8       ; 458        ; 3        ; from_stack[10]                           ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B9       ; 452        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B10      ; 448        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B11      ; 435        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B12      ; 433        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B5       ; 481        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B6       ; 480        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B7       ; 466        ; 3        ; next_pc_out[0]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 458        ; 3        ; pc_out[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 452        ; 3        ; pc_out[8]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B10      ; 448        ; 3        ; new_pc_in[1]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 435        ; 3        ; pc_out[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 433        ; 3        ; new_pc_in[6]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B14      ; 428        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -526,16 +526,16 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; B26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C2       ; 6          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C3       ; 7          ; 2        ; new_pc_in[4]                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; C4       ; 478        ; 3        ; pc_out[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C3       ; 7          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C4       ; 478        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 486        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C6       ; 485        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C7       ; 468        ; 3        ; new_pc_in[7]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C8       ; 463        ; 3        ; pc_out[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C9       ; 459        ; 3        ; from_stack[5]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C10      ; 450        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C11      ; 436        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C12      ; 434        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C7       ; 468        ; 3        ; next_pc_out[7]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C8       ; 463        ; 3        ; new_pc_in[7]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C9       ; 459        ; 3        ; new_pc_in[2]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C10      ; 450        ; 3        ; new_pc_in[9]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 436        ; 3        ; next_pc_out[9]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C12      ; 434        ; 3        ; from_stack[7]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; new_pc_in[0]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 421        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -550,20 +550,20 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; C24      ; 360        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C25      ; 361        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; D1       ; 13         ; 2        ; pc_out[6]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D2       ; 12         ; 2        ; pc_out[8]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D1       ; 13         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D2       ; 12         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D5       ; 477        ; 3        ; new_pc_in[6]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D6       ; 467        ; 3        ; new_pc_in[3]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D7       ; 469        ; 3        ; new_pc_in[1]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D8       ; 464        ; 3        ; next_pc_out[3]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D9       ; 460        ; 3        ; from_stack[7]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D10      ; 449        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D11      ; 445        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D12      ; 443        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D5       ; 477        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D6       ; 467        ; 3        ; new_pc_in[5]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D7       ; 469        ; 3        ; pc_out[7]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D8       ; 464        ; 3        ; next_pc_out[4]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 460        ; 3        ; from_stack[8]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 449        ; 3        ; pc_ctrl[1]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D11      ; 445        ; 3        ; from_stack[6]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D12      ; 443        ; 3        ; next_pc_out[1]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; pc_ctrl[0]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D14      ; 426        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D14      ; 426        ; 4        ; pc_out[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D17      ; 403        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -583,11 +583,11 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; E5       ; 4          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E6       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E7       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E8       ; 474        ; 3        ; pc_out[5]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E8       ; 474        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E10      ; 453        ; 3        ; from_stack[4]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E10      ; 453        ; 3        ; pc_out[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E12      ; 444        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E12      ; 444        ; 3        ; from_stack[9]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E13      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E15      ; 416        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -604,16 +604,16 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; E26      ; 356        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 29         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F3       ; 10         ; 2        ; pc_out[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F4       ; 11         ; 2        ; pc_out[1]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F3       ; 10         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F4       ; 11         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F6       ; 5          ; 2        ; new_pc_in[9]                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F7       ; 14         ; 2        ; pc_out[9]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F6       ; 5          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F7       ; 14         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F9       ; 470        ; 3        ; next_pc_out[4]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F10      ; 462        ; 3        ; from_stack[2]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F11      ; 454        ; 3        ; from_stack[6]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F12      ; 440        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F9       ; 470        ; 3        ; from_stack[2]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F10      ; 462        ; 3        ; next_pc_out[5]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F11      ; 454        ; 3        ; pc_out[5]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F12      ; 440        ; 3        ; from_stack[5]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F13      ; 423        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F14      ; 425        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F15      ; 409        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -622,7 +622,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; F18      ; 398        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F20      ; 372        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F21      ; 371        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F21      ; 371        ; 5        ; next_pc_out[10]                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F23      ; 353        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F24      ; 354        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -631,15 +631,15 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; G1       ; 30         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G2       ; 31         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G3       ; 24         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G4       ; 23         ; 2        ; from_stack[9]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G4       ; 23         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G5       ; 8          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G6       ; 9          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G9       ; 471        ; 3        ; pc_out[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G10      ; 461        ; 3        ; new_pc_in[8]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G11      ; 446        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G12      ; 439        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G9       ; 471        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G10      ; 461        ; 3        ; next_pc_out[3]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G11      ; 446        ; 3        ; pc_out[9]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G12      ; 439        ; 3        ; pc_out[2]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G13      ; 422        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G14      ; 424        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G15      ; 410        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -659,13 +659,13 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; H3       ; 32         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H4       ; 33         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H6       ; 18         ; 2        ; new_pc_in[2]                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H6       ; 18         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H7       ;            ;          ; VCCD_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; H8       ; 473        ; 3        ; from_stack[1]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H8       ; 473        ; 3        ; from_stack[0]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H10      ; 472        ; 3        ; next_pc_out[2]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H11      ; 456        ; 3        ; next_pc_out[5]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H12      ; 455        ; 3        ; pc_ctrl[1]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H11      ; 456        ; 3        ; new_pc_in[4]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H12      ; 455        ; 3        ; new_pc_in[3]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H15      ; 414        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -684,16 +684,16 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; J2       ; 38         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J3       ; 34         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J4       ; 35         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J5       ; 15         ; 2        ; from_stack[3]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J5       ; 15         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J6       ; 25         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J7       ; 17         ; 2        ; next_pc_out[0]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J8       ; 16         ; 2        ; next_pc_out[8]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J9       ; 475        ; 3        ; next_pc_out[6]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J10      ; 438        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J11      ; 437        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J7       ; 17         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J8       ; 16         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J9       ; 475        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J10      ; 438        ; 3        ; from_stack[4]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J11      ; 437        ; 3        ; from_stack[10]                           ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J12      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J13      ; 442        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J14      ; 441        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J13      ; 442        ; 3        ; from_stack[1]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J14      ; 441        ; 3        ; new_pc_in[10]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ; 385        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J17      ; 399        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -711,10 +711,10 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; K3       ; 41         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K4       ; 40         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K5       ; 22         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K6       ; 21         ; 2        ; from_stack[0]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K6       ; 21         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K7       ; 27         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K8       ; 26         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K9       ; 476        ; 3        ; next_pc_out[10]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K9       ; 476        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; K10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -975,7 +975,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Prog_cnt/Prog_cnt.
 ; Y7       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y8       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y9       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y10      ; 146        ; 8        ; new_pc_in[10]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y10      ; 146        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y11      ; 156        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y12      ; 180        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y13      ; 193        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1048,17 +1048,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------+---------------+---------------+-----------------------+-----+
 ; Name            ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +-----------------+----------+---------------+---------------+-----------------------+-----+
-; next_pc_out[0]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[1]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[2]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[3]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[4]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[5]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[6]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[7]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[8]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[9]  ; Output   ; --            ; --            ; --                    ; --  ;
-; next_pc_out[10] ; Output   ; --            ; --            ; --                    ; --  ;
 ; pc_out[0]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; pc_out[1]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; pc_out[2]       ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1070,17 +1059,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; pc_out[8]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; pc_out[9]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; pc_out[10]      ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[1]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[2]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[3]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[4]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[5]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[6]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[7]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[8]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[9]  ; Output   ; --            ; --            ; --                    ; --  ;
+; next_pc_out[10] ; Output   ; --            ; --            ; --                    ; --  ;
 ; new_pc_in[0]    ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
 ; pc_ctrl[0]      ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
-; from_stack[0]   ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; from_stack[0]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; pc_ctrl[1]      ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[1]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; new_pc_in[1]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
-; new_pc_in[2]    ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; new_pc_in[2]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[2]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
-; from_stack[3]   ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; from_stack[3]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; new_pc_in[3]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
-; new_pc_in[4]    ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; new_pc_in[4]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[4]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[5]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; new_pc_in[5]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
@@ -1090,8 +1090,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; new_pc_in[7]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; new_pc_in[8]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[8]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
-; from_stack[9]   ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; new_pc_in[9]    ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; from_stack[9]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
+; new_pc_in[9]    ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; new_pc_in[10]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; from_stack[10]  ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; clk_in          ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
@@ -1107,7 +1107,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; new_pc_in[0]        ;                   ;         ;
 ; pc_ctrl[0]          ;                   ;         ;
 ; from_stack[0]       ;                   ;         ;
-;      - Mux10~0      ; 1                 ; 6       ;
+;      - Mux10~0      ; 0                 ; 6       ;
 ; pc_ctrl[1]          ;                   ;         ;
 ;      - Mux10~0      ; 1                 ; 6       ;
 ;      - Mux9~0       ; 1                 ; 6       ;
@@ -1126,39 +1126,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux1~1       ; 1                 ; 6       ;
 ;      - Mux0~0       ; 1                 ; 6       ;
 ; from_stack[1]       ;                   ;         ;
-;      - Mux9~1       ; 1                 ; 6       ;
+;      - Mux9~1       ; 0                 ; 6       ;
 ; new_pc_in[1]        ;                   ;         ;
 ;      - Mux9~0       ; 0                 ; 6       ;
 ; new_pc_in[2]        ;                   ;         ;
-;      - Mux8~1       ; 1                 ; 6       ;
+;      - Mux8~1       ; 0                 ; 6       ;
 ; from_stack[2]       ;                   ;         ;
-;      - Mux8~0       ; 0                 ; 6       ;
+;      - Mux8~0       ; 1                 ; 6       ;
 ; from_stack[3]       ;                   ;         ;
-;      - Mux7~1       ; 0                 ; 6       ;
+;      - Mux7~1       ; 1                 ; 6       ;
 ; new_pc_in[3]        ;                   ;         ;
-;      - Mux7~0       ; 1                 ; 6       ;
+;      - Mux7~0       ; 0                 ; 6       ;
 ; new_pc_in[4]        ;                   ;         ;
-;      - Mux6~1       ; 1                 ; 6       ;
+;      - Mux6~1       ; 0                 ; 6       ;
 ; from_stack[4]       ;                   ;         ;
 ;      - Mux6~0       ; 0                 ; 6       ;
 ; from_stack[5]       ;                   ;         ;
 ;      - Mux5~1       ; 1                 ; 6       ;
 ; new_pc_in[5]        ;                   ;         ;
-;      - Mux5~0       ; 0                 ; 6       ;
+;      - Mux5~0       ; 1                 ; 6       ;
 ; new_pc_in[6]        ;                   ;         ;
 ;      - Mux4~1       ; 0                 ; 6       ;
 ; from_stack[6]       ;                   ;         ;
 ;      - Mux4~0       ; 0                 ; 6       ;
 ; from_stack[7]       ;                   ;         ;
-;      - Mux3~1       ; 1                 ; 6       ;
+;      - Mux3~1       ; 0                 ; 6       ;
 ; new_pc_in[7]        ;                   ;         ;
 ;      - Mux3~0       ; 0                 ; 6       ;
 ; new_pc_in[8]        ;                   ;         ;
-;      - Mux2~1       ; 0                 ; 6       ;
+;      - Mux2~1       ; 1                 ; 6       ;
 ; from_stack[8]       ;                   ;         ;
 ;      - Mux2~0       ; 0                 ; 6       ;
 ; from_stack[9]       ;                   ;         ;
-;      - Mux1~1       ; 1                 ; 6       ;
+;      - Mux1~1       ; 0                 ; 6       ;
 ; new_pc_in[9]        ;                   ;         ;
 ;      - Mux1~0       ; 0                 ; 6       ;
 ; new_pc_in[10]       ;                   ;         ;
@@ -1197,17 +1197,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------------+
 ; pc_ctrl[0]     ; 17             ;
 ; pc_ctrl[1]     ; 16             ;
-; pc[10]         ; 3              ;
-; pc[9]          ; 3              ;
-; pc[8]          ; 3              ;
-; pc[7]          ; 3              ;
-; pc[6]          ; 3              ;
-; pc[5]          ; 3              ;
-; pc[4]          ; 3              ;
-; pc[3]          ; 3              ;
-; pc[2]          ; 3              ;
-; pc[1]          ; 3              ;
-; pc[0]          ; 3              ;
+; pc_reg[10]     ; 3              ;
+; pc_reg[9]      ; 3              ;
+; pc_reg[8]      ; 3              ;
+; pc_reg[7]      ; 3              ;
+; pc_reg[6]      ; 3              ;
+; pc_reg[5]      ; 3              ;
+; pc_reg[4]      ; 3              ;
+; pc_reg[3]      ; 3              ;
+; pc_reg[2]      ; 3              ;
+; pc_reg[1]      ; 3              ;
+; pc_reg[0]      ; 3              ;
 ; Mux0~1         ; 2              ;
 ; Mux1~1         ; 2              ;
 ; Mux2~1         ; 2              ;
@@ -1253,14 +1253,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 80 / 94,460 ( < 1 % ) ;
-; C16 interconnects          ; 8 / 3,315 ( < 1 % )   ;
-; C4 interconnects           ; 42 / 60,840 ( < 1 % ) ;
-; Direct links               ; 24 / 94,460 ( < 1 % ) ;
+; Block interconnects        ; 74 / 94,460 ( < 1 % ) ;
+; C16 interconnects          ; 4 / 3,315 ( < 1 % )   ;
+; C4 interconnects           ; 48 / 60,840 ( < 1 % ) ;
+; Direct links               ; 22 / 94,460 ( < 1 % ) ;
 ; Global clocks              ; 2 / 16 ( 13 % )       ;
-; Local interconnects        ; 17 / 33,216 ( < 1 % ) ;
-; R24 interconnects          ; 12 / 3,091 ( < 1 % )  ;
-; R4 interconnects           ; 56 / 81,294 ( < 1 % ) ;
+; Local interconnects        ; 20 / 33,216 ( < 1 % ) ;
+; R24 interconnects          ; 1 / 3,091 ( < 1 % )   ;
+; R4 interconnects           ; 89 / 81,294 ( < 1 % ) ;
 +----------------------------+-----------------------+
 
 
@@ -1435,7 +1435,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 08 22:28:46 2024
+    Info: Processing started: Sun Jun 23 13:58:40 2024
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Prog_cnt -c Prog_cnt
 Info: Selected device EP2C35F672C6 for design "Prog_cnt"
 Info: Low junction temperature is 0 degrees C
@@ -1450,17 +1450,6 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~nCSO~ is reserved at location D3
     Info: Pin ~LVDS150p/nCEO~ is reserved at location AE24
 Critical Warning: No exact pin location assignment(s) for 48 pins of 48 total pins
-    Info: Pin next_pc_out[0] not assigned to an exact location on the device
-    Info: Pin next_pc_out[1] not assigned to an exact location on the device
-    Info: Pin next_pc_out[2] not assigned to an exact location on the device
-    Info: Pin next_pc_out[3] not assigned to an exact location on the device
-    Info: Pin next_pc_out[4] not assigned to an exact location on the device
-    Info: Pin next_pc_out[5] not assigned to an exact location on the device
-    Info: Pin next_pc_out[6] not assigned to an exact location on the device
-    Info: Pin next_pc_out[7] not assigned to an exact location on the device
-    Info: Pin next_pc_out[8] not assigned to an exact location on the device
-    Info: Pin next_pc_out[9] not assigned to an exact location on the device
-    Info: Pin next_pc_out[10] not assigned to an exact location on the device
     Info: Pin pc_out[0] not assigned to an exact location on the device
     Info: Pin pc_out[1] not assigned to an exact location on the device
     Info: Pin pc_out[2] not assigned to an exact location on the device
@@ -1472,6 +1461,17 @@ Critical Warning: No exact pin location assignment(s) for 48 pins of 48 total pi
     Info: Pin pc_out[8] not assigned to an exact location on the device
     Info: Pin pc_out[9] not assigned to an exact location on the device
     Info: Pin pc_out[10] not assigned to an exact location on the device
+    Info: Pin next_pc_out[0] not assigned to an exact location on the device
+    Info: Pin next_pc_out[1] not assigned to an exact location on the device
+    Info: Pin next_pc_out[2] not assigned to an exact location on the device
+    Info: Pin next_pc_out[3] not assigned to an exact location on the device
+    Info: Pin next_pc_out[4] not assigned to an exact location on the device
+    Info: Pin next_pc_out[5] not assigned to an exact location on the device
+    Info: Pin next_pc_out[6] not assigned to an exact location on the device
+    Info: Pin next_pc_out[7] not assigned to an exact location on the device
+    Info: Pin next_pc_out[8] not assigned to an exact location on the device
+    Info: Pin next_pc_out[9] not assigned to an exact location on the device
+    Info: Pin next_pc_out[10] not assigned to an exact location on the device
     Info: Pin new_pc_in[0] not assigned to an exact location on the device
     Info: Pin pc_ctrl[0] not assigned to an exact location on the device
     Info: Pin from_stack[0] not assigned to an exact location on the device
@@ -1532,38 +1532,27 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to register delay of 3.123 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X8_Y32; Fanout = 4; REG Node = 'pc[2]'
-    Info: 2: + IC(0.646 ns) + CELL(0.414 ns) = 1.060 ns; Loc. = LAB_X7_Y32; Fanout = 2; COMB Node = 'Add0~5'
-    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 1.131 ns; Loc. = LAB_X7_Y32; Fanout = 2; COMB Node = 'Add0~7'
-    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.202 ns; Loc. = LAB_X7_Y32; Fanout = 2; COMB Node = 'Add0~9'
-    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.273 ns; Loc. = LAB_X7_Y32; Fanout = 2; COMB Node = 'Add0~11'
-    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.344 ns; Loc. = LAB_X7_Y32; Fanout = 2; COMB Node = 'Add0~13'
-    Info: 7: + IC(0.000 ns) + CELL(0.410 ns) = 1.754 ns; Loc. = LAB_X7_Y32; Fanout = 1; COMB Node = 'Add0~14'
-    Info: 8: + IC(0.606 ns) + CELL(0.150 ns) = 2.510 ns; Loc. = LAB_X8_Y32; Fanout = 2; COMB Node = 'Mux3~1'
-    Info: 9: + IC(0.529 ns) + CELL(0.084 ns) = 3.123 ns; Loc. = LAB_X8_Y32; Fanout = 4; REG Node = 'pc[7]'
-    Info: Total cell delay = 1.342 ns ( 42.97 % )
-    Info: Total interconnect delay = 1.781 ns ( 57.03 % )
+Info: Estimated most critical path is register to register delay of 3.122 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X19_Y35; Fanout = 4; REG Node = 'pc_reg[2]'
+    Info: 2: + IC(0.645 ns) + CELL(0.414 ns) = 1.059 ns; Loc. = LAB_X20_Y35; Fanout = 2; COMB Node = 'Add0~5'
+    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 1.130 ns; Loc. = LAB_X20_Y35; Fanout = 2; COMB Node = 'Add0~7'
+    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.201 ns; Loc. = LAB_X20_Y35; Fanout = 2; COMB Node = 'Add0~9'
+    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.272 ns; Loc. = LAB_X20_Y35; Fanout = 2; COMB Node = 'Add0~11'
+    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.343 ns; Loc. = LAB_X20_Y35; Fanout = 2; COMB Node = 'Add0~13'
+    Info: 7: + IC(0.000 ns) + CELL(0.410 ns) = 1.753 ns; Loc. = LAB_X20_Y35; Fanout = 1; COMB Node = 'Add0~14'
+    Info: 8: + IC(0.606 ns) + CELL(0.150 ns) = 2.509 ns; Loc. = LAB_X19_Y35; Fanout = 2; COMB Node = 'Mux3~1'
+    Info: 9: + IC(0.529 ns) + CELL(0.084 ns) = 3.122 ns; Loc. = LAB_X19_Y35; Fanout = 4; REG Node = 'pc_reg[7]'
+    Info: Total cell delay = 1.342 ns ( 42.99 % )
+    Info: Total interconnect delay = 1.780 ns ( 57.01 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 1% of the available device resources in the region that extends from location X0_Y24 to location X10_Y36
+    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y24 to location X21_Y36
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
 Warning: Found 22 output pins without output pin load capacitance assignment
-    Info: Pin "next_pc_out[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "next_pc_out[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "pc_out[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "pc_out[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "pc_out[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1575,10 +1564,21 @@ Warning: Found 22 output pins without output pin load capacitance assignment
     Info: Pin "pc_out[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "pc_out[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "pc_out[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "next_pc_out[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Info: Quartus II Fitter was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 286 megabytes
-    Info: Processing ended: Wed May 08 22:28:48 2024
+    Info: Processing ended: Sun Jun 23 13:58:42 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,5 +1,5 @@
 Fitter report for Stack
-Wed May 08 22:13:23 2024
+Sun Jun 23 14:18:02 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -61,7 +61,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 08 22:13:23 2024        ;
+; Fitter Status                      ; Successful - Sun Jun 23 14:18:02 2024        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Stack                                        ;
 ; Top-level Entity Name              ; Stack                                        ;
@@ -194,9 +194,9 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ;     -- Combinational with a register        ; 88                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 77                    ;
-;     -- 3 input functions                    ; 11                    ;
-;     -- <=2 input functions                  ; 1                     ;
+;     -- 4 input functions                    ; 0                     ;
+;     -- 3 input functions                    ; 77                    ;
+;     -- <=2 input functions                  ; 12                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
@@ -228,8 +228,8 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; Maximum fan-out                             ; 89                    ;
 ; Highest non-global fan-out signal           ; stack_push            ;
 ; Highest non-global fan-out                  ; 89                    ;
-; Total fan-out                               ; 708                   ;
-; Average fan-out                             ; 3.40                  ;
+; Total fan-out                               ; 620                   ;
+; Average fan-out                             ; 2.98                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -243,17 +243,17 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; clk_in       ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; nrst         ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; stack_in[0]  ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[10] ; J14   ; 3        ; 24           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[1]  ; Y12   ; 8        ; 29           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[2]  ; B10   ; 3        ; 22           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[3]  ; A9    ; 3        ; 20           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[4]  ; W12   ; 8        ; 18           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[10] ; F9    ; 3        ; 9            ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[1]  ; AD7   ; 8        ; 5            ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[2]  ; J14   ; 3        ; 24           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[3]  ; D12   ; 3        ; 24           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[4]  ; AF7   ; 8        ; 16           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; stack_in[5]  ; C16   ; 4        ; 37           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[6]  ; B8    ; 3        ; 16           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[7]  ; H12   ; 3        ; 18           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[8]  ; J10   ; 3        ; 27           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_in[9]  ; D15   ; 4        ; 40           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stack_pop    ; H11   ; 3        ; 18           ; 36           ; 3           ; 89                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[6]  ; D8    ; 3        ; 14           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[7]  ; B8    ; 3        ; 16           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[8]  ; D7    ; 3        ; 9            ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_in[9]  ; H16   ; 4        ; 42           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stack_pop    ; J9    ; 3        ; 5            ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; stack_push   ; D13   ; 3        ; 31           ; 36           ; 3           ; 89                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -263,17 +263,17 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; stack_out[0]  ; B11   ; 3        ; 29           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[10] ; D8    ; 3        ; 14           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[1]  ; V14   ; 8        ; 27           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[2]  ; F11   ; 3        ; 18           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[3]  ; F10   ; 3        ; 14           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[4]  ; B9    ; 3        ; 20           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[5]  ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[6]  ; D9    ; 3        ; 16           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[7]  ; E10   ; 3        ; 18           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[8]  ; J11   ; 3        ; 27           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; stack_out[9]  ; F20   ; 5        ; 65           ; 34           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[0]  ; D6    ; 3        ; 11           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[10] ; B7    ; 3        ; 11           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[1]  ; W10   ; 8        ; 7            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[2]  ; C3    ; 2        ; 0            ; 33           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[3]  ; D10   ; 3        ; 20           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[4]  ; G10   ; 3        ; 14           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[5]  ; C15   ; 4        ; 37           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[6]  ; A7    ; 3        ; 11           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[7]  ; C9    ; 3        ; 16           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[8]  ; C7    ; 3        ; 9            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; stack_out[9]  ; Y14   ; 7        ; 37           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -283,12 +283,12 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 2 / 64 ( 3 % )   ; 3.3V          ; --           ;
-; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
-; 3        ; 17 / 56 ( 30 % ) ; 3.3V          ; --           ;
+; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
+; 3        ; 16 / 56 ( 29 % ) ; 3.3V          ; --           ;
 ; 4        ; 3 / 58 ( 5 % )   ; 3.3V          ; --           ;
-; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
+; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
-; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
+; 7        ; 1 / 58 ( 2 % )   ; 3.3V          ; --           ;
 ; 8        ; 3 / 56 ( 5 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -303,9 +303,9 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; A4       ; 484        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A5       ; 482        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A6       ; 479        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A7       ; 465        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A7       ; 465        ; 3        ; stack_out[6]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A8       ; 457        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A9       ; 451        ; 3        ; stack_in[3]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A9       ; 451        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A10      ; 447        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -406,7 +406,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; AD4      ; 135        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD5      ; 136        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD6      ; 139        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD7      ; 140        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD7      ; 140        ; 8        ; stack_in[1]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD8      ; 149        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD10     ; 167        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -457,7 +457,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; AF4      ; 132        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF5      ; 138        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF6      ; 151        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF7      ; 158        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF7      ; 158        ; 8        ; stack_in[4]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF8      ; 160        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF9      ; 166        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF10     ; 170        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -482,11 +482,11 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; B4       ; 483        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B5       ; 481        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B6       ; 480        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B7       ; 466        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B8       ; 458        ; 3        ; stack_in[6]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B9       ; 452        ; 3        ; stack_out[4]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B10      ; 448        ; 3        ; stack_in[2]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B11      ; 435        ; 3        ; stack_out[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B7       ; 466        ; 3        ; stack_out[10]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 458        ; 3        ; stack_in[7]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 452        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B10      ; 448        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B11      ; 435        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 433        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B14      ; 428        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -504,19 +504,19 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; B26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C2       ; 6          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C3       ; 7          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C3       ; 7          ; 2        ; stack_out[2]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C4       ; 478        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 486        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C6       ; 485        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C7       ; 468        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C7       ; 468        ; 3        ; stack_out[8]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C8       ; 463        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C9       ; 459        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C9       ; 459        ; 3        ; stack_out[7]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C10      ; 450        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; stack_in[0]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C15      ; 421        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C15      ; 421        ; 4        ; stack_out[5]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C16      ; 418        ; 4        ; stack_in[5]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C17      ; 404        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -533,16 +533,16 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 477        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D6       ; 467        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D7       ; 469        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D8       ; 464        ; 3        ; stack_out[10]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D9       ; 460        ; 3        ; stack_out[6]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D10      ; 449        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D6       ; 467        ; 3        ; stack_out[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D7       ; 469        ; 3        ; stack_in[8]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D8       ; 464        ; 3        ; stack_in[6]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 460        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D10      ; 449        ; 3        ; stack_out[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D12      ; 443        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D12      ; 443        ; 3        ; stack_in[3]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; stack_push                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D15      ; 417        ; 4        ; stack_in[9]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 417        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D17      ; 403        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 396        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -563,12 +563,12 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; E7       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E8       ; 474        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E10      ; 453        ; 3        ; stack_out[7]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E10      ; 453        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E12      ; 444        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E15      ; 416        ; 4        ; stack_out[5]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 416        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E16      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E18      ; 395        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -588,9 +588,9 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; F6       ; 5          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F7       ; 14         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F9       ; 470        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F10      ; 462        ; 3        ; stack_out[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F11      ; 454        ; 3        ; stack_out[2]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F9       ; 470        ; 3        ; stack_in[10]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F10      ; 462        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; F11      ; 454        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F12      ; 440        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F13      ; 423        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F14      ; 425        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -599,7 +599,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; F17      ; 401        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F18      ; 398        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F20      ; 372        ; 5        ; stack_out[9]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F20      ; 372        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F21      ; 371        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F23      ; 353        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -615,7 +615,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ; 471        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G10      ; 461        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G10      ; 461        ; 3        ; stack_out[4]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 439        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G13      ; 422        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -642,12 +642,12 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; H8       ; 473        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H10      ; 472        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H11      ; 456        ; 3        ; stack_pop                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H12      ; 455        ; 3        ; stack_in[7]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H11      ; 456        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H12      ; 455        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H15      ; 414        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H16      ; 413        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H16      ; 413        ; 4        ; stack_in[9]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H17      ; 400        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H19      ; 335        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -666,12 +666,12 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; J6       ; 25         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J7       ; 17         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J8       ; 16         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J9       ; 475        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J10      ; 438        ; 3        ; stack_in[8]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J11      ; 437        ; 3        ; stack_out[8]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J9       ; 475        ; 3        ; stack_pop                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J10      ; 438        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J11      ; 437        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J12      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J13      ; 442        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J14      ; 441        ; 3        ; stack_in[10]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J14      ; 441        ; 3        ; stack_in[2]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ; 385        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J17      ; 399        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -905,7 +905,7 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; V11      ; 177        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V12      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V13      ; 176        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V14      ; 175        ; 8        ; stack_out[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; V14      ; 175        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V15      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V17      ; 218        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -927,9 +927,9 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; W7       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W8       ; 144        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W9       ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; W10      ; 145        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; W10      ; 145        ; 8        ; stack_out[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; W11      ; 161        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; W12      ; 162        ; 8        ; stack_in[4]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; W12      ; 162        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W15      ; 203        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -955,9 +955,9 @@ The pin-out file can be found in D:/Puc/sistemas reconf/Trab2/Stack/Stack.pin.
 ; Y9       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 146        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y11      ; 156        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y12      ; 180        ; 8        ; stack_in[1]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y12      ; 180        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y13      ; 193        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y14      ; 195        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y14      ; 195        ; 7        ; stack_out[9]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y15      ; 196        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y16      ; 210        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1039,9 +1039,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; stack_out[10] ; Output   ; --            ; --            ; --                    ; --  ;
 ; stack_in[0]   ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
 ; stack_push    ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
-; stack_pop     ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; clk_in        ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
 ; nrst          ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
+; stack_pop     ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; stack_in[1]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; stack_in[2]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
 ; stack_in[3]   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
@@ -1055,137 +1055,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; stack_in[0]         ;                   ;         ;
-; stack_push          ;                   ;         ;
-; stack_pop           ;                   ;         ;
-;      - stack~0      ; 0                 ; 6       ;
-;      - stack~1      ; 0                 ; 6       ;
-;      - stack~2      ; 0                 ; 6       ;
-;      - stack~3      ; 0                 ; 6       ;
-;      - stack~4      ; 0                 ; 6       ;
-;      - stack~5      ; 0                 ; 6       ;
-;      - stack~6      ; 0                 ; 6       ;
-;      - stack~7      ; 0                 ; 6       ;
-;      - stack~8      ; 0                 ; 6       ;
-;      - stack~9      ; 0                 ; 6       ;
-;      - stack~10     ; 0                 ; 6       ;
-;      - stack~11     ; 0                 ; 6       ;
-;      - stack~12     ; 0                 ; 6       ;
-;      - stack~13     ; 0                 ; 6       ;
-;      - stack~14     ; 0                 ; 6       ;
-;      - stack~15     ; 0                 ; 6       ;
-;      - stack~16     ; 0                 ; 6       ;
-;      - stack~17     ; 0                 ; 6       ;
-;      - stack~18     ; 0                 ; 6       ;
-;      - stack~19     ; 0                 ; 6       ;
-;      - stack~20     ; 0                 ; 6       ;
-;      - stack~21     ; 0                 ; 6       ;
-;      - stack~22     ; 0                 ; 6       ;
-;      - stack~23     ; 0                 ; 6       ;
-;      - stack~24     ; 0                 ; 6       ;
-;      - stack~25     ; 0                 ; 6       ;
-;      - stack~26     ; 0                 ; 6       ;
-;      - stack~27     ; 0                 ; 6       ;
-;      - stack~28     ; 0                 ; 6       ;
-;      - stack~29     ; 0                 ; 6       ;
-;      - stack~30     ; 0                 ; 6       ;
-;      - stack~31     ; 0                 ; 6       ;
-;      - stack~32     ; 0                 ; 6       ;
-;      - stack~33     ; 0                 ; 6       ;
-;      - stack~34     ; 0                 ; 6       ;
-;      - stack~35     ; 0                 ; 6       ;
-;      - stack~36     ; 0                 ; 6       ;
-;      - stack~37     ; 0                 ; 6       ;
-;      - stack~38     ; 0                 ; 6       ;
-;      - stack~39     ; 0                 ; 6       ;
-;      - stack~40     ; 0                 ; 6       ;
-;      - stack~41     ; 0                 ; 6       ;
-;      - stack~42     ; 0                 ; 6       ;
-;      - stack~43     ; 0                 ; 6       ;
-;      - stack~44     ; 0                 ; 6       ;
-;      - stack~45     ; 0                 ; 6       ;
-;      - stack~46     ; 0                 ; 6       ;
-;      - stack~47     ; 0                 ; 6       ;
-;      - stack~48     ; 0                 ; 6       ;
-;      - stack~49     ; 0                 ; 6       ;
-;      - stack~50     ; 0                 ; 6       ;
-;      - stack~51     ; 0                 ; 6       ;
-;      - stack~52     ; 0                 ; 6       ;
-;      - stack~53     ; 0                 ; 6       ;
-;      - stack~54     ; 0                 ; 6       ;
-;      - stack~55     ; 0                 ; 6       ;
-;      - stack~56     ; 0                 ; 6       ;
-;      - stack~57     ; 0                 ; 6       ;
-;      - stack~58     ; 0                 ; 6       ;
-;      - stack~59     ; 0                 ; 6       ;
-;      - stack~60     ; 0                 ; 6       ;
-;      - stack~61     ; 0                 ; 6       ;
-;      - stack~62     ; 0                 ; 6       ;
-;      - stack~63     ; 0                 ; 6       ;
-;      - stack~64     ; 0                 ; 6       ;
-;      - stack~65     ; 0                 ; 6       ;
-;      - stack~66     ; 0                 ; 6       ;
-;      - stack~67     ; 0                 ; 6       ;
-;      - stack~68     ; 0                 ; 6       ;
-;      - stack~69     ; 0                 ; 6       ;
-;      - stack~70     ; 0                 ; 6       ;
-;      - stack~71     ; 0                 ; 6       ;
-;      - stack~72     ; 0                 ; 6       ;
-;      - stack~73     ; 0                 ; 6       ;
-;      - stack~74     ; 0                 ; 6       ;
-;      - stack~75     ; 0                 ; 6       ;
-;      - stack~76     ; 0                 ; 6       ;
-;      - stack~77     ; 0                 ; 6       ;
-;      - stack~78     ; 0                 ; 6       ;
-;      - stack~79     ; 0                 ; 6       ;
-;      - stack~80     ; 0                 ; 6       ;
-;      - stack~81     ; 0                 ; 6       ;
-;      - stack~82     ; 0                 ; 6       ;
-;      - stack~83     ; 0                 ; 6       ;
-;      - stack~84     ; 0                 ; 6       ;
-;      - stack~85     ; 0                 ; 6       ;
-;      - stack~86     ; 0                 ; 6       ;
-;      - stack~87     ; 0                 ; 6       ;
-;      - stack~88     ; 0                 ; 6       ;
-; clk_in              ;                   ;         ;
-; nrst                ;                   ;         ;
-; stack_in[1]         ;                   ;         ;
-;      - stack~2      ; 0                 ; 6       ;
-; stack_in[2]         ;                   ;         ;
-;      - stack~3      ; 0                 ; 6       ;
-; stack_in[3]         ;                   ;         ;
-;      - stack~4      ; 0                 ; 6       ;
-; stack_in[4]         ;                   ;         ;
-;      - stack~5      ; 0                 ; 6       ;
-; stack_in[5]         ;                   ;         ;
-;      - stack~6      ; 0                 ; 6       ;
-; stack_in[6]         ;                   ;         ;
-;      - stack~7      ; 0                 ; 6       ;
-; stack_in[7]         ;                   ;         ;
-;      - stack~8      ; 0                 ; 6       ;
-; stack_in[8]         ;                   ;         ;
-;      - stack~9      ; 0                 ; 6       ;
-; stack_in[9]         ;                   ;         ;
-;      - stack~10     ; 0                 ; 6       ;
-; stack_in[10]        ;                   ;         ;
-;      - stack~11     ; 0                 ; 6       ;
-+---------------------+-------------------+---------+
++----------------------------------------------------+
+; Pad To Core Delay Chain Fanout                     ;
++----------------------+-------------------+---------+
+; Source Pin / Fanout  ; Pad To Core Index ; Setting ;
++----------------------+-------------------+---------+
+; stack_in[0]          ;                   ;         ;
+; stack_push           ;                   ;         ;
+; clk_in               ;                   ;         ;
+; nrst                 ;                   ;         ;
+; stack_pop            ;                   ;         ;
+;      - stack[1][0]~1 ; 0                 ; 6       ;
+; stack_in[1]          ;                   ;         ;
+;      - stack~2       ; 1                 ; 6       ;
+; stack_in[2]          ;                   ;         ;
+;      - stack~3       ; 0                 ; 6       ;
+; stack_in[3]          ;                   ;         ;
+;      - stack~4       ; 0                 ; 6       ;
+; stack_in[4]          ;                   ;         ;
+;      - stack~5       ; 0                 ; 6       ;
+; stack_in[5]          ;                   ;         ;
+;      - stack~6       ; 0                 ; 6       ;
+; stack_in[6]          ;                   ;         ;
+;      - stack~7       ; 0                 ; 6       ;
+; stack_in[7]          ;                   ;         ;
+;      - stack~8       ; 1                 ; 6       ;
+; stack_in[8]          ;                   ;         ;
+;      - stack~9       ; 0                 ; 6       ;
+; stack_in[9]          ;                   ;         ;
+;      - stack~10      ; 1                 ; 6       ;
+; stack_in[10]         ;                   ;         ;
+;      - stack~11      ; 0                 ; 6       ;
++----------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                     ;
-+---------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name    ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clk_in  ; PIN_P2            ; 88      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; nrst    ; PIN_P1            ; 88      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; stack~1 ; LCCOMB_X29_Y22_N6 ; 88      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+---------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                           ;
++---------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name          ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clk_in        ; PIN_P2            ; 88      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; nrst          ; PIN_P1            ; 88      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; stack[1][0]~1 ; LCCOMB_X9_Y34_N22 ; 88      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++---------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -1200,60 +1112,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+--------------+------------------+
-; Name         ; Fan-Out          ;
-+--------------+------------------+
-; stack_pop    ; 89               ;
-; stack_push   ; 89               ;
-; stack~1      ; 88               ;
-; stack[6][10] ; 2                ;
-; stack[6][9]  ; 2                ;
-; stack[6][8]  ; 2                ;
-; stack[6][7]  ; 2                ;
-; stack[6][6]  ; 2                ;
-; stack[6][5]  ; 2                ;
-; stack[6][4]  ; 2                ;
-; stack[6][3]  ; 2                ;
-; stack[6][2]  ; 2                ;
-; stack[6][1]  ; 2                ;
-; stack[6][0]  ; 2                ;
-; stack[5][10] ; 2                ;
-; stack[5][9]  ; 2                ;
-; stack[5][8]  ; 2                ;
-; stack[5][7]  ; 2                ;
-; stack[5][6]  ; 2                ;
-; stack[5][5]  ; 2                ;
-; stack[5][4]  ; 2                ;
-; stack[5][3]  ; 2                ;
-; stack[5][2]  ; 2                ;
-; stack[5][1]  ; 2                ;
-; stack[5][0]  ; 2                ;
-; stack[4][10] ; 2                ;
-; stack[4][9]  ; 2                ;
-; stack[4][8]  ; 2                ;
-; stack[4][7]  ; 2                ;
-; stack[4][6]  ; 2                ;
-; stack[4][5]  ; 2                ;
-; stack[4][4]  ; 2                ;
-; stack[4][3]  ; 2                ;
-; stack[4][2]  ; 2                ;
-; stack[4][1]  ; 2                ;
-; stack[4][0]  ; 2                ;
-; stack[3][10] ; 2                ;
-; stack[3][9]  ; 2                ;
-; stack[3][8]  ; 2                ;
-; stack[3][7]  ; 2                ;
-; stack[3][6]  ; 2                ;
-; stack[3][5]  ; 2                ;
-; stack[3][4]  ; 2                ;
-; stack[3][3]  ; 2                ;
-; stack[3][2]  ; 2                ;
-; stack[3][1]  ; 2                ;
-; stack[3][0]  ; 2                ;
-; stack[2][10] ; 2                ;
-; stack[2][9]  ; 2                ;
-; stack[2][8]  ; 2                ;
-+--------------+------------------+
++---------------+-----------------+
+; Name          ; Fan-Out         ;
++---------------+-----------------+
+; stack_push    ; 89              ;
+; stack[1][0]~1 ; 88              ;
+; stack[6][10]  ; 2               ;
+; stack[6][9]   ; 2               ;
+; stack[6][8]   ; 2               ;
+; stack[6][7]   ; 2               ;
+; stack[6][6]   ; 2               ;
+; stack[6][5]   ; 2               ;
+; stack[6][4]   ; 2               ;
+; stack[6][3]   ; 2               ;
+; stack[6][2]   ; 2               ;
+; stack[6][1]   ; 2               ;
+; stack[6][0]   ; 2               ;
+; stack[5][10]  ; 2               ;
+; stack[5][9]   ; 2               ;
+; stack[5][8]   ; 2               ;
+; stack[5][7]   ; 2               ;
+; stack[5][6]   ; 2               ;
+; stack[5][5]   ; 2               ;
+; stack[5][4]   ; 2               ;
+; stack[5][3]   ; 2               ;
+; stack[5][2]   ; 2               ;
+; stack[5][1]   ; 2               ;
+; stack[5][0]   ; 2               ;
+; stack[4][10]  ; 2               ;
+; stack[4][9]   ; 2               ;
+; stack[4][8]   ; 2               ;
+; stack[4][7]   ; 2               ;
+; stack[4][6]   ; 2               ;
+; stack[4][5]   ; 2               ;
+; stack[4][4]   ; 2               ;
+; stack[4][3]   ; 2               ;
+; stack[4][2]   ; 2               ;
+; stack[4][1]   ; 2               ;
+; stack[4][0]   ; 2               ;
+; stack[3][10]  ; 2               ;
+; stack[3][9]   ; 2               ;
+; stack[3][8]   ; 2               ;
+; stack[3][7]   ; 2               ;
+; stack[3][6]   ; 2               ;
+; stack[3][5]   ; 2               ;
+; stack[3][4]   ; 2               ;
+; stack[3][3]   ; 2               ;
+; stack[3][2]   ; 2               ;
+; stack[3][1]   ; 2               ;
+; stack[3][0]   ; 2               ;
+; stack[2][10]  ; 2               ;
+; stack[2][9]   ; 2               ;
+; stack[2][8]   ; 2               ;
+; stack[2][7]   ; 2               ;
++---------------+-----------------+
 
 
 +----------------------------------------------------+
@@ -1261,14 +1173,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 56 / 94,460 ( < 1 % ) ;
-; C16 interconnects          ; 9 / 3,315 ( < 1 % )   ;
+; Block interconnects        ; 49 / 94,460 ( < 1 % ) ;
+; C16 interconnects          ; 7 / 3,315 ( < 1 % )   ;
 ; C4 interconnects           ; 44 / 60,840 ( < 1 % ) ;
-; Direct links               ; 13 / 94,460 ( < 1 % ) ;
+; Direct links               ; 15 / 94,460 ( < 1 % ) ;
 ; Global clocks              ; 2 / 16 ( 13 % )       ;
-; Local interconnects        ; 81 / 33,216 ( < 1 % ) ;
-; R24 interconnects          ; 2 / 3,091 ( < 1 % )   ;
-; R4 interconnects           ; 35 / 81,294 ( < 1 % ) ;
+; Local interconnects        ; 86 / 33,216 ( < 1 % ) ;
+; R24 interconnects          ; 4 / 3,091 ( < 1 % )   ;
+; R4 interconnects           ; 19 / 81,294 ( < 1 % ) ;
 +----------------------------+-----------------------+
 
 
@@ -1364,7 +1276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 7.00) ; Number of LABs  (Total = 6) ;
+; Number of Distinct Inputs  (Average = 6.17) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -1372,8 +1284,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 6                           ;
+; 6                                           ; 5                           ;
+; 7                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1419,7 +1331,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 08 22:13:21 2024
+    Info: Processing started: Sun Jun 23 14:18:00 2024
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Stack -c Stack
 Info: Selected device EP2C35F672C6 for design "Stack"
 Info: Low junction temperature is 0 degrees C
@@ -1447,9 +1359,9 @@ Critical Warning: No exact pin location assignment(s) for 26 pins of 26 total pi
     Info: Pin stack_out[10] not assigned to an exact location on the device
     Info: Pin stack_in[0] not assigned to an exact location on the device
     Info: Pin stack_push not assigned to an exact location on the device
-    Info: Pin stack_pop not assigned to an exact location on the device
     Info: Pin clk_in not assigned to an exact location on the device
     Info: Pin nrst not assigned to an exact location on the device
+    Info: Pin stack_pop not assigned to an exact location on the device
     Info: Pin stack_in[1] not assigned to an exact location on the device
     Info: Pin stack_in[2] not assigned to an exact location on the device
     Info: Pin stack_in[3] not assigned to an exact location on the device
@@ -1495,14 +1407,14 @@ Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Estimated most critical path is register to register delay of 0.898 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X28_Y22; Fanout = 1; REG Node = 'stack[7][1]'
-    Info: 2: + IC(0.376 ns) + CELL(0.438 ns) = 0.814 ns; Loc. = LAB_X29_Y22; Fanout = 1; COMB Node = 'stack~68'
-    Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 0.898 ns; Loc. = LAB_X29_Y22; Fanout = 2; REG Node = 'stack[6][1]'
-    Info: Total cell delay = 0.522 ns ( 58.13 % )
-    Info: Total interconnect delay = 0.376 ns ( 41.87 % )
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X10_Y34; Fanout = 1; REG Node = 'stack[7][1]'
+    Info: 2: + IC(0.394 ns) + CELL(0.420 ns) = 0.814 ns; Loc. = LAB_X9_Y34; Fanout = 1; COMB Node = 'stack~68'
+    Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 0.898 ns; Loc. = LAB_X9_Y34; Fanout = 2; REG Node = 'stack[6][1]'
+    Info: Total cell delay = 0.504 ns ( 56.12 % )
+    Info: Total interconnect delay = 0.394 ns ( 43.88 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
+    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y24 to location X21_Y36
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1523,7 +1435,7 @@ Warning: Found 11 output pins without output pin load capacitance assignment
 Info: Delay annotation completed successfully
 Info: Quartus II Fitter was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 286 megabytes
-    Info: Processing ended: Wed May 08 22:13:23 2024
+    Info: Processing ended: Sun Jun 23 14:18:02 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

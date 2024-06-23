@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Declaração da entidade Stack com as entradas e saídas necessárias
 entity Stack is
     port (
         clk_in     : in std_logic;                 -- Entrada de clock
@@ -14,7 +13,6 @@ entity Stack is
     );
 end Stack;
 
--- Arquitetura comportamental da pilha
 architecture Behavioral of Stack is
     type stack_array is array (0 to 7) of std_logic_vector(10 downto 0);
     signal stack : stack_array := (others => (others => '0'));  -- Array para armazenar os elementos da pilha

@@ -31,7 +31,7 @@ ON
 # case_insensitive
 # source_file
 regbank.vhd
-54c37dcb4ea3aa6addd5c60a39c0d0
+bd5ebd9025eeccf110feb348fd8e59a6
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

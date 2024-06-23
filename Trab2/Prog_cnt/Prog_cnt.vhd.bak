@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Declaração da entidade Prog_cnt
 entity Prog_cnt is
     port (
         clk_in     : in  std_logic;                        -- Entrada de clock
@@ -15,7 +14,6 @@ entity Prog_cnt is
     );
 end Prog_cnt;
 
--- Arquitetura do contador programável
 architecture Behavioral of Prog_cnt is
     signal pc      : std_logic_vector(10 downto 0) := (others => '0'); -- Contador interno
 begin

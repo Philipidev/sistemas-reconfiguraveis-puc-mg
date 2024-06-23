@@ -74,12 +74,12 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 GND                          : A2        : gnd    :                   :         :           :                
 VCCIO3                       : A3        : power  :                   : 3.3V    : 3         :                
 RESERVED_INPUT               : A4        :        :                   :         : 3         :                
-next_pc_out[1]               : A5        : output : 3.3-V LVTTL       :         : 3         : N              
-pc_out[7]                    : A6        : output : 3.3-V LVTTL       :         : 3         : N              
-next_pc_out[7]               : A7        : output : 3.3-V LVTTL       :         : 3         : N              
-new_pc_in[5]                 : A8        : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : A9        :        :                   :         : 3         :                
-RESERVED_INPUT               : A10       :        :                   :         : 3         :                
+RESERVED_INPUT               : A5        :        :                   :         : 3         :                
+RESERVED_INPUT               : A6        :        :                   :         : 3         :                
+pc_out[10]                   : A7        : output : 3.3-V LVTTL       :         : 3         : N              
+from_stack[3]                : A8        : input  : 3.3-V LVTTL       :         : 3         : N              
+next_pc_out[8]               : A9        : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[6]                    : A10       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
@@ -155,7 +155,7 @@ RESERVED_INPUT               : AC5       :        :                   :         
 RESERVED_INPUT               : AC6       :        :                   :         : 8         :                
 RESERVED_INPUT               : AC7       :        :                   :         : 8         :                
 RESERVED_INPUT               : AC8       :        :                   :         : 8         :                
-RESERVED_INPUT               : AC9       :        :                   :         : 8         :                
+new_pc_in[8]                 : AC9       : input  : 3.3-V LVTTL       :         : 8         : N              
 RESERVED_INPUT               : AC10      :        :                   :         : 8         :                
 RESERVED_INPUT               : AC11      :        :                   :         : 8         :                
 RESERVED_INPUT               : AC12      :        :                   :         : 8         :                
@@ -250,17 +250,17 @@ RESERVED_INPUT               : AF23      :        :                   :         
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
 GND                          : B1        : gnd    :                   :         :           :                
-RESERVED_INPUT               : B2        :        :                   :         : 2         :                
+next_pc_out[6]               : B2        : output : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : B3        :        :                   :         : 2         :                
 RESERVED_INPUT               : B4        :        :                   :         : 3         :                
-next_pc_out[9]               : B5        : output : 3.3-V LVTTL       :         : 3         : N              
-pc_out[10]                   : B6        : output : 3.3-V LVTTL       :         : 3         : N              
-from_stack[8]                : B7        : input  : 3.3-V LVTTL       :         : 3         : N              
-from_stack[10]               : B8        : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : B9        :        :                   :         : 3         :                
-RESERVED_INPUT               : B10       :        :                   :         : 3         :                
-RESERVED_INPUT               : B11       :        :                   :         : 3         :                
-RESERVED_INPUT               : B12       :        :                   :         : 3         :                
+RESERVED_INPUT               : B5        :        :                   :         : 3         :                
+RESERVED_INPUT               : B6        :        :                   :         : 3         :                
+next_pc_out[0]               : B7        : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[4]                    : B8        : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[8]                    : B9        : output : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[1]                 : B10       : input  : 3.3-V LVTTL       :         : 3         : N              
+pc_out[0]                    : B11       : output : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[6]                 : B12       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : B13       :        :                   :         : 4         :                
 RESERVED_INPUT               : B14       :        :                   :         : 4         :                
 RESERVED_INPUT               : B15       :        :                   :         : 4         :                
@@ -277,16 +277,16 @@ RESERVED_INPUT               : B25       :        :                   :         
 GND                          : B26       : gnd    :                   :         :           :                
 VCCIO2                       : C1        : power  :                   : 3.3V    : 2         :                
 RESERVED_INPUT               : C2        :        :                   :         : 2         :                
-new_pc_in[4]                 : C3        : input  : 3.3-V LVTTL       :         : 2         : N              
-pc_out[3]                    : C4        : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : C3        :        :                   :         : 2         :                
+RESERVED_INPUT               : C4        :        :                   :         : 3         :                
 RESERVED_INPUT               : C5        :        :                   :         : 3         :                
 RESERVED_INPUT               : C6        :        :                   :         : 3         :                
-new_pc_in[7]                 : C7        : input  : 3.3-V LVTTL       :         : 3         : N              
-pc_out[0]                    : C8        : output : 3.3-V LVTTL       :         : 3         : N              
-from_stack[5]                : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : C10       :        :                   :         : 3         :                
-RESERVED_INPUT               : C11       :        :                   :         : 3         :                
-RESERVED_INPUT               : C12       :        :                   :         : 3         :                
+next_pc_out[7]               : C7        : output : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[7]                 : C8        : input  : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[2]                 : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[9]                 : C10       : input  : 3.3-V LVTTL       :         : 3         : N              
+next_pc_out[9]               : C11       : output : 3.3-V LVTTL       :         : 3         : N              
+from_stack[7]                : C12       : input  : 3.3-V LVTTL       :         : 3         : N              
 new_pc_in[0]                 : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
 RESERVED_INPUT               : C15       :        :                   :         : 4         :                
@@ -301,20 +301,20 @@ RESERVED_INPUT               : C23       :        :                   :         
 RESERVED_INPUT               : C24       :        :                   :         : 5         :                
 RESERVED_INPUT               : C25       :        :                   :         : 5         :                
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
-pc_out[6]                    : D1        : output : 3.3-V LVTTL       :         : 2         : N              
-pc_out[8]                    : D2        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : D1        :        :                   :         : 2         :                
+RESERVED_INPUT               : D2        :        :                   :         : 2         :                
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : D4        : gnd    :                   :         :           :                
-new_pc_in[6]                 : D5        : input  : 3.3-V LVTTL       :         : 3         : N              
-new_pc_in[3]                 : D6        : input  : 3.3-V LVTTL       :         : 3         : N              
-new_pc_in[1]                 : D7        : input  : 3.3-V LVTTL       :         : 3         : N              
-next_pc_out[3]               : D8        : output : 3.3-V LVTTL       :         : 3         : N              
-from_stack[7]                : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : D10       :        :                   :         : 3         :                
-RESERVED_INPUT               : D11       :        :                   :         : 3         :                
-RESERVED_INPUT               : D12       :        :                   :         : 3         :                
+RESERVED_INPUT               : D5        :        :                   :         : 3         :                
+new_pc_in[5]                 : D6        : input  : 3.3-V LVTTL       :         : 3         : N              
+pc_out[7]                    : D7        : output : 3.3-V LVTTL       :         : 3         : N              
+next_pc_out[4]               : D8        : output : 3.3-V LVTTL       :         : 3         : N              
+from_stack[8]                : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
+pc_ctrl[1]                   : D10       : input  : 3.3-V LVTTL       :         : 3         : N              
+from_stack[6]                : D11       : input  : 3.3-V LVTTL       :         : 3         : N              
+next_pc_out[1]               : D12       : output : 3.3-V LVTTL       :         : 3         : N              
 pc_ctrl[0]                   : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : D14       :        :                   :         : 4         :                
+pc_out[1]                    : D14       : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT               : D15       :        :                   :         : 4         :                
 RESERVED_INPUT               : D16       :        :                   :         : 4         :                
 RESERVED_INPUT               : D17       :        :                   :         : 4         :                
@@ -334,11 +334,11 @@ GND_PLL3                     : E4        : gnd    :                   :         
 RESERVED_INPUT               : E5        :        :                   :         : 2         :                
 VCCIO3                       : E6        : power  :                   : 3.3V    : 3         :                
 GND                          : E7        : gnd    :                   :         :           :                
-pc_out[5]                    : E8        : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : E8        :        :                   :         : 3         :                
 VCCIO3                       : E9        : power  :                   : 3.3V    : 3         :                
-from_stack[4]                : E10       : input  : 3.3-V LVTTL       :         : 3         : N              
+pc_out[3]                    : E10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : E11       : gnd    :                   :         :           :                
-RESERVED_INPUT               : E12       :        :                   :         : 3         :                
+from_stack[9]                : E12       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E13       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : E14       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : E15       :        :                   :         : 4         :                
@@ -355,16 +355,16 @@ RESERVED_INPUT               : E25       :        :                   :         
 RESERVED_INPUT               : E26       :        :                   :         : 5         :                
 RESERVED_INPUT               : F1        :        :                   :         : 2         :                
 RESERVED_INPUT               : F2        :        :                   :         : 2         :                
-pc_out[2]                    : F3        : output : 3.3-V LVTTL       :         : 2         : N              
-pc_out[1]                    : F4        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : F3        :        :                   :         : 2         :                
+RESERVED_INPUT               : F4        :        :                   :         : 2         :                
 VCCIO2                       : F5        : power  :                   : 3.3V    : 2         :                
-new_pc_in[9]                 : F6        : input  : 3.3-V LVTTL       :         : 2         : N              
-pc_out[9]                    : F7        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : F6        :        :                   :         : 2         :                
+RESERVED_INPUT               : F7        :        :                   :         : 2         :                
 GNDA_PLL3                    : F8        : gnd    :                   :         :           :                
-next_pc_out[4]               : F9        : output : 3.3-V LVTTL       :         : 3         : N              
-from_stack[2]                : F10       : input  : 3.3-V LVTTL       :         : 3         : N              
-from_stack[6]                : F11       : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : F12       :        :                   :         : 3         :                
+from_stack[2]                : F9        : input  : 3.3-V LVTTL       :         : 3         : N              
+next_pc_out[5]               : F10       : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[5]                    : F11       : output : 3.3-V LVTTL       :         : 3         : N              
+from_stack[5]                : F12       : input  : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : F13       :        :                   :         : 4         :                
 RESERVED_INPUT               : F14       :        :                   :         : 4         :                
 RESERVED_INPUT               : F15       :        :                   :         : 4         :                
@@ -373,7 +373,7 @@ RESERVED_INPUT               : F17       :        :                   :         
 RESERVED_INPUT               : F18       :        :                   :         : 4         :                
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
 RESERVED_INPUT               : F20       :        :                   :         : 5         :                
-RESERVED_INPUT               : F21       :        :                   :         : 5         :                
+next_pc_out[10]              : F21       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
 RESERVED_INPUT               : F23       :        :                   :         : 5         :                
 RESERVED_INPUT               : F24       :        :                   :         : 5         :                
@@ -382,15 +382,15 @@ RESERVED_INPUT               : F26       :        :                   :         
 RESERVED_INPUT               : G1        :        :                   :         : 2         :                
 RESERVED_INPUT               : G2        :        :                   :         : 2         :                
 RESERVED_INPUT               : G3        :        :                   :         : 2         :                
-from_stack[9]                : G4        : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : G4        :        :                   :         : 2         :                
 RESERVED_INPUT               : G5        :        :                   :         : 2         :                
 RESERVED_INPUT               : G6        :        :                   :         : 2         :                
 GND_PLL3                     : G7        : gnd    :                   :         :           :                
 VCCA_PLL3                    : G8        : power  :                   : 1.2V    :           :                
-pc_out[4]                    : G9        : output : 3.3-V LVTTL       :         : 3         : N              
-new_pc_in[8]                 : G10       : input  : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : G11       :        :                   :         : 3         :                
-RESERVED_INPUT               : G12       :        :                   :         : 3         :                
+RESERVED_INPUT               : G9        :        :                   :         : 3         :                
+next_pc_out[3]               : G10       : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[9]                    : G11       : output : 3.3-V LVTTL       :         : 3         : N              
+pc_out[2]                    : G12       : output : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : G13       :        :                   :         : 4         :                
 RESERVED_INPUT               : G14       :        :                   :         : 4         :                
 RESERVED_INPUT               : G15       :        :                   :         : 4         :                
@@ -410,13 +410,13 @@ RESERVED_INPUT               : H2        :        :                   :         
 RESERVED_INPUT               : H3        :        :                   :         : 2         :                
 RESERVED_INPUT               : H4        :        :                   :         : 2         :                
 GND                          : H5        : gnd    :                   :         :           :                
-new_pc_in[2]                 : H6        : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : H6        :        :                   :         : 2         :                
 VCCD_PLL3                    : H7        : power  :                   : 1.2V    :           :                
-from_stack[1]                : H8        : input  : 3.3-V LVTTL       :         : 3         : N              
+from_stack[0]                : H8        : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : H9        : power  :                   : 3.3V    : 3         :                
 next_pc_out[2]               : H10       : output : 3.3-V LVTTL       :         : 3         : N              
-next_pc_out[5]               : H11       : output : 3.3-V LVTTL       :         : 3         : N              
-pc_ctrl[1]                   : H12       : input  : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[4]                 : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[3]                 : H12       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : H13       : gnd    :                   :         :           :                
 GND                          : H14       : gnd    :                   :         :           :                
 RESERVED_INPUT               : H15       :        :                   :         : 4         :                
@@ -435,16 +435,16 @@ RESERVED_INPUT               : J1        :        :                   :         
 RESERVED_INPUT               : J2        :        :                   :         : 2         :                
 RESERVED_INPUT               : J3        :        :                   :         : 2         :                
 RESERVED_INPUT               : J4        :        :                   :         : 2         :                
-from_stack[3]                : J5        : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : J5        :        :                   :         : 2         :                
 RESERVED_INPUT               : J6        :        :                   :         : 2         :                
-next_pc_out[0]               : J7        : output : 3.3-V LVTTL       :         : 2         : N              
-next_pc_out[8]               : J8        : output : 3.3-V LVTTL       :         : 2         : N              
-next_pc_out[6]               : J9        : output : 3.3-V LVTTL       :         : 3         : N              
-RESERVED_INPUT               : J10       :        :                   :         : 3         :                
-RESERVED_INPUT               : J11       :        :                   :         : 3         :                
+RESERVED_INPUT               : J7        :        :                   :         : 2         :                
+RESERVED_INPUT               : J8        :        :                   :         : 2         :                
+RESERVED_INPUT               : J9        :        :                   :         : 3         :                
+from_stack[4]                : J10       : input  : 3.3-V LVTTL       :         : 3         : N              
+from_stack[10]               : J11       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : J12       : power  :                   : 3.3V    : 3         :                
-RESERVED_INPUT               : J13       :        :                   :         : 3         :                
-RESERVED_INPUT               : J14       :        :                   :         : 3         :                
+from_stack[1]                : J13       : input  : 3.3-V LVTTL       :         : 3         : N              
+new_pc_in[10]                : J14       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : J16       :        :                   :         : 4         :                
 RESERVED_INPUT               : J17       :        :                   :         : 4         :                
@@ -462,10 +462,10 @@ RESERVED_INPUT               : K2        :        :                   :         
 RESERVED_INPUT               : K3        :        :                   :         : 2         :                
 RESERVED_INPUT               : K4        :        :                   :         : 2         :                
 RESERVED_INPUT               : K5        :        :                   :         : 2         :                
-from_stack[0]                : K6        : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : K6        :        :                   :         : 2         :                
 RESERVED_INPUT               : K7        :        :                   :         : 2         :                
 RESERVED_INPUT               : K8        :        :                   :         : 2         :                
-next_pc_out[10]              : K9        : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : K9        :        :                   :         : 3         :                
 VCCINT                       : K10       : power  :                   : 1.2V    :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
 VCCINT                       : K12       : power  :                   : 1.2V    :           :                
@@ -726,7 +726,7 @@ GND_PLL1                     : Y6        : gnd    :                   :         
 VCCD_PLL1                    : Y7        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : Y8        : gnd    :                   :         :           :                
 GND                          : Y9        : gnd    :                   :         :           :                
-new_pc_in[10]                : Y10       : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : Y10       :        :                   :         : 8         :                
 RESERVED_INPUT               : Y11       :        :                   :         : 8         :                
 RESERVED_INPUT               : Y12       :        :                   :         : 8         :                
 RESERVED_INPUT               : Y13       :        :                   :         : 7         :                

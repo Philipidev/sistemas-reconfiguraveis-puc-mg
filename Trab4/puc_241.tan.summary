@@ -5,41 +5,51 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.797 ns
-From           : key0
-To             : puc_241:inst6|instrucao[3]
+Actual Time    : 10.644 ns
+From           : sw[1]
+To             : ram_256x8:inst5|memory[160][1]
 From Clock     : --
-To Clock       : clk_50
+To Clock       : clk_in
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.788 ns
-From           : rom_2k_16:inst11|altsyncram:altsyncram_component|altsyncram_me71:auto_generated|q_a[6]
-To             : rom_q[6]
-From Clock     : clk_50
+Actual Time    : 18.371 ns
+From           : rom_2k_16:inst11|altsyncram:altsyncram_component|altsyncram_me71:auto_generated|q_a[0]
+To             : dext[6]
+From Clock     : clk_in
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.595 ns
+From           : sw[1]
+To             : dext[1]
+From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.567 ns
-From           : key0
-To             : puc_241:inst6|instrucao[3]
+Actual Time    : -4.461 ns
+From           : sw[6]
+To             : port_io:inst8|port_reg[6]
 From Clock     : --
-To Clock       : clk_50
+To Clock       : clk_in
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clk_50'
+Type           : Clock Setup: 'clk_in'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 230.79 MHz ( period = 4.333 ns )
-From           : Prog_cnt:inst1|pc[2]
-To             : rom_2k_16:inst11|altsyncram:altsyncram_component|altsyncram_me71:auto_generated|ram_block1a0~porta_address_reg9
-From Clock     : clk_50
-To Clock       : clk_50
+Actual Time    : 74.81 MHz ( period = 13.367 ns )
+From           : rom_2k_16:inst11|altsyncram:altsyncram_component|altsyncram_me71:auto_generated|q_a[0]
+To             : RegBank:inst2|regs[0][7]
+From Clock     : clk_in
+To Clock       : clk_in
 Failed Paths   : 0
 
 Type           : Total number of failed paths

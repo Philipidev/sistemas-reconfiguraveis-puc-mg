@@ -23,13 +23,13 @@ begin
         if nrst = '0' then
             stack <= (others => (others => '0'));  -- Reseta a pilha se o sinal de reset estiver ativo
         elsif rising_edge(clk_in) then
-            if stack_push = '1' and stack_pop = '0' then
+            if stack_push = '1' then
                 -- Processo de push: move os elementos para cima para inserir um novo no topo
                 for i in 6 downto 0 loop
                     stack(i + 1) <= stack(i);
                 end loop;
                 stack(0) <= stack_in;  -- Insere novo dado no topo da pilha
-            elsif stack_pop = '1' and stack_push = '0' then
+            elsif stack_pop = '1' then
                 -- Processo de pop: move os elementos para baixo, removendo o elemento do topo
                 for i in 0 to 6 loop
                     stack(i) <= stack(i + 1);

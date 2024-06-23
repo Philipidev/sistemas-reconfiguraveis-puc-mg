@@ -24,9 +24,9 @@ VECTOR("D:/Puc/sistemas reconf/Trab2/RegBank/RegBank.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 500000;
-		NUMERATOR = 1718;
-		DENOMINATOR = 500000;
+		ZEND = 397846;
+		NUMERATOR = 1367;
+		DENOMINATOR = 397846;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

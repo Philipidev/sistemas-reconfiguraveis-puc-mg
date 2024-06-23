@@ -83,14 +83,14 @@ RESERVED_INPUT               : A10       :        :                   :         
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
-c_flag_out                   : A14       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : A14       :        :                   :         : 4         :                
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
-regn_do_b[3]                 : A17       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_do_a[4]                 : A18       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_di[6]                   : A19       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_a[0]                 : A20       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_do_a[1]                 : A21       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[6]                 : A17       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_di[4]                   : A18       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_wr_sel[0]               : A19       : input  : 3.3-V LVTTL       :         : 4         : N              
+c_flag_wr_ena                : A20       : input  : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : A21       :        :                   :         : 4         :                
 RESERVED_INPUT               : A22       :        :                   :         : 4         :                
 RESERVED_INPUT               : A23       :        :                   :         : 4         :                
 VCCIO4                       : A24       : power  :                   : 3.3V    : 4         :                
@@ -217,7 +217,7 @@ RESERVED_INPUT               : AE15      :        :                   :         
 RESERVED_INPUT               : AE16      :        :                   :         : 7         :                
 RESERVED_INPUT               : AE17      :        :                   :         : 7         :                
 RESERVED_INPUT               : AE18      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE19      :        :                   :         : 7         :                
+regn_do_b[2]                 : AE19      : output : 3.3-V LVTTL       :         : 7         : N              
 RESERVED_INPUT               : AE20      :        :                   :         : 7         :                
 RESERVED_INPUT               : AE21      :        :                   :         : 7         :                
 RESERVED_INPUT               : AE22      :        :                   :         : 7         :                
@@ -250,7 +250,7 @@ RESERVED_INPUT               : AF23      :        :                   :         
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
 GND                          : B1        : gnd    :                   :         :           :                
-v_flag_out                   : B2        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : B2        :        :                   :         : 2         :                
 RESERVED_INPUT               : B3        :        :                   :         : 2         :                
 RESERVED_INPUT               : B4        :        :                   :         : 3         :                
 RESERVED_INPUT               : B5        :        :                   :         : 3         :                
@@ -262,12 +262,12 @@ RESERVED_INPUT               : B10       :        :                   :         
 RESERVED_INPUT               : B11       :        :                   :         : 3         :                
 RESERVED_INPUT               : B12       :        :                   :         : 3         :                
 GND+                         : B13       :        :                   :         : 4         :                
-c_flag_in                    : B14       : input  : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT               : B15       :        :                   :         : 4         :                
-RESERVED_INPUT               : B16       :        :                   :         : 4         :                
-regn_do_a[6]                 : B17       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_do_b[7]                 : B18       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_di[2]                   : B19       : input  : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : B14       :        :                   :         : 4         :                
+regn_do_b[1]                 : B15       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_do_b[5]                 : B16       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[3]                 : B17       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_rd_sel_b[2]             : B18       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_rd_sel_b[1]             : B19       : input  : 3.3-V LVTTL       :         : 4         : N              
 regn_rd_sel_a[0]             : B20       : input  : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT               : B21       :        :                   :         : 4         :                
 RESERVED_INPUT               : B22       :        :                   :         : 4         :                
@@ -289,11 +289,11 @@ RESERVED_INPUT               : C11       :        :                   :         
 RESERVED_INPUT               : C12       :        :                   :         : 3         :                
 regn_rd_sel_a[2]             : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
-RESERVED_INPUT               : C15       :        :                   :         : 4         :                
-RESERVED_INPUT               : C16       :        :                   :         : 4         :                
-regn_do_b[1]                 : C17       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_wr_sel[2]               : C15       : input  : 3.3-V LVTTL       :         : 4         : N              
+z_flag_out                   : C16       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_do_b[4]                 : C17       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : C18       : gnd    :                   :         :           :                
-regn_di[4]                   : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
+z_flag_wr_ena                : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : C21       :        :                   :         : 4         :                
 RESERVED_INPUT               : C22       :        :                   :         : 4         :                
@@ -314,16 +314,16 @@ RESERVED_INPUT               : D10       :        :                   :         
 RESERVED_INPUT               : D11       :        :                   :         : 3         :                
 RESERVED_INPUT               : D12       :        :                   :         : 3         :                
 regn_rd_sel_a[1]             : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
-c_flag_wr_ena                : D14       : input  : 3.3-V LVTTL       :         : 4         : N              
-v_flag_in                    : D15       : input  : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT               : D16       :        :                   :         : 4         :                
-regn_do_b[6]                 : D17       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_rd_sel_b[0]             : D18       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_di[1]                   : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_b[0]                 : D20       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : D14       :        :                   :         : 4         :                
+regn_do_a[2]                 : D15       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[1]                 : D16       : output : 3.3-V LVTTL       :         : 4         : N              
+v_flag_out                   : D17       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_di[3]                   : D18       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[7]                 : D19       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : D20       :        :                   :         : 4         :                
 RESERVED_INPUT               : D21       :        :                   :         : 4         :                
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
-regn_do_a[3]                 : D23       : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : D23       :        :                   :         : 5         :                
 GND                          : D24       : gnd    :                   :         :           :                
 RESERVED_INPUT               : D25       :        :                   :         : 5         :                
 RESERVED_INPUT               : D26       :        :                   :         : 5         :                
@@ -341,14 +341,14 @@ GND                          : E11       : gnd    :                   :         
 RESERVED_INPUT               : E12       :        :                   :         : 3         :                
 VCCIO3                       : E13       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : E14       : power  :                   : 3.3V    : 4         :                
-RESERVED_INPUT               : E15       :        :                   :         : 4         :                
+regn_do_b[3]                 : E15       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E16       : gnd    :                   :         :           :                
 VCCIO4                       : E17       : power  :                   : 3.3V    : 4         :                
-regn_rd_sel_b[1]             : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_di[6]                   : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E19       : gnd    :                   :         :           :                
-regn_do_a[2]                 : E20       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_wr_sel[1]               : E20       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND_PLL2                     : E21       : gnd    :                   :         :           :                
-z_flag_in                    : E22       : input  : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : E22       :        :                   :         : 5         :                
 RESERVED_INPUT               : E23       :        :                   :         : 5         :                
 RESERVED_INPUT               : E24       :        :                   :         : 5         :                
 RESERVED_INPUT               : E25       :        :                   :         : 5         :                
@@ -367,16 +367,16 @@ RESERVED_INPUT               : F11       :        :                   :         
 RESERVED_INPUT               : F12       :        :                   :         : 3         :                
 RESERVED_INPUT               : F13       :        :                   :         : 4         :                
 RESERVED_INPUT               : F14       :        :                   :         : 4         :                
-regn_wr_sel[2]               : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_b[5]                 : F16       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_di[0]                   : F17       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_di[5]                   : F18       : input  : 3.3-V LVTTL       :         : 4         : N              
+v_flag_in                    : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_do_b[0]                 : F16       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_di[1]                   : F17       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_di[7]                   : F18       : input  : 3.3-V LVTTL       :         : 4         : N              
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
-v_flag_wr_ena                : F20       : input  : 3.3-V LVTTL       :         : 5         : N              
-z_flag_out                   : F21       : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : F20       :        :                   :         : 5         :                
+RESERVED_INPUT               : F21       :        :                   :         : 5         :                
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
-RESERVED_INPUT               : F23       :        :                   :         : 5         :                
-RESERVED_INPUT               : F24       :        :                   :         : 5         :                
+regn_do_a[0]                 : F23       : output : 3.3-V LVTTL       :         : 5         : N              
+z_flag_in                    : F24       : input  : 3.3-V LVTTL       :         : 5         : N              
 RESERVED_INPUT               : F25       :        :                   :         : 5         :                
 RESERVED_INPUT               : F26       :        :                   :         : 5         :                
 RESERVED_INPUT               : G1        :        :                   :         : 2         :                
@@ -393,16 +393,16 @@ RESERVED_INPUT               : G11       :        :                   :         
 RESERVED_INPUT               : G12       :        :                   :         : 3         :                
 RESERVED_INPUT               : G13       :        :                   :         : 4         :                
 RESERVED_INPUT               : G14       :        :                   :         : 4         :                
-regn_wr_ena                  : G15       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_b[4]                 : G16       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_di[7]                   : G17       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_di[3]                   : G18       : input  : 3.3-V LVTTL       :         : 4         : N              
+v_flag_wr_ena                : G15       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[4]                 : G16       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_di[2]                   : G17       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_di[5]                   : G18       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
-z_flag_wr_ena                : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : G21       :        :                   :         : 5         :                
 RESERVED_INPUT               : G22       :        :                   :         : 5         :                
-RESERVED_INPUT               : G23       :        :                   :         : 5         :                
-RESERVED_INPUT               : G24       :        :                   :         : 5         :                
+regn_do_b[7]                 : G23       : output : 3.3-V LVTTL       :         : 5         : N              
+regn_do_b[6]                 : G24       : output : 3.3-V LVTTL       :         : 5         : N              
 RESERVED_INPUT               : G25       :        :                   :         : 5         :                
 RESERVED_INPUT               : G26       :        :                   :         : 5         :                
 RESERVED_INPUT               : H1        :        :                   :         : 2         :                
@@ -419,9 +419,9 @@ RESERVED_INPUT               : H11       :        :                   :         
 RESERVED_INPUT               : H12       :        :                   :         : 3         :                
 GND                          : H13       : gnd    :                   :         :           :                
 GND                          : H14       : gnd    :                   :         :           :                
-regn_wr_sel[1]               : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_a[7]                 : H16       : output : 3.3-V LVTTL       :         : 4         : N              
-regn_rd_sel_b[2]             : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
+c_flag_in                    : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
+regn_do_a[5]                 : H16       : output : 3.3-V LVTTL       :         : 4         : N              
+regn_di[0]                   : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : H18       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : H19       :        :                   :         : 5         :                
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
@@ -446,12 +446,12 @@ VCCIO3                       : J12       : power  :                   : 3.3V    
 RESERVED_INPUT               : J13       :        :                   :         : 3         :                
 RESERVED_INPUT               : J14       :        :                   :         : 3         :                
 VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
-regn_wr_sel[0]               : J16       : input  : 3.3-V LVTTL       :         : 4         : N              
-regn_do_a[5]                 : J17       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : J16       :        :                   :         : 4         :                
+c_flag_out                   : J17       : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT               : J18       :        :                   :         : 4         :                
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
-RESERVED_INPUT               : J20       :        :                   :         : 5         :                
-RESERVED_INPUT               : J21       :        :                   :         : 5         :                
+regn_rd_sel_b[0]             : J20       : input  : 3.3-V LVTTL       :         : 5         : N              
+regn_wr_ena                  : J21       : input  : 3.3-V LVTTL       :         : 5         : N              
 RESERVED_INPUT               : J22       :        :                   :         : 5         :                
 RESERVED_INPUT               : J23       :        :                   :         : 5         :                
 RESERVED_INPUT               : J24       :        :                   :         : 5         :                
@@ -472,7 +472,7 @@ VCCINT                       : K12       : power  :                   : 1.2V    
 VCCINT                       : K13       : power  :                   : 1.2V    :           :                
 VCCINT                       : K14       : power  :                   : 1.2V    :           :                
 VCCINT                       : K15       : power  :                   : 1.2V    :           :                
-regn_do_b[2]                 : K16       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : K16       :        :                   :         : 4         :                
 RESERVED_INPUT               : K17       :        :                   :         : 4         :                
 RESERVED_INPUT               : K18       :        :                   :         : 5         :                
 RESERVED_INPUT               : K19       :        :                   :         : 5         :                

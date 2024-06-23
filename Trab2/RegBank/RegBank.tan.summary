@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.354 ns
+Actual Time    : 6.264 ns
 From           : regn_wr_sel[1]
-To             : registers[7][3]
+To             : regs[5][7]
 From Clock     : --
 To Clock       : clk_in
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.057 ns
-From           : registers[1][1]
-To             : regn_do_a[1]
+Actual Time    : 11.275 ns
+From           : regs[4][2]
+To             : regn_do_b[2]
 From Clock     : clk_in
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.326 ns
-From           : regn_rd_sel_b[2]
-To             : regn_do_b[0]
+Actual Time    : 14.745 ns
+From           : regn_rd_sel_b[1]
+To             : regn_do_b[2]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.603 ns
-From           : z_flag_in
-To             : z_flag
+Actual Time    : -3.405 ns
+From           : regn_di[0]
+To             : regs[7][0]
 From Clock     : --
 To Clock       : clk_in
 Failed Paths   : 0
@@ -46,8 +46,8 @@ Type           : Clock Setup: 'clk_in'
 Slack          : N/A
 Required Time  : None
 Actual Time    : Restricted to 420.17 MHz ( period = 2.380 ns )
-From           : v_flag
-To             : v_flag
+From           : regs[7][0]
+To             : regs[7][0]
 From Clock     : clk_in
 To Clock       : clk_in
 Failed Paths   : 0

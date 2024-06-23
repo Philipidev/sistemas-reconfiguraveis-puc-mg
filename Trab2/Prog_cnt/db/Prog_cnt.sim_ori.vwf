@@ -569,9 +569,9 @@ TRANSITION_LIST("clk_in")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
 	}
 }
@@ -590,8 +590,7 @@ TRANSITION_LIST("from_stack[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -609,8 +608,7 @@ TRANSITION_LIST("from_stack[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -628,8 +626,7 @@ TRANSITION_LIST("from_stack[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -647,8 +644,7 @@ TRANSITION_LIST("from_stack[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -657,7 +653,9 @@ TRANSITION_LIST("from_stack[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -666,8 +664,7 @@ TRANSITION_LIST("from_stack[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -676,7 +673,9 @@ TRANSITION_LIST("from_stack[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -685,9 +684,7 @@ TRANSITION_LIST("new_pc_in[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 920.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -750,7 +747,9 @@ TRANSITION_LIST("new_pc_in[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 940.0;
 	}
 }
 
@@ -768,7 +767,9 @@ TRANSITION_LIST("new_pc_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 940.0;
 	}
 }
 
@@ -895,9 +896,13 @@ TRANSITION_LIST("pc_ctrl[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 380.0;
-		LEVEL 0 FOR 540.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 840.0;
 	}
 }
 
@@ -906,9 +911,11 @@ TRANSITION_LIST("pc_ctrl[0]")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 880.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 840.0;
 	}
 }
 
@@ -1013,7 +1020,7 @@ TRANSITION_LIST("pc_out[0]")
 
 DISPLAY_LINE
 {
-	CHANNEL = "clk_in";
+	CHANNEL = "nrst";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 0;
@@ -1022,7 +1029,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "nrst";
+	CHANNEL = "clk_in";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = ASCII;
 	TREE_INDEX = 1;
@@ -1541,7 +1548,7 @@ DISPLAY_LINE
 
 TIME_BAR
 {
-	TIME = 27900;
+	TIME = 27350;
 	MASTER = TRUE;
 }
 ;
