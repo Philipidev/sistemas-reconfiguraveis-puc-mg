@@ -9,29 +9,29 @@ entity puc_241 is
         clk : in std_logic;                     -- Sinal de clock de entrada
 
         -- Sinais de entrada
-        rom_q : in std_logic_vector(15 downto 0); -- Sinal de saída da ROM
+        rom_q : in std_logic_vector(15 downto 0); -- Sinal de saída da ROM, contendo a instrução atual
 
         -- Sinais de flags
-        c_flag_reg : in std_logic;
-        z_flag_reg : in std_logic;
-        v_flag_reg : in std_logic;
+        c_flag_reg : in std_logic;              -- Sinal de entrada do flag C
+        z_flag_reg : in std_logic;              -- Sinal de entrada do flag Z
+        v_flag_reg : in std_logic;              -- Sinal de entrada do flag V
 
         -- Sinais de saída de controle
-        reg_do_a_on_dext : out std_logic;
-        reg_di_sel : out std_logic;
-        alu_b_in_sel : out std_logic;
-        reg_wr_ena : out std_logic;
-        c_flag_wr_ena : out std_logic;
-        z_flag_wr_ena : out std_logic;
-        v_flag_wr_ena : out std_logic;
-        alu_op : out std_logic_vector(3 downto 0);
-        stack_push : out std_logic;
-        stack_pop : out std_logic;
-        pc_ctrl : out std_logic_vector(1 downto 0);
-        mem_wr_ena : out std_logic;
-        mem_rd_ena : out std_logic;
-        inp : out std_logic;
-        outp : out std_logic
+        reg_do_a_on_dext : out std_logic;       -- Sinal para ativar a saída do registrador A para a extensão de dados
+        reg_di_sel : out std_logic;             -- Sinal para selecionar o valor imediato na entrada do registrador
+        alu_b_in_sel : out std_logic;           -- Sinal para selecionar a entrada B da ALU
+        reg_wr_ena : out std_logic;             -- Habilitação de escrita nos registradores
+        c_flag_wr_ena : out std_logic;          -- Habilitação de escrita do flag C
+        z_flag_wr_ena : out std_logic;          -- Habilitação de escrita do flag Z
+        v_flag_wr_ena : out std_logic;          -- Habilitação de escrita do flag V
+        alu_op : out std_logic_vector(3 downto 0); -- Operação selecionada da ALU
+        stack_push : out std_logic;             -- Sinal para empurrar valor na pilha
+        stack_pop : out std_logic;              -- Sinal para retirar valor da pilha
+        pc_ctrl : out std_logic_vector(1 downto 0); -- Controle do contador do programa
+        mem_wr_ena : out std_logic;             -- Habilitação de escrita na memória
+        mem_rd_ena : out std_logic;             -- Habilitação de leitura na memória
+        inp : out std_logic;                    
+        outp : out std_logic                    
     );
 end puc_241;
 
@@ -39,10 +39,6 @@ architecture Behavioral of puc_241 is
     -- Definição dos estados da FSM
     type state_type is (rst, fetch_only, fetch_dec_ex);
     signal pres_state, next_state : state_type;
-    signal instrucao : std_logic_vector(15 downto 0);
-    signal RA, RB : std_logic_vector(2 downto 0);
-    signal op_code : std_logic_vector(2 downto 0);
-    signal imm_value : std_logic_vector(7 downto 0);
 
     -- Definição das operações
     constant INSTRUCAO_REG_REG  : std_logic_vector(1 downto 0) := "00";
@@ -103,12 +99,6 @@ architecture Behavioral of puc_241 is
     constant CARREGA_UM_NOVO_VALOR : std_logic_vector(1 downto 0) := "01";
     constant CARREGA_VALOR_DO_TOPO_DA_PILHA : std_logic_vector(1 downto 0) := "10";
     constant INCREMENTA : std_logic_vector(1 downto 0) := "11";
-
-    -- Sinais de controle internos
-    signal alu_op_code : std_logic_vector(2 downto 0);
-    signal alu_op_type : std_logic_vector(1 downto 0);
-    signal mem_addr : std_logic_vector(3 downto 0);
-
 begin
 
     process(nrst, clk)
@@ -152,7 +142,6 @@ begin
 
             -- Fetch, Decode and Execute
             when fetch_dec_ex =>
-                instrucao <= rom_q;
                 case rom_q(15 downto 14) is
                     when INSTRUCAO_REG_REG => -- Instruções Reg-Reg
                         case rom_q(13 downto 11) is
@@ -162,8 +151,8 @@ begin
                                 alu_b_in_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when OR_OP => 
@@ -172,8 +161,8 @@ begin
                                 alu_b_in_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when XOR_OP => 
@@ -182,8 +171,8 @@ begin
                                 alu_b_in_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when MOV_OP => 
@@ -191,8 +180,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when ADD_OP => 
@@ -247,8 +236,8 @@ begin
                                 reg_di_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when ORI_OP => 
@@ -257,8 +246,8 @@ begin
                                 reg_di_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when XORI_OP => 
@@ -267,8 +256,8 @@ begin
                                 reg_di_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when MOVI_OP => 
@@ -277,8 +266,8 @@ begin
                                 reg_di_sel <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
-                                v_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when ADDI_OP => 
@@ -331,7 +320,10 @@ begin
                                 alu_op <= "1" & RL_OP;
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
+                                
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -340,6 +332,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -348,6 +342,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -356,6 +352,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -364,6 +362,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -372,6 +372,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -380,6 +382,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 -- Atualizar c_flag_wr_ena com base na saída do deslocamento
                                 next_state <= fetch_dec_ex;
 
@@ -388,7 +392,8 @@ begin
                                 reg_wr_ena <= '1';
                                 pc_ctrl <= INCREMENTA;
                                 z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '0';
+                                c_flag_wr_ena <= '1';
+                                v_flag_wr_ena <= '1';
                                 next_state <= fetch_dec_ex;
 
                             when others =>

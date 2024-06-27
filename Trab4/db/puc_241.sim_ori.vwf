@@ -955,7 +955,17 @@ TRANSITION_LIST("c_flag_wr_ena")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		NODE
+		{
+			REPEAT = 23;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 25.0;
 	}
 }
 
@@ -1604,7 +1614,17 @@ TRANSITION_LIST("v_flag_wr_ena")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		NODE
+		{
+			REPEAT = 23;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 25.0;
 	}
 }
 
@@ -1615,7 +1635,15 @@ TRANSITION_LIST("z_flag_wr_ena")
 		REPEAT = 1;
 		LEVEL 0 FOR 25.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 965.0;
+		LEVEL 0 FOR 10.0;
+		NODE
+		{
+			REPEAT = 23;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 25.0;
 	}
 }
 

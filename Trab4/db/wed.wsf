@@ -1134,9 +1134,9 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 246632;
-		NUMERATOR = 1245;
-		DENOMINATOR = 246632;
+		ZEND = 267432;
+		NUMERATOR = 1350;
+		DENOMINATOR = 267432;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Jun 23 15:42:37 2024
+Analysis & Synthesis Status : Successful - Thu Jun 27 20:36:39 2024
 Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
 Revision Name : puc_241
 Top-level Entity Name : puc_241_esquema
 Family : Cyclone II
-Total logic elements : 4,176
-    Total combinational functions : 2,058
+Total logic elements : 4,180
+    Total combinational functions : 2,062
     Dedicated logic registers : 2,237
 Total registers : 2237
 Total pins : 61
