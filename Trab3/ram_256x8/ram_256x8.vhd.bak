@@ -1,46 +1,48 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL; -- Use numeric_std for to_integer and unsigned
+use IEEE.NUMERIC_STD.ALL; -- Use numeric_std para to_integer e unsigned
 
+-- Definição da entidade ram_256x8
 entity ram_256x8 is
     port (
-        nrst       : in  std_logic;
-        clk_in     : in  std_logic;
-        addr       : in  std_logic_vector(7 downto 0);
-        dio        : inout std_logic_vector(7 downto 0);
-        mem_wr_en  : in  std_logic;
-        mem_rd_en  : in  std_logic
+        nrst       : in  std_logic;  -- Entrada de reset assíncrono
+        clk_in     : in  std_logic;  -- Entrada de clock do sistema
+        addr       : in  std_logic_vector(7 downto 0);  -- Barramento de endereços
+        dio        : inout std_logic_vector(7 downto 0);  -- Barramento bidirecional de dados
+        mem_wr_en  : in  std_logic;  -- Habilitação de escrita na memória
+        mem_rd_en  : in  std_logic   -- Habilitação de leitura da memória
     );
 end ram_256x8;
 
-architecture Behavioral of ram_256x8 is
-    type memory_type is array (255 downto 0) of std_logic_vector(7 downto 0);
-    signal memory : memory_type := (others => (others => '0'));
-    signal data_out : std_logic_vector(7 downto 0);
-begin
-    -- Process for asynchronous reset and synchronous write
-    process(nrst, clk_in)
-    begin
-        if nrst = '0' then
-            memory <= (others => (others => '0'));
-        elsif rising_edge(clk_in) then
-            if mem_wr_en = '1' then
-                memory(to_integer(unsigned(addr))) <= dio;
-            end if;
-        end if;
-    end process;
+-- Arquitetura comportamental da entidade ram_256x8
+ARCHITECTURE arch1 OF ram_256x8 IS
+	TYPE mem_type IS ARRAY(0 TO 255) OF
+	STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL memory : mem_type;
+	SIGNAL addr_int : INTEGER RANGE 0 TO 255;
+	BEGIN
+		----------- Convers?o:
+		addr_int <= TO_INTEGER(UNSIGNED(addr));
 
-    -- Process for asynchronous read
-    process(addr, mem_rd_en)
-    begin
-        if mem_rd_en = '1' then
-            data_out <= memory(to_integer(unsigned(addr)));
-        else
-            data_out <= (others => 'Z');
-        end if;
-    end process;
+		----------- Escrita:
+		PROCESS(nrst, clk_in)
+			BEGIN
+				IF nrst = '0' THEN
+					memory <= (OTHERS => (OTHERS => '0'));
+				ELSIF RISING_EDGE(clk_in) THEN
+					IF mem_rd_en = '0' AND mem_wr_en = '1' THEN
+						memory(addr_int) <= dio;
+					END IF;
+				END IF;
+		END PROCESS;
 
-    -- Tri-state buffer for dio
-    dio <= data_out when mem_rd_en = '1' else (others => 'Z');
-    
-end Behavioral;
+		----------- Leitura:
+		PROCESS(mem_rd_en, mem_wr_en, memory, addr_int)
+			BEGIN
+				IF mem_rd_en = '0' AND mem_wr_en = '1' THEN
+					dio <= memory(addr_int);
+				ELSE
+					dio <= (OTHERS => 'Z');
+				END IF;
+		END PROCESS;
+END arch1;

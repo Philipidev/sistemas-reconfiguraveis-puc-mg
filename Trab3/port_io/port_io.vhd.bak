@@ -26,8 +26,6 @@ architecture Behavioral of port_io is
     signal port_reg: std_logic_vector(7 downto 0) := (others => '0');  -- Registrador de porta
     signal latch   : std_logic_vector(7 downto 0);  -- Latch para leitura dos pinos
     signal dbus_internal: std_logic_vector(7 downto 0);  -- Sinal interno para o barramento de dados
-    signal dir_reg_debug : std_logic_vector(7 downto 0); -- Sinal de debug do registrador de direção
-    signal port_reg_debug: std_logic_vector(7 downto 0); -- Sinal de debug do registrador de porta
 begin
     -- Processo para tratar o reset assíncrono e as escritas síncronas
     process(nrst, clk_in)
@@ -48,10 +46,6 @@ begin
         end if;
     end process;
 
-    -- Atualiza os sinais de debug
-    dir_reg_debug <= dir_reg;
-    port_reg_debug <= port_reg;
-
     -- Processo para tratar a direção e os dados da porta
     process(dir_reg, port_reg)
     begin
@@ -64,16 +58,24 @@ begin
         end loop;
     end process;
 
-    -- Processo para travar as entradas de port_io quando configuradas como entradas
-    process(port_io, dir_reg)
+    -- Processo para leitura das entradas de port_io quando configuradas como entradas e operações de leitura/escrita no latch
+    process(port_io, dir_reg, wr_en, rd_en, abus)
     begin
-        for i in 0 to 7 loop
-            if dir_reg(i) = '0' then
-                latch(i) <= port_io(i);  -- Lê o valor dos pinos de entrada
-            else
-                latch(i) <= '0';
+        if rd_en = '0' and wr_en = '1' then
+            if abus = base_addr then
+                latch <= port_io; -- escrita port_io no latch
             end if;
-        end loop;
+        end if;
+
+        if rd_en = '1' then
+            for i in 0 to 7 loop
+                if dir_reg(i) = '0' then
+                    latch(i) <= port_io(i);  -- Lê o valor dos pinos de entrada
+                else
+                    latch(i) <= '0';
+                end if;
+            end loop;
+        end if;
     end process;
 
     -- Processo para tratar as operações de leitura
@@ -95,5 +97,5 @@ begin
 
     -- Buffer tri-state para o barramento de dados
     dbus <= dbus_internal when rd_en = '1' else (others => 'Z');
-    
+
 end Behavioral;

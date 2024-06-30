@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity puc_241 is
     Port (
-        -- Sinais de controle e clock
+		-- Sinais de controle e clock
         nrst : in std_logic;                    -- Sinal de reset negativo
         clk : in std_logic;                     -- Sinal de clock de entrada
 
@@ -31,16 +31,15 @@ entity puc_241 is
         mem_wr_ena : out std_logic;             -- Habilitação de escrita na memória
         mem_rd_ena : out std_logic;             -- Habilitação de leitura na memória
         inp : out std_logic;                    
-        outp : out std_logic                    
+        outp : out std_logic;         
+        debug : out std_logic_vector(10 downto 0)
     );
 end puc_241;
 
 architecture Behavioral of puc_241 is
-    -- Definição dos estados da FSM
     type state_type is (rst, fetch_only, fetch_dec_ex);
     signal pres_state, next_state : state_type;
-
-    -- Definição das operações
+    
     constant INSTRUCAO_REG_REG  : std_logic_vector(1 downto 0) := "00";
     constant INSTRUCAO_REG_IMMED  : std_logic_vector(1 downto 0) := "01";
     constant INSTRUCAO_ALU_1_REG  : std_logic_vector(1 downto 0) := "10";
@@ -48,7 +47,6 @@ architecture Behavioral of puc_241 is
     constant INSTRUCAO_DESVIO_INCONDICIONAL  : std_logic_vector(3 downto 0) := "1110";
     constant INSTRUCAO_SALTO_CONDICIONAL_RETORNO  : std_logic_vector(5 downto 1) := "11110";
 
-    -- Instruções Reg-Reg
     constant AND_OP  : std_logic_vector(2 downto 0) := "000";
     constant OR_OP   : std_logic_vector(2 downto 0) := "001";
     constant XOR_OP  : std_logic_vector(2 downto 0) := "010";
@@ -58,7 +56,6 @@ architecture Behavioral of puc_241 is
     constant SUB_OP  : std_logic_vector(2 downto 0) := "110";
     constant SUBC_OP : std_logic_vector(2 downto 0) := "111";
 
-    -- Instruções Reg-Immed
     constant ANDI_OP  : std_logic_vector(2 downto 0) := "000";
     constant ORI_OP   : std_logic_vector(2 downto 0) := "001";
     constant XORI_OP  : std_logic_vector(2 downto 0) := "010";
@@ -68,7 +65,6 @@ architecture Behavioral of puc_241 is
     constant SUBI_OP  : std_logic_vector(2 downto 0) := "110";
     constant SUBCI_OP : std_logic_vector(2 downto 0) := "111";
 
-    -- Instruções ALU-1 Reg
     constant RL_OP   : std_logic_vector(2 downto 0) := "000";
     constant RR_OP   : std_logic_vector(2 downto 0) := "001";
     constant RLC_OP  : std_logic_vector(2 downto 0) := "010";
@@ -78,23 +74,19 @@ architecture Behavioral of puc_241 is
     constant SRA_OP  : std_logic_vector(2 downto 0) := "110";
     constant NOT_OP  : std_logic_vector(2 downto 0) := "111";
 
-    -- Instruções de memória e E/S
     constant LDM_OP  : std_logic_vector(1 downto 0) := "00";
     constant STM_OP  : std_logic_vector(1 downto 0) := "01";
     constant INP_OP  : std_logic_vector(1 downto 0) := "10";
     constant OUT_OP  : std_logic_vector(1 downto 0) := "11";
 
-    -- Instruções de desvio incondicional e chamada de sub-rotina
     constant JMP_OP  : std_logic := '0';
     constant CALL_OP : std_logic := '1';
 
-    -- Instruções de salto condicional e retorno
     constant SKIPC_OP : std_logic_vector(1 downto 0) := "00";
     constant SKIPZ_OP : std_logic_vector(1 downto 0) := "01";
     constant SKIPV_OP : std_logic_vector(1 downto 0) := "10";
     constant RET_OP   : std_logic_vector(1 downto 0) := "11";
 
-    -- Instruções do Prog_cnt
     constant PERMANECE_COMO_ESTA : std_logic_vector(1 downto 0) := "00";
     constant CARREGA_UM_NOVO_VALOR : std_logic_vector(1 downto 0) := "01";
     constant CARREGA_VALOR_DO_TOPO_DA_PILHA : std_logic_vector(1 downto 0) := "10";
@@ -112,7 +104,6 @@ begin
 
     process(nrst, rom_q, pres_state, c_flag_reg, z_flag_reg)
     begin
-        -- Inicializando os valores
         reg_do_a_on_dext <= '0';
         reg_di_sel <= '0';
         alu_b_in_sel <= '0';
@@ -128,384 +119,403 @@ begin
         mem_rd_ena <= '0';
         inp <= '0';
         outp <= '0';
+        debug <= (others => '0');
 
-        case pres_state is
-            -- Reset
-            when rst =>
-                next_state <= fetch_only;
+        if pres_state = rst then
+            next_state <= fetch_only;
+            debug <= "00000000001";
 
-            -- Fetch only
-            when fetch_only =>
-                next_state <= fetch_dec_ex;
-                reg_wr_ena <= '1';
-                pc_ctrl <= INCREMENTA; -- Incrementa PC
+        elsif pres_state = fetch_only then
+            next_state <= fetch_dec_ex;
+            pc_ctrl <= INCREMENTA;
+            debug <= "00000000010";
 
-            -- Fetch, Decode and Execute
-            when fetch_dec_ex =>
-                case rom_q(15 downto 14) is
-                    when INSTRUCAO_REG_REG => -- Instruções Reg-Reg
-                        case rom_q(13 downto 11) is
-                            when AND_OP => 
-                                alu_op <= "0" & AND_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
+        elsif pres_state = fetch_dec_ex then
 
-                            when OR_OP => 
-                                alu_op <= "0" & OR_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when XOR_OP => 
-                                alu_op <= "0" & XOR_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when MOV_OP => 
-                                alu_op <= "1111";
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when ADD_OP => 
-                                alu_op <= "0" & ADD_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when ADDC_OP => 
-                                alu_op <= "0" & ADDC_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when SUB_OP => 
-                                alu_op <= "0" & SUB_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when SUBC_OP => 
-                                alu_op <= "0" & SUBC_OP;
-                                reg_wr_ena <= '1';
-                                alu_b_in_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-
-                    when INSTRUCAO_REG_IMMED => -- Instruções Reg-Immed
-                        case rom_q(13 downto 11) is
-                            when ANDI_OP => 
-                                alu_op <= "0" & ANDI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when ORI_OP => 
-                                alu_op <= "0" & ORI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when XORI_OP => 
-                                alu_op <= "0" & XORI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when MOVI_OP => 
-                                alu_op <= "1111";
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when ADDI_OP => 
-                                alu_op <= "0" & ADDI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when ADDCI_OP => 
-                                alu_op <= "0" & ADDCI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when SUBI_OP => 
-                                alu_op <= "0" & SUBI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when SUBCI_OP => 
-                                alu_op <= "0" & SUBCI_OP;
-                                reg_wr_ena <= '1';
-                                reg_di_sel <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-
-                    when INSTRUCAO_ALU_1_REG => -- Instruções ALU-1 Reg
-                        case rom_q(13 downto 11) is
-                            when RL_OP => 
-                                alu_op <= "1" & RL_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when RR_OP => 
-                                alu_op <= "1" & RR_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when RLC_OP => 
-                                alu_op <= "1" & RLC_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when RRC_OP => 
-                                alu_op <= "1" & RRC_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when SLL_OP => 
-                                alu_op <= "1" & SLL_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when SRL_OP => 
-                                alu_op <= "1" & SRL_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when SRA_OP => 
-                                alu_op <= "1" & SRA_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                -- Atualizar c_flag_wr_ena com base na saída do deslocamento
-                                next_state <= fetch_dec_ex;
-
-                            when NOT_OP => 
-                                alu_op <= "1" & NOT_OP;
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                z_flag_wr_ena <= '1';
-                                c_flag_wr_ena <= '1';
-                                v_flag_wr_ena <= '1';
-                                next_state <= fetch_dec_ex;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-
-                    when others =>
+            if rom_q(15 downto 11) = INSTRUCAO_SALTO_CONDICIONAL_RETORNO then
+                if rom_q(10 downto 9) = SKIPC_OP then
+                    if c_flag_reg = '1' then
+                        pc_ctrl <= CARREGA_UM_NOVO_VALOR;
                         next_state <= fetch_only;
-                end case;
+                        debug <= "00000000011";
+                    else
+                        pc_ctrl <= INCREMENTA;
+                        next_state <= fetch_dec_ex;
+                        debug <= "00000000100";
+                    end if;
 
-                case rom_q(15 downto 13) is
-                    when INSTRUCAO_MEMORIA_ES => -- Instruções de memória e E/S
-                        case rom_q(12 downto 11) is
-                            when LDM_OP =>
-                                mem_rd_ena <= '1';
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                next_state <= fetch_dec_ex;
-
-                            when STM_OP =>
-                                mem_wr_ena <= '1';
-                                reg_do_a_on_dext <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                next_state <= fetch_dec_ex;
-
-                            when INP_OP =>
-                                inp <= '1';
-                                reg_wr_ena <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                next_state <= fetch_dec_ex;
-
-                            when OUT_OP =>
-                                outp <= '1';
-                                reg_do_a_on_dext <= '1';
-                                pc_ctrl <= INCREMENTA;
-                                next_state <= fetch_dec_ex;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-                        when others =>
-                            next_state <= fetch_only;    
-                    end case;
-
-                case rom_q(15 downto 12) is
-                    when INSTRUCAO_DESVIO_INCONDICIONAL => -- Instruções de Desvio Incondicional e Chamada de Sub-Rotina
-                        case rom_q(11) is
-                            when JMP_OP => -- JMP
-                                pc_ctrl <= CARREGA_UM_NOVO_VALOR; -- Carregar novo valor no PC
-                                next_state <= fetch_only;
-
-                            when CALL_OP => -- CALL
-                                stack_push <= '1';
-                                pc_ctrl <= CARREGA_UM_NOVO_VALOR; -- Carregar novo valor no PC
-                                next_state <= fetch_only;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-                        when others =>
-                            next_state <= fetch_only;
-                    end case;
-
-                case rom_q(15 downto 11) is
-                    when INSTRUCAO_SALTO_CONDICIONAL_RETORNO => -- Instruções de Salto Condicional e Retorno
-                        case rom_q(10 downto 9) is
-                            when SKIPC_OP =>
-                                if c_flag_reg = '1' then
-                                    pc_ctrl <= CARREGA_UM_NOVO_VALOR; -- Carregar novo valor no PC
-									next_state <= fetch_only;
-                                else
-                                    pc_ctrl <= INCREMENTA; -- Incrementar PC
-									next_state <= fetch_dec_ex;
-                                end if;
-                                next_state <= fetch_only;
-
-                            when SKIPZ_OP =>
-                                if z_flag_reg = '1' then
-                                    pc_ctrl <= CARREGA_UM_NOVO_VALOR; -- Carregar novo valor no PC
-									next_state <= fetch_only;
-                                else
-                                    pc_ctrl <= INCREMENTA; -- Incrementar PC
-									next_state <= fetch_dec_ex;
-                                end if;
-                                next_state <= fetch_only;
-
-                            when SKIPV_OP =>
-                                if v_flag_reg = '1' then
-                                    pc_ctrl <= CARREGA_UM_NOVO_VALOR; -- Carregar novo valor no PC
-									next_state <= fetch_only;
-                                else
-                                    pc_ctrl <= INCREMENTA; -- Incrementar PC
-									next_state <= fetch_dec_ex;
-                                end if;
-                                next_state <= fetch_only;
-
-                            when RET_OP =>
-                                stack_pop <= '1';
-                                pc_ctrl <= CARREGA_VALOR_DO_TOPO_DA_PILHA; -- Carregar valor do topo da pilha
-                                next_state <= fetch_only;
-
-                            when others =>
-                                next_state <= fetch_only;
-                        end case;
-
-                    when others =>
+                elsif rom_q(10 downto 9) = SKIPZ_OP then
+                    if z_flag_reg = '1' then
+                        pc_ctrl <= CARREGA_UM_NOVO_VALOR;
                         next_state <= fetch_only;
-                end case;
+                        debug <= "00000000101";
+                    else
+                        pc_ctrl <= INCREMENTA;
+                        next_state <= fetch_dec_ex;
+                        debug <= "00000000110";
+                    end if;
 
-            when others =>
+                elsif rom_q(10 downto 9) = SKIPV_OP then
+                    if v_flag_reg = '1' then
+                        pc_ctrl <= CARREGA_UM_NOVO_VALOR;
+                        next_state <= fetch_only;
+                        debug <= "00000000111";
+                    else
+                        pc_ctrl <= INCREMENTA;
+                        next_state <= fetch_dec_ex;
+                        debug <= "00000001000";
+                    end if;
+
+                elsif rom_q(10 downto 9) = RET_OP then
+                    stack_pop <= '1';
+                    pc_ctrl <= CARREGA_VALOR_DO_TOPO_DA_PILHA;
+                    next_state <= fetch_only;
+                    debug <= "00000001001";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000001010";
+                end if;
+
+            elsif rom_q(15 downto 12) = INSTRUCAO_DESVIO_INCONDICIONAL then
+                if rom_q(11) = JMP_OP then
+                    pc_ctrl <= CARREGA_UM_NOVO_VALOR;
+                    next_state <= fetch_only;
+                    debug <= "00000001100";
+
+                elsif rom_q(11) = CALL_OP then
+                    stack_push <= '1';
+                    pc_ctrl <= CARREGA_UM_NOVO_VALOR;
+                    next_state <= fetch_only;
+                    debug <= "00000001101";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000001110";
+                end if;
+
+            elsif rom_q(15 downto 13) = INSTRUCAO_MEMORIA_ES then
+                if rom_q(12 downto 11) = LDM_OP then
+                    mem_rd_ena <= '1';
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010000";
+
+                elsif rom_q(12 downto 11) = STM_OP then
+                    mem_wr_ena <= '1';
+                    reg_do_a_on_dext <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010001";
+
+                elsif rom_q(12 downto 11) = INP_OP then
+                    inp <= '1';
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010010";
+
+                elsif rom_q(12 downto 11) = OUT_OP then
+                    outp <= '1';
+                    reg_do_a_on_dext <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010011";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000010100";
+                end if;
+
+            elsif rom_q(15 downto 14) = INSTRUCAO_REG_REG then
+                if rom_q(13 downto 11) = AND_OP then
+                    alu_op <= "0" & AND_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010110";
+
+                elsif rom_q(13 downto 11) = OR_OP then
+                    alu_op <= "0" & OR_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000010111";
+
+                elsif rom_q(13 downto 11) = XOR_OP then
+                    alu_op <= "0" & XOR_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011000";
+
+                elsif rom_q(13 downto 11) = MOV_OP then
+                    alu_op <= "1111";
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011001";
+
+                elsif rom_q(13 downto 11) = ADD_OP then
+                    alu_op <= "0" & ADD_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011010";
+
+                elsif rom_q(13 downto 11) = ADDC_OP then
+                    alu_op <= "0" & ADDC_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011011";
+
+                elsif rom_q(13 downto 11) = SUB_OP then
+                    alu_op <= "0" & SUB_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011100";
+
+                elsif rom_q(13 downto 11) = SUBC_OP then
+                    alu_op <= "0" & SUBC_OP;
+                    reg_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    reg_di_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011101";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000011110";
+                end if;
+
+            elsif rom_q(15 downto 14) = INSTRUCAO_REG_IMMED then
+                if rom_q(13 downto 11) = ANDI_OP then
+                    alu_op <= "0" & ANDI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000011111";
+
+                elsif rom_q(13 downto 11) = ORI_OP then
+                    alu_op <= "0" & ORI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100000";
+
+                elsif rom_q(13 downto 11) = XORI_OP then
+                    alu_op <= "0" & XORI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '0';
+                    v_flag_wr_ena <= '0';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100001";
+
+                elsif rom_q(13 downto 11) = MOVI_OP then
+                    alu_op <= "1111";
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    c_flag_wr_ena <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100010";
+
+                elsif rom_q(13 downto 11) = ADDI_OP then
+                    alu_op <= "0" & ADDI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100011";
+
+                elsif rom_q(13 downto 11) = ADDCI_OP then
+                    alu_op <= "0" & ADDCI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100100";
+
+                elsif rom_q(13 downto 11) = SUBI_OP then
+                    alu_op <= "0" & SUBI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100101";
+
+                elsif rom_q(13 downto 11) = SUBCI_OP then
+                    alu_op <= "0" & SUBCI_OP;
+                    reg_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    alu_b_in_sel <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    c_flag_wr_ena <= '1';
+                    v_flag_wr_ena <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000100110";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000100111";
+                end if;
+
+            elsif rom_q(15 downto 14) = INSTRUCAO_ALU_1_REG then
+                if rom_q(13 downto 11) = RL_OP then
+                    alu_op <= "1" & RL_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101000";
+
+                elsif rom_q(13 downto 11) = RR_OP then
+                    alu_op <= "1" & RR_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101001";
+
+                elsif rom_q(13 downto 11) = RLC_OP then
+                    alu_op <= "1" & RLC_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101010";
+
+                elsif rom_q(13 downto 11) = RRC_OP then
+                    alu_op <= "1" & RRC_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101011";
+
+                elsif rom_q(13 downto 11) = SLL_OP then
+                    alu_op <= "1" & SLL_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101100";
+
+                elsif rom_q(13 downto 11) = SRL_OP then
+                    alu_op <= "1" & SRL_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101101";
+
+                elsif rom_q(13 downto 11) = SRA_OP then
+                    alu_op <= "1" & SRA_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101110";
+
+                elsif rom_q(13 downto 11) = NOT_OP then
+                    alu_op <= "1" & NOT_OP;
+                    reg_wr_ena <= '1';
+                    pc_ctrl <= INCREMENTA;
+                    z_flag_wr_ena <= '1';
+                    reg_di_sel <= '1';
+                    next_state <= fetch_dec_ex;
+                    debug <= "00000101111";
+
+                else
+                    next_state <= fetch_only;
+                    debug <= "00000110000";
+                end if;
+
+            else
                 next_state <= fetch_only;
-        end case;
+                debug <= "00000110001";
+            end if;
+
+        else
+            next_state <= fetch_only;
+            debug <= "00000110010";
+        end if;
     end process;
 
 end Behavioral;

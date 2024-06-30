@@ -1444,15 +1444,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "alu_b_in_sel";
+		SIGNAL = "debug";
 		INDEX = 37;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "c_flag_wr_ena";
+		SIGNAL = "debug[10]";
 		INDEX = 38;
 		FORMAT = E;
 		SCALE = 1;
@@ -1460,7 +1460,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mem_rd_ena";
+		SIGNAL = "debug[9]";
 		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
@@ -1468,7 +1468,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mem_wr_ena";
+		SIGNAL = "debug[8]";
 		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
@@ -1476,7 +1476,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reg_di_sel";
+		SIGNAL = "debug[7]";
 		INDEX = 41;
 		FORMAT = E;
 		SCALE = 1;
@@ -1484,7 +1484,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reg_do_a_on_dext";
+		SIGNAL = "debug[6]";
 		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
@@ -1492,7 +1492,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reg_wr_ena";
+		SIGNAL = "debug[5]";
 		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
@@ -1500,7 +1500,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "stack_pop";
+		SIGNAL = "debug[4]";
 		INDEX = 44;
 		FORMAT = E;
 		SCALE = 1;
@@ -1508,7 +1508,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "stack_push";
+		SIGNAL = "debug[3]";
 		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
@@ -1516,7 +1516,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "v_flag_wr_ena";
+		SIGNAL = "debug[2]";
 		INDEX = 46;
 		FORMAT = E;
 		SCALE = 1;
@@ -1524,7 +1524,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z_flag_wr_ena";
+		SIGNAL = "debug[1]";
 		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
@@ -1532,7 +1532,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outp";
+		SIGNAL = "debug[0]";
 		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
@@ -1540,15 +1540,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr";
+		SIGNAL = "alu_b_in_sel";
 		INDEX = 49;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[7]";
+		SIGNAL = "c_flag_wr_ena";
 		INDEX = 50;
 		FORMAT = E;
 		SCALE = 1;
@@ -1556,7 +1556,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[6]";
+		SIGNAL = "mem_rd_ena";
 		INDEX = 51;
 		FORMAT = E;
 		SCALE = 1;
@@ -1564,7 +1564,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[5]";
+		SIGNAL = "mem_wr_ena";
 		INDEX = 52;
 		FORMAT = E;
 		SCALE = 1;
@@ -1572,7 +1572,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[4]";
+		SIGNAL = "reg_di_sel";
 		INDEX = 53;
 		FORMAT = E;
 		SCALE = 1;
@@ -1580,7 +1580,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[3]";
+		SIGNAL = "reg_do_a_on_dext";
 		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
@@ -1588,7 +1588,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[2]";
+		SIGNAL = "reg_wr_ena";
 		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
@@ -1596,7 +1596,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[1]";
+		SIGNAL = "stack_pop";
 		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
@@ -1604,7 +1604,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[0]";
+		SIGNAL = "stack_push";
 		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
@@ -1612,7 +1612,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "inp";
+		SIGNAL = "v_flag_wr_ena";
 		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
@@ -1620,15 +1620,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw";
+		SIGNAL = "z_flag_wr_ena";
 		INDEX = 59;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[7]";
+		SIGNAL = "outp";
 		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
@@ -1636,15 +1636,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[6]";
+		SIGNAL = "port_io:inst8|dir_reg";
 		INDEX = 61;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[5]";
+		SIGNAL = "port_io:inst8|dir_reg[7]";
 		INDEX = 62;
 		FORMAT = E;
 		SCALE = 1;
@@ -1652,7 +1652,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[4]";
+		SIGNAL = "port_io:inst8|dir_reg[6]";
 		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
@@ -1660,7 +1660,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[3]";
+		SIGNAL = "port_io:inst8|dir_reg[5]";
 		INDEX = 64;
 		FORMAT = E;
 		SCALE = 1;
@@ -1668,7 +1668,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[2]";
+		SIGNAL = "port_io:inst8|dir_reg[4]";
 		INDEX = 65;
 		FORMAT = E;
 		SCALE = 1;
@@ -1676,7 +1676,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[1]";
+		SIGNAL = "port_io:inst8|dir_reg[3]";
 		INDEX = 66;
 		FORMAT = E;
 		SCALE = 1;
@@ -1684,7 +1684,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[0]";
+		SIGNAL = "port_io:inst8|dir_reg[2]";
 		INDEX = 67;
 		FORMAT = E;
 		SCALE = 1;
@@ -1692,7 +1692,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[7]~result";
+		SIGNAL = "port_io:inst8|dir_reg[1]";
 		INDEX = 68;
 		FORMAT = E;
 		SCALE = 1;
@@ -1700,7 +1700,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[6]~result";
+		SIGNAL = "port_io:inst8|dir_reg[0]";
 		INDEX = 69;
 		FORMAT = E;
 		SCALE = 1;
@@ -1708,15 +1708,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[5]~result";
+		SIGNAL = "port_io:inst8|port_reg";
 		INDEX = 70;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[4]~result";
+		SIGNAL = "port_io:inst8|port_reg[7]";
 		INDEX = 71;
 		FORMAT = E;
 		SCALE = 1;
@@ -1724,7 +1724,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[3]~result";
+		SIGNAL = "port_io:inst8|port_reg[6]";
 		INDEX = 72;
 		FORMAT = E;
 		SCALE = 1;
@@ -1732,7 +1732,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[2]~result";
+		SIGNAL = "port_io:inst8|port_reg[5]";
 		INDEX = 73;
 		FORMAT = E;
 		SCALE = 1;
@@ -1740,7 +1740,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[1]~result";
+		SIGNAL = "port_io:inst8|port_reg[4]";
 		INDEX = 74;
 		FORMAT = E;
 		SCALE = 1;
@@ -1748,7 +1748,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ledr[0]~result";
+		SIGNAL = "port_io:inst8|port_reg[3]";
 		INDEX = 75;
 		FORMAT = E;
 		SCALE = 1;
@@ -1756,7 +1756,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[7]~result";
+		SIGNAL = "port_io:inst8|port_reg[2]";
 		INDEX = 76;
 		FORMAT = E;
 		SCALE = 1;
@@ -1764,7 +1764,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[6]~result";
+		SIGNAL = "port_io:inst8|port_reg[1]";
 		INDEX = 77;
 		FORMAT = E;
 		SCALE = 1;
@@ -1772,7 +1772,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[5]~result";
+		SIGNAL = "port_io:inst8|port_reg[0]";
 		INDEX = 78;
 		FORMAT = E;
 		SCALE = 1;
@@ -1780,15 +1780,15 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[4]~result";
+		SIGNAL = "ledr";
 		INDEX = 79;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[3]~result";
+		SIGNAL = "ledr[7]";
 		INDEX = 80;
 		FORMAT = E;
 		SCALE = 1;
@@ -1796,7 +1796,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[2]~result";
+		SIGNAL = "ledr[6]";
 		INDEX = 81;
 		FORMAT = E;
 		SCALE = 1;
@@ -1804,7 +1804,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[1]~result";
+		SIGNAL = "ledr[5]";
 		INDEX = 82;
 		FORMAT = E;
 		SCALE = 1;
@@ -1812,8 +1812,248 @@ VECTOR("D:/Puc/sistemas reconf/Trab4/puc_241_waveForm.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[0]~result";
+		SIGNAL = "ledr[4]";
 		INDEX = 83;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[3]";
+		INDEX = 84;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[2]";
+		INDEX = 85;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[1]";
+		INDEX = 86;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[0]";
+		INDEX = 87;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "inp";
+		INDEX = 88;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw";
+		INDEX = 89;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[7]";
+		INDEX = 90;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[6]";
+		INDEX = 91;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[5]";
+		INDEX = 92;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[4]";
+		INDEX = 93;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[3]";
+		INDEX = 94;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[2]";
+		INDEX = 95;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[1]";
+		INDEX = 96;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[0]";
+		INDEX = 97;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[7]~result";
+		INDEX = 98;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[6]~result";
+		INDEX = 99;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[5]~result";
+		INDEX = 100;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[4]~result";
+		INDEX = 101;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[3]~result";
+		INDEX = 102;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[2]~result";
+		INDEX = 103;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[1]~result";
+		INDEX = 104;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ledr[0]~result";
+		INDEX = 105;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[7]~result";
+		INDEX = 106;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[6]~result";
+		INDEX = 107;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[5]~result";
+		INDEX = 108;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[4]~result";
+		INDEX = 109;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[3]~result";
+		INDEX = 110;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[2]~result";
+		INDEX = 111;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[1]~result";
+		INDEX = 112;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[0]~result";
+		INDEX = 113;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

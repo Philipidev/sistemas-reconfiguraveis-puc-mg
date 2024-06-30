@@ -1,5 +1,5 @@
 Flow report for puc_241
-Thu Jun 27 20:36:49 2024
+Sun Jun 30 16:58:53 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 27 20:36:49 2024        ;
+; Flow Status                        ; Successful - Sun Jun 30 16:58:53 2024        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; puc_241                                      ;
 ; Top-level Entity Name              ; puc_241_esquema                              ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 3,115 / 33,216 ( 9 % )                       ;
-;     Total combinational functions  ; 2,062 / 33,216 ( 6 % )                       ;
-;     Dedicated logic registers      ; 2,237 / 33,216 ( 7 % )                       ;
-; Total registers                    ; 2237                                         ;
-; Total pins                         ; 61 / 475 ( 13 % )                            ;
+; Met timing requirements            ; No                                           ;
+; Total logic elements               ; 3,155 / 33,216 ( 9 % )                       ;
+;     Total combinational functions  ; 2,120 / 33,216 ( 6 % )                       ;
+;     Dedicated logic registers      ; 2,238 / 33,216 ( 7 % )                       ;
+; Total registers                    ; 2238                                         ;
+; Total pins                         ; 72 / 475 ( 15 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 32,768 / 483,840 ( 7 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                               ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/27/2024 20:36:35 ;
+; Start date & time ; 06/30/2024 16:58:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; puc_241             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+----------------------------------------------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                    ; Value                                                                      ; Default Value ; Entity Name     ; Section Id     ;
 +------------------------------------+----------------------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 88974376817777.171953139522860                                             ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID              ; 88974376817777.171977751861104                                             ; --            ; --              ; --             ;
 ; IP_TOOL_NAME                       ; ROM: 1-PORT                                                                ; --            ; --              ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                                                                        ; --            ; --              ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                                         ; --            ; --              ; --             ;
@@ -82,6 +82,7 @@ applicable agreement for further details.
 ; MISC_FILE                          ; rom_2k_16.bsf                                                              ; --            ; --              ; --             ;
 ; MISC_FILE                          ; rom_2k_16.cmp                                                              ; --            ; --              ; --             ;
 ; MISC_FILE                          ; C:/Users/phili/Documents/sistemas-reconfiguraveis-puc-mg/Trab4/puc_241.dpf ; --            ; --              ; --             ;
+; MISC_FILE                          ; D:/Puc/sistemas reconf/Trab4/puc_241.dpf                                   ; --            ; --              ; --             ;
 ; PARTITION_COLOR                    ; 16764057                                                                   ; --            ; puc_241_esquema ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                                                                     ; --            ; puc_241_esquema ; Top            ;
 ; TOP_LEVEL_ENTITY                   ; puc_241_esquema                                                            ; puc_241       ; --              ; --             ;
@@ -94,11 +95,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 263 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:07     ; 1.0                     ; 297 MB              ; 00:00:02                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 266 MB              ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 267 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 297 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 266 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 195 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:13     ; --                      ; --                  ; 00:00:04                           ;
+; Total                   ; 00:00:11     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

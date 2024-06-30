@@ -58,20 +58,28 @@ begin
         end loop;
     end process;
 
-    -- Processo para travar as entradas de port_io quando configuradas como entradas
-    process(port_io, dir_reg)
+    -- Processo para leitura das entradas de port_io quando configuradas como entradas e operações de leitura/escrita no latch
+    process(port_io, dir_reg, wr_en, rd_en, abus)
     begin
-        for i in 0 to 7 loop
-            if dir_reg(i) = '0' then
-                latch(i) <= port_io(i);  -- Lê o valor dos pinos de entrada
-            else
-                latch(i) <= '0';
+        if rd_en = '0' and wr_en = '1' then
+            if abus = base_addr then
+                latch <= port_io; -- escrita port_io no latch
             end if;
-        end loop;
+        end if;
+
+        if rd_en = '1' then
+            for i in 0 to 7 loop
+                if dir_reg(i) = '0' then
+                    latch(i) <= port_io(i);  -- Lê o valor dos pinos de entrada
+                else
+                    latch(i) <= '0';
+                end if;
+            end loop;
+        end if;
     end process;
 
     -- Processo para tratar as operações de leitura
-    process(rd_en, abus)
+    process(rd_en, abus, latch, dir_reg)
     begin
         if rd_en = '1' then
             -- Leitura dos registradores ou latch dependendo do endereço
@@ -89,5 +97,5 @@ begin
 
     -- Buffer tri-state para o barramento de dados
     dbus <= dbus_internal when rd_en = '1' else (others => 'Z');
-    
+
 end Behavioral;

@@ -422,7 +422,7 @@ VECTOR("D:/Puc/sistemas reconf/Trab3/port_io/tb_reset.vwf")
 		ZEND = 133597;
 		NUMERATOR = 1162;
 		DENOMINATOR = 141256;
-		TOP_INDEX = 22;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;

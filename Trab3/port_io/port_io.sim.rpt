@@ -1,5 +1,5 @@
 Simulator report for port_io
-Thu May 30 17:28:03 2024
+Sun Jun 30 15:41:24 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 144 nodes    ;
-; Simulation Coverage         ;      36.88 % ;
-; Total Number of Transitions ; 416          ;
+; Simulation Netlist Size     ; 163 nodes    ;
+; Simulation Coverage         ;      36.87 % ;
+; Total Number of Transitions ; 468          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      36.88 % ;
-; Total nodes checked                                 ; 144          ;
-; Total output ports checked                          ; 160          ;
-; Total output ports with complete 1/0-value coverage ; 59           ;
-; Total output ports with no 1/0-value coverage       ; 54           ;
-; Total output ports with no 1-value coverage         ; 86           ;
-; Total output ports with no 0-value coverage         ; 69           ;
+; Total coverage as a percentage                      ;      36.87 % ;
+; Total nodes checked                                 ; 163          ;
+; Total output ports checked                          ; 179          ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 62           ;
+; Total output ports with no 1-value coverage         ; 98           ;
+; Total output ports with no 0-value coverage         ; 77           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -126,6 +126,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |port_io|port_reg~6         ; |port_io|port_reg~6         ; out              ;
 ; |port_io|port_reg[7]        ; |port_io|port_reg[7]        ; regout           ;
 ; |port_io|port_reg[5]        ; |port_io|port_reg[5]        ; regout           ;
+; |port_io|process_2~0        ; |port_io|process_2~0        ; out0             ;
 ; |port_io|dbus[4]~4          ; |port_io|dbus[4]~4          ; out              ;
 ; |port_io|dbus[5]~5          ; |port_io|dbus[5]~5          ; out              ;
 ; |port_io|dbus[6]~6          ; |port_io|dbus[6]~6          ; out              ;
@@ -139,6 +140,12 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |port_io|dbus_internal[7]~7 ; |port_io|dbus_internal[7]~7 ; out              ;
 ; |port_io|dbus_internal[7]~9 ; |port_io|dbus_internal[7]~9 ; out0             ;
 ; |port_io|dbus_internal[7]   ; |port_io|dbus_internal[7]   ; out              ;
+; |port_io|latch[1]~1         ; |port_io|latch[1]~1         ; out0             ;
+; |port_io|latch[1]~3         ; |port_io|latch[1]~3         ; out0             ;
+; |port_io|latch[5]           ; |port_io|latch[5]           ; out              ;
+; |port_io|latch[5]~7         ; |port_io|latch[5]~7         ; out              ;
+; |port_io|latch[7]           ; |port_io|latch[7]           ; out              ;
+; |port_io|latch[7]~9         ; |port_io|latch[7]~9         ; out              ;
 ; |port_io|port_io[5]~5       ; |port_io|port_io[5]~5       ; out              ;
 ; |port_io|port_io[7]~7       ; |port_io|port_io[7]~7       ; out              ;
 ; |port_io|clk_in             ; |port_io|clk_in             ; out              ;
@@ -200,14 +207,14 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |port_io|port_reg[4]        ; |port_io|port_reg[4]        ; regout           ;
 ; |port_io|port_reg[2]        ; |port_io|port_reg[2]        ; regout           ;
 ; |port_io|port_reg[0]        ; |port_io|port_reg[0]        ; regout           ;
-; |port_io|latch[0]           ; |port_io|latch[0]           ; out              ;
-; |port_io|latch[1]           ; |port_io|latch[1]           ; out              ;
-; |port_io|latch[2]           ; |port_io|latch[2]           ; out              ;
-; |port_io|latch[3]           ; |port_io|latch[3]           ; out              ;
-; |port_io|latch[4]           ; |port_io|latch[4]           ; out              ;
-; |port_io|latch[5]           ; |port_io|latch[5]           ; out              ;
-; |port_io|latch[6]           ; |port_io|latch[6]           ; out              ;
-; |port_io|latch[7]           ; |port_io|latch[7]           ; out              ;
+; |port_io|latch~10           ; |port_io|latch~10           ; out              ;
+; |port_io|latch~11           ; |port_io|latch~11           ; out              ;
+; |port_io|latch~12           ; |port_io|latch~12           ; out              ;
+; |port_io|latch~13           ; |port_io|latch~13           ; out              ;
+; |port_io|latch~14           ; |port_io|latch~14           ; out              ;
+; |port_io|latch~15           ; |port_io|latch~15           ; out              ;
+; |port_io|latch~16           ; |port_io|latch~16           ; out              ;
+; |port_io|latch~17           ; |port_io|latch~17           ; out              ;
 ; |port_io|port_io[0]~0       ; |port_io|port_io[0]~0       ; out              ;
 ; |port_io|dbus[0]~0          ; |port_io|dbus[0]~0          ; out              ;
 ; |port_io|dbus[1]~1          ; |port_io|dbus[1]~1          ; out              ;
@@ -222,6 +229,18 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |port_io|dbus_internal[3]~3 ; |port_io|dbus_internal[3]~3 ; out              ;
 ; |port_io|dbus_internal[3]   ; |port_io|dbus_internal[3]   ; out              ;
 ; |port_io|dbus_internal[7]~8 ; |port_io|dbus_internal[7]~8 ; out0             ;
+; |port_io|latch[0]~0         ; |port_io|latch[0]~0         ; out              ;
+; |port_io|latch[1]           ; |port_io|latch[1]           ; out              ;
+; |port_io|latch[1]~2         ; |port_io|latch[1]~2         ; out              ;
+; |port_io|latch[2]           ; |port_io|latch[2]           ; out              ;
+; |port_io|latch[2]~4         ; |port_io|latch[2]~4         ; out              ;
+; |port_io|latch[3]           ; |port_io|latch[3]           ; out              ;
+; |port_io|latch[3]~5         ; |port_io|latch[3]~5         ; out              ;
+; |port_io|latch[4]           ; |port_io|latch[4]           ; out              ;
+; |port_io|latch[4]~6         ; |port_io|latch[4]~6         ; out              ;
+; |port_io|latch[6]           ; |port_io|latch[6]           ; out              ;
+; |port_io|latch[6]~8         ; |port_io|latch[6]~8         ; out              ;
+; |port_io|port_io[3]~direct  ; |port_io|port_io[3]~direct  ; out0             ;
 ; |port_io|port_io[1]~1       ; |port_io|port_io[1]~1       ; out              ;
 ; |port_io|port_io[2]~2       ; |port_io|port_io[2]~2       ; out              ;
 ; |port_io|port_io[3]~3       ; |port_io|port_io[3]~3       ; out              ;
@@ -230,7 +249,7 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |port_io|port_io[0]~direct  ; |port_io|port_io[0]~direct  ; out0             ;
 ; |port_io|port_io[1]~direct  ; |port_io|port_io[1]~direct  ; out0             ;
 ; |port_io|port_io[2]~direct  ; |port_io|port_io[2]~direct  ; out0             ;
-; |port_io|port_io[3]~direct  ; |port_io|port_io[3]~direct  ; out0             ;
+; |port_io|latch[0]           ; |port_io|latch[0]           ; out              ;
 ; |port_io|abus[1]            ; |port_io|abus[1]            ; out              ;
 ; |port_io|abus[2]            ; |port_io|abus[2]            ; out              ;
 ; |port_io|abus[3]            ; |port_io|abus[3]            ; out              ;
@@ -303,19 +322,27 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |port_io|port_reg[2]        ; |port_io|port_reg[2]        ; regout           ;
 ; |port_io|port_reg[1]        ; |port_io|port_reg[1]        ; regout           ;
 ; |port_io|port_reg[0]        ; |port_io|port_reg[0]        ; regout           ;
-; |port_io|latch[0]           ; |port_io|latch[0]           ; out              ;
-; |port_io|latch[1]           ; |port_io|latch[1]           ; out              ;
-; |port_io|latch[2]           ; |port_io|latch[2]           ; out              ;
-; |port_io|latch[3]           ; |port_io|latch[3]           ; out              ;
+; |port_io|latch~10           ; |port_io|latch~10           ; out              ;
+; |port_io|latch~11           ; |port_io|latch~11           ; out              ;
+; |port_io|latch~12           ; |port_io|latch~12           ; out              ;
+; |port_io|latch~13           ; |port_io|latch~13           ; out              ;
 ; |port_io|port_io[0]~0       ; |port_io|port_io[0]~0       ; out              ;
 ; |port_io|dbus_internal[7]~8 ; |port_io|dbus_internal[7]~8 ; out0             ;
+; |port_io|latch[0]~0         ; |port_io|latch[0]~0         ; out              ;
+; |port_io|latch[1]           ; |port_io|latch[1]           ; out              ;
+; |port_io|latch[1]~2         ; |port_io|latch[1]~2         ; out              ;
+; |port_io|latch[2]           ; |port_io|latch[2]           ; out              ;
+; |port_io|latch[2]~4         ; |port_io|latch[2]~4         ; out              ;
+; |port_io|latch[3]           ; |port_io|latch[3]           ; out              ;
+; |port_io|latch[3]~5         ; |port_io|latch[3]~5         ; out              ;
+; |port_io|port_io[3]~direct  ; |port_io|port_io[3]~direct  ; out0             ;
 ; |port_io|port_io[1]~1       ; |port_io|port_io[1]~1       ; out              ;
 ; |port_io|port_io[2]~2       ; |port_io|port_io[2]~2       ; out              ;
 ; |port_io|port_io[3]~3       ; |port_io|port_io[3]~3       ; out              ;
 ; |port_io|port_io[0]~direct  ; |port_io|port_io[0]~direct  ; out0             ;
 ; |port_io|port_io[1]~direct  ; |port_io|port_io[1]~direct  ; out0             ;
 ; |port_io|port_io[2]~direct  ; |port_io|port_io[2]~direct  ; out0             ;
-; |port_io|port_io[3]~direct  ; |port_io|port_io[3]~direct  ; out0             ;
+; |port_io|latch[0]           ; |port_io|latch[0]           ; out              ;
 ; |port_io|nrst               ; |port_io|nrst               ; out              ;
 ; |port_io|abus[1]            ; |port_io|abus[1]            ; out              ;
 ; |port_io|abus[2]            ; |port_io|abus[2]            ; out              ;
@@ -358,7 +385,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu May 30 17:28:03 2024
+    Info: Processing started: Sun Jun 30 15:41:23 2024
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off port_io -c port_io
 Info: Using vector source file "D:/Puc/sistemas reconf/Trab3/port_io/tb_reset.vwf"
 Info: Overwriting simulation input file with simulation results
@@ -408,13 +435,13 @@ Warning: Found logic contention at time 100.0 ns on bus node "|port_io|dbus[3]~1
     Info: Node "dbus[3]" has logic level of 0
     Info: Node "dbus[3]~3" has logic level of X
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      36.88 %
-Info: Number of transitions in simulation is 416
+Info: Simulation coverage is      36.87 %
+Info: Number of transitions in simulation is 468
 Info: Vector file tb_reset.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 148 megabytes
-    Info: Processing ended: Thu May 30 17:28:03 2024
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Sun Jun 30 15:41:24 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
